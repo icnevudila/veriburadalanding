@@ -87,3 +87,7 @@ Final content checks: `research/content-final-checks.json` contains the final 16
 See research/CONTENT-RELEASE-NOTES.md. The product now uses a web-app narrative throughout. /basla/ replaces /eklenti-indir/. There is no installer CTA. The original transparent wordmark replaced the opaque footer clip. The final custom-brand placements, centered flow inputs, authored blog covers, four-slogan typewriter and four-stage demo onboarding are in the current build. All inner pages load the illustration/onboarding helpers explicitly. Live requests have no demo delay. The deployment archive is the website distribution, not an extension installer.
 
 Current validation and outstanding real integrations are listed in CONTENT-RELEASE-NOTES.md. No push or deployment has been done. The developer preview on port 4173 remains running.
+
+## Legal pages — 27 October 2026
+
+`research/legal-content.py` now owns the two site-specific legal pages. `research/LEGAL-CONTENT-REVIEW.md` records source evidence, primary references and unknown operator/infrastructure facts. Company name/address were not fabricated at the user's direction. The policies describe the landing/demo, not a paid application agreement or a complete identified-controller KVKK notice. They remain noindex. The preference-clear button removes the session draft and resets the onboarding state; it does not clear server data. Neutral policy links are available within onboarding. No push/deployment was performed.

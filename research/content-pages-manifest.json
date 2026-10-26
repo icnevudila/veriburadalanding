@@ -94,15 +94,15 @@
   },
   {
     "slug": "gizlilik-politikasi",
-    "title": "Gizlilik ve veri kullanımı | Veri Burada",
-    "description": "Veri Burada landing sayfasındaki arama tercihleri, oturum kaydı, örnek arama ve veri kullanımı hakkında açıklamalar.",
+    "title": "Gizlilik Politikası | Veri Burada",
+    "description": "Veri Burada tanıtım sitesinde arama tercihleri, tarayıcı depolaması, örnek sonuçlar, iletişim ve kişisel veri hakları hakkında açıklamalar.",
     "scene": null,
     "noindex": true
   },
   {
     "slug": "kullanim-kosullari",
-    "title": "Kullanım bilgileri ve koşullar | Veri Burada",
-    "description": "Veri Burada ürün kapsamı, örnek veriler, kaynak alanların doluluğu ve satın alma bağlantıları hakkında kullanım bilgileri.",
+    "title": "Kullanım Koşulları ve Sözleşme Kapsamı | Veri Burada",
+    "description": "Veri Burada tanıtım sitesi, ücretsiz örnek arama, örnek CSV, kullanım sınırları ve ücretli işlemlerden ayrılan kapsam hakkında kullanım koşulları.",
     "scene": null,
     "noindex": true
   }

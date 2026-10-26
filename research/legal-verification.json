@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "width": 320,
+      "slug": "gizlilik-politikasi",
+      "status": 200,
+      "noOverflow": true,
+      "noPlaceholderNotes": true,
+      "dateCorrect": true,
+      "violations": []
+    },
+    {
+      "width": 320,
+      "slug": "kullanim-kosullari",
+      "status": 200,
+      "noOverflow": true,
+      "noPlaceholderNotes": true,
+      "dateCorrect": true,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "slug": "gizlilik-politikasi",
+      "status": 200,
+      "noOverflow": true,
+      "noPlaceholderNotes": true,
+      "dateCorrect": true,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "slug": "kullanim-kosullari",
+      "status": 200,
+      "noOverflow": true,
+      "noPlaceholderNotes": true,
+      "dateCorrect": true,
+      "violations": []
+    },
+    {
+      "width": 768,
+      "slug": "gizlilik-politikasi",
+      "status": 200,
+      "noOverflow": true,
+      "noPlaceholderNotes": true,
+      "dateCorrect": true,
+      "violations": []
+    },
+    {
+      "width": 768,
+      "slug": "kullanim-kosullari",
+      "status": 200,
+      "noOverflow": true,
+      "noPlaceholderNotes": true,
+      "dateCorrect": true,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "slug": "gizlilik-politikasi",
+      "status": 200,
+      "noOverflow": true,
+      "noPlaceholderNotes": true,
+      "dateCorrect": true,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "slug": "kullanim-kosullari",
+      "status": 200,
+      "noOverflow": true,
+      "noPlaceholderNotes": true,
+      "dateCorrect": true,
+      "violations": []
+    }
+  ],
+  "preferenceClear": {
+    "storageRemoved": true,
+    "inMemoryDraftReset": true,
+    "defaultPurposeRestored": true,
+    "stepReset": true
+  },
+  "errors": []
+}
