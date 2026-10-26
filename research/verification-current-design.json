@@ -1,0 +1,389 @@
+[
+  {
+    "width": 390,
+    "pinSequence": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "sectors": [
+      {
+        "layout": "list",
+        "query": "Kuaförler",
+        "count": "5",
+        "names": [
+          "Ada Kuaför",
+          "Makas Studio",
+          "Pera Kuaför",
+          "Atölye Saç",
+          "Beyoğlu Kuaför"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "cards",
+        "query": "Kafeler",
+        "count": "5",
+        "names": [
+          "Köşe Kahve",
+          "Mahalle Atölyesi",
+          "Gün Işığı Kafe",
+          "Pera Kahve",
+          "Sokak Kahvesi"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "contacts",
+        "query": "Diş klinikleri",
+        "count": "5",
+        "names": [
+          "Gülüş Diş Kliniği",
+          "Merkez Ağız ve Diş",
+          "İnci Diş Kliniği",
+          "Pera Dental",
+          "Beyoğlu Diş"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "web",
+        "query": "Restoranlar",
+        "count": "5",
+        "names": [
+          "Pera Mutfak",
+          "Sahil Restoran",
+          "Mahalle Sofrası",
+          "Atölye Lezzet",
+          "Sokak Lokantası"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "directory",
+        "query": "Mimarlık ofisleri",
+        "count": "5",
+        "names": [
+          "Atölye Mimarlık",
+          "Form Tasarım",
+          "Studio Mimarlık",
+          "Mekân Atölyesi",
+          "Pera Mimarlık"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "locations",
+        "query": "Oteller",
+        "count": "5",
+        "names": [
+          "Pera Konak",
+          "Beyoğlu Otel",
+          "Şehir Otel",
+          "Sahil Konak",
+          "Meydan Otel"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "studios",
+        "query": "Spor salonları",
+        "count": "5",
+        "names": [
+          "Hareket Studio",
+          "Pera Spor",
+          "Mahalle Fitness",
+          "Form Studio",
+          "Beyoğlu Spor"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "phone",
+        "query": "Oto servisleri",
+        "count": "5",
+        "names": [
+          "Merkez Oto Servis",
+          "Pera Otomotiv",
+          "Şehir Oto Bakım",
+          "Güven Oto Servis",
+          "Beyoğlu Otomotiv"
+        ],
+        "rows": 5
+      }
+    ],
+    "automaticWrap": true,
+    "distinctAudienceScenes": [
+      "sales",
+      "agency",
+      "local"
+    ],
+    "lightFilm": "rgb(245, 249, 246)",
+    "overlayControlsRemoved": true,
+    "transparentHub": true,
+    "closingPins": 12,
+    "globalPause": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 582,
+    "pinSequence": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "sectors": [
+      {
+        "layout": "list",
+        "query": "Kuaförler",
+        "count": "5",
+        "names": [
+          "Ada Kuaför",
+          "Makas Studio",
+          "Pera Kuaför",
+          "Atölye Saç",
+          "Beyoğlu Kuaför"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "cards",
+        "query": "Kafeler",
+        "count": "5",
+        "names": [
+          "Köşe Kahve",
+          "Mahalle Atölyesi",
+          "Gün Işığı Kafe",
+          "Pera Kahve",
+          "Sokak Kahvesi"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "contacts",
+        "query": "Diş klinikleri",
+        "count": "5",
+        "names": [
+          "Gülüş Diş Kliniği",
+          "Merkez Ağız ve Diş",
+          "İnci Diş Kliniği",
+          "Pera Dental",
+          "Beyoğlu Diş"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "web",
+        "query": "Restoranlar",
+        "count": "5",
+        "names": [
+          "Pera Mutfak",
+          "Sahil Restoran",
+          "Mahalle Sofrası",
+          "Atölye Lezzet",
+          "Sokak Lokantası"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "directory",
+        "query": "Mimarlık ofisleri",
+        "count": "5",
+        "names": [
+          "Atölye Mimarlık",
+          "Form Tasarım",
+          "Studio Mimarlık",
+          "Mekân Atölyesi",
+          "Pera Mimarlık"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "locations",
+        "query": "Oteller",
+        "count": "5",
+        "names": [
+          "Pera Konak",
+          "Beyoğlu Otel",
+          "Şehir Otel",
+          "Sahil Konak",
+          "Meydan Otel"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "studios",
+        "query": "Spor salonları",
+        "count": "5",
+        "names": [
+          "Hareket Studio",
+          "Pera Spor",
+          "Mahalle Fitness",
+          "Form Studio",
+          "Beyoğlu Spor"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "phone",
+        "query": "Oto servisleri",
+        "count": "5",
+        "names": [
+          "Merkez Oto Servis",
+          "Pera Otomotiv",
+          "Şehir Oto Bakım",
+          "Güven Oto Servis",
+          "Beyoğlu Otomotiv"
+        ],
+        "rows": 5
+      }
+    ],
+    "automaticWrap": true,
+    "distinctAudienceScenes": [
+      "sales",
+      "agency",
+      "local"
+    ],
+    "lightFilm": "rgb(245, 249, 246)",
+    "overlayControlsRemoved": true,
+    "transparentHub": true,
+    "closingPins": 12,
+    "globalPause": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "pinSequence": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "sectors": [
+      {
+        "layout": "list",
+        "query": "Kuaförler",
+        "count": "5",
+        "names": [
+          "Ada Kuaför",
+          "Makas Studio",
+          "Pera Kuaför",
+          "Atölye Saç",
+          "Beyoğlu Kuaför"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "cards",
+        "query": "Kafeler",
+        "count": "5",
+        "names": [
+          "Köşe Kahve",
+          "Mahalle Atölyesi",
+          "Gün Işığı Kafe",
+          "Pera Kahve",
+          "Sokak Kahvesi"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "contacts",
+        "query": "Diş klinikleri",
+        "count": "5",
+        "names": [
+          "Gülüş Diş Kliniği",
+          "Merkez Ağız ve Diş",
+          "İnci Diş Kliniği",
+          "Pera Dental",
+          "Beyoğlu Diş"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "web",
+        "query": "Restoranlar",
+        "count": "5",
+        "names": [
+          "Pera Mutfak",
+          "Sahil Restoran",
+          "Mahalle Sofrası",
+          "Atölye Lezzet",
+          "Sokak Lokantası"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "directory",
+        "query": "Mimarlık ofisleri",
+        "count": "5",
+        "names": [
+          "Atölye Mimarlık",
+          "Form Tasarım",
+          "Studio Mimarlık",
+          "Mekân Atölyesi",
+          "Pera Mimarlık"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "locations",
+        "query": "Oteller",
+        "count": "5",
+        "names": [
+          "Pera Konak",
+          "Beyoğlu Otel",
+          "Şehir Otel",
+          "Sahil Konak",
+          "Meydan Otel"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "studios",
+        "query": "Spor salonları",
+        "count": "5",
+        "names": [
+          "Hareket Studio",
+          "Pera Spor",
+          "Mahalle Fitness",
+          "Form Studio",
+          "Beyoğlu Spor"
+        ],
+        "rows": 5
+      },
+      {
+        "layout": "phone",
+        "query": "Oto servisleri",
+        "count": "5",
+        "names": [
+          "Merkez Oto Servis",
+          "Pera Otomotiv",
+          "Şehir Oto Bakım",
+          "Güven Oto Servis",
+          "Beyoğlu Otomotiv"
+        ],
+        "rows": 5
+      }
+    ],
+    "automaticWrap": true,
+    "distinctAudienceScenes": [
+      "sales",
+      "agency",
+      "local"
+    ],
+    "lightFilm": "rgb(245, 249, 246)",
+    "overlayControlsRemoved": true,
+    "transparentHub": true,
+    "closingPins": 12,
+    "globalPause": true,
+    "reducedMotion": true,
+    "errors": []
+  }
+]

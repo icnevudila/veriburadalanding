@@ -1,0 +1,36 @@
+[
+  {
+    "width": 390,
+    "path": "/basla/",
+    "state": "app-page",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "path": "/",
+    "state": "purpose",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "state": "cinema",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "path": "/basla/",
+    "state": "app-page",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "path": "/",
+    "state": "purpose",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "state": "cinema",
+    "violations": []
+  }
+]

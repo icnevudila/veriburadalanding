@@ -1,0 +1,3 @@
+const fs=require('fs');
+const {chromium}=require('C:/Users/TP2/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const b=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});const p=await b.newPage({viewport:{width:1440,height:1000}});await p.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle'});fs.writeFileSync('research/v2-rendered.html',await p.content());await p.goto('http://127.0.0.1:4173/istanbul-map-art.svg');await p.screenshot({path:'research/map-art-review.png'});await b.close()})();

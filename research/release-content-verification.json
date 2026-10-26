@@ -1,0 +1,10 @@
+{
+  "manifestFiles": 65,
+  "sourceMatchesRelease": true,
+  "hashesMatch": true,
+  "packagedStaticRoutesChecked": 56,
+  "canonicalPageRedirects": 17,
+  "apiPathsNotRedirected": true,
+  "origin": "http://127.0.0.1:4187",
+  "published": false
+}

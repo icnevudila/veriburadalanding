@@ -1,0 +1,98 @@
+[
+  {
+    "width": 1440,
+    "step": 0,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 1440,
+    "step": 1,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 1440,
+    "step": 2,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 1440,
+    "step": 3,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 1440,
+    "step": 4,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 1440,
+    "step": 5,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 390,
+    "step": 0,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 390,
+    "step": 1,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 390,
+    "step": 2,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 390,
+    "step": 3,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 390,
+    "step": 4,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  {
+    "width": 390,
+    "step": 5,
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  }
+]

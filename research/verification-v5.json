@@ -1,0 +1,135 @@
+{
+  "errors": [],
+  "badResponses": [],
+  "blocked": [],
+  "geometry": [
+    {
+      "width": 320,
+      "documentWidth": 320
+    },
+    {
+      "width": 360,
+      "documentWidth": 360
+    },
+    {
+      "width": 390,
+      "documentWidth": 390
+    },
+    {
+      "width": 430,
+      "documentWidth": 430
+    },
+    {
+      "width": 768,
+      "documentWidth": 768
+    },
+    {
+      "width": 1024,
+      "documentWidth": 1024
+    },
+    {
+      "width": 1440,
+      "documentWidth": 1440
+    },
+    {
+      "width": 1920,
+      "documentWidth": 1920
+    }
+  ],
+  "initial": {
+    "cls": 0.000009266493055555557,
+    "lcp": 956,
+    "fontLoaded": true,
+    "mapLoaded": true,
+    "logoAlphaAsset": "brand-transparent-v3.webp",
+    "mainHeadings": 1
+  },
+  "sector": [
+    "Köşe Kahve",
+    "Mahalle Atölyesi",
+    "Gün Işığı Kafe"
+  ],
+  "sectorCount": "3",
+  "download": {
+    "name": "veriburada-temsili-ornek.csv",
+    "containsSample": true,
+    "containsSelection": true,
+    "rows": 4
+  },
+  "mapZoom": true,
+  "keyboardTab": true,
+  "tabPanel": "audience-tab-1",
+  "workflow": "Dağınık bilgilerden,\ndüzenli bir listeye.",
+  "faq": true,
+  "modal": {
+    "width": 1440,
+    "height": 900,
+    "duration": 12,
+    "playing": true
+  },
+  "focusRestored": true,
+  "modalClosed": true,
+  "chapter": true,
+  "pause": true,
+  "reduced": true,
+  "reducedCss": true,
+  "mobileMenu": true,
+  "menuEscape": true,
+  "hitTest": {
+    "r": {
+      "x": 1127,
+      "y": 698.5,
+      "width": 264,
+      "height": 48,
+      "top": 698.5,
+      "right": 1391,
+      "bottom": 746.5,
+      "left": 1127
+    },
+    "hits": [
+      [
+        2,
+        "panel-export"
+      ],
+      [
+        12,
+        "panel-export"
+      ],
+      [
+        24,
+        "panel-export"
+      ],
+      [
+        36,
+        "panel-export"
+      ],
+      [
+        46,
+        "panel-export"
+      ]
+    ]
+  },
+  "accessibility": {
+    "violations": [],
+    "needsManualReview": [
+      {
+        "id": "color-contrast",
+        "nodes": 81
+      },
+      {
+        "id": "link-in-text-block",
+        "nodes": 1
+      },
+      {
+        "id": "video-caption",
+        "nodes": 1
+      }
+    ]
+  },
+  "noJavascript": {
+    "title": "Veriburada — Bir sonraki müşteriniz, haritada.",
+    "headings": 1,
+    "contentVisible": true,
+    "filmControls": true
+  }
+}

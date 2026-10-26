@@ -1,0 +1,292 @@
+[
+  {
+    "width": 320,
+    "bounds": [
+      {
+        "layout": "list",
+        "bottom": 250.65972137451172,
+        "stageBottom": 255.54861450195312,
+        "overflow": false
+      },
+      {
+        "layout": "cards",
+        "bottom": 251.5486125946045,
+        "stageBottom": 255.54861450195312,
+        "overflow": false
+      },
+      {
+        "layout": "contacts",
+        "bottom": 250.65972137451172,
+        "stageBottom": 255.54861450195312,
+        "overflow": false
+      },
+      {
+        "layout": "web",
+        "bottom": 251.5486125946045,
+        "stageBottom": 255.54861450195312,
+        "overflow": false
+      },
+      {
+        "layout": "directory",
+        "bottom": 250.65972137451172,
+        "stageBottom": 255.54861450195312,
+        "overflow": false
+      },
+      {
+        "layout": "locations",
+        "bottom": 239.10416412353516,
+        "stageBottom": 255.54861450195312,
+        "overflow": false
+      },
+      {
+        "layout": "studios",
+        "bottom": 251.5486125946045,
+        "stageBottom": 255.54861450195312,
+        "overflow": false
+      },
+      {
+        "layout": "phone",
+        "bottom": 250.65972137451172,
+        "stageBottom": 255.54861450195312,
+        "overflow": false
+      }
+    ],
+    "output": {
+      "heading": "center",
+      "copy": "center",
+      "link": "inline-flex"
+    }
+  },
+  {
+    "width": 390,
+    "bounds": [
+      {
+        "layout": "list",
+        "bottom": 286.8645839691162,
+        "stageBottom": 292.82293701171875,
+        "overflow": false
+      },
+      {
+        "layout": "cards",
+        "bottom": 287.9479274749756,
+        "stageBottom": 292.82293701171875,
+        "overflow": false
+      },
+      {
+        "layout": "contacts",
+        "bottom": 286.8645839691162,
+        "stageBottom": 292.82293701171875,
+        "overflow": false
+      },
+      {
+        "layout": "web",
+        "bottom": 287.9479274749756,
+        "stageBottom": 292.82293701171875,
+        "overflow": false
+      },
+      {
+        "layout": "directory",
+        "bottom": 286.8645839691162,
+        "stageBottom": 292.82293701171875,
+        "overflow": false
+      },
+      {
+        "layout": "locations",
+        "bottom": 272.78124618530273,
+        "stageBottom": 292.82293701171875,
+        "overflow": false
+      },
+      {
+        "layout": "studios",
+        "bottom": 287.9479274749756,
+        "stageBottom": 292.82293701171875,
+        "overflow": false
+      },
+      {
+        "layout": "phone",
+        "bottom": 286.8645839691162,
+        "stageBottom": 292.82293701171875,
+        "overflow": false
+      }
+    ],
+    "output": {
+      "heading": "center",
+      "copy": "center",
+      "link": "inline-flex"
+    }
+  },
+  {
+    "width": 582,
+    "bounds": [
+      {
+        "layout": "list",
+        "bottom": 381.2854290008545,
+        "stageBottom": 390.1770935058594,
+        "overflow": false
+      },
+      {
+        "layout": "cards",
+        "bottom": 382.90209770202637,
+        "stageBottom": 390.1770935058594,
+        "overflow": false
+      },
+      {
+        "layout": "contacts",
+        "bottom": 381.2854290008545,
+        "stageBottom": 390.1770935058594,
+        "overflow": false
+      },
+      {
+        "layout": "web",
+        "bottom": 382.90209770202637,
+        "stageBottom": 390.1770935058594,
+        "overflow": false
+      },
+      {
+        "layout": "directory",
+        "bottom": 381.2854290008545,
+        "stageBottom": 390.1770935058594,
+        "overflow": false
+      },
+      {
+        "layout": "locations",
+        "bottom": 360.2687454223633,
+        "stageBottom": 390.1770935058594,
+        "overflow": false
+      },
+      {
+        "layout": "studios",
+        "bottom": 382.90209770202637,
+        "stageBottom": 390.1770935058594,
+        "overflow": false
+      },
+      {
+        "layout": "phone",
+        "bottom": 381.2854290008545,
+        "stageBottom": 390.1770935058594,
+        "overflow": false
+      }
+    ],
+    "output": {
+      "heading": "center",
+      "copy": "center",
+      "link": "inline-flex"
+    }
+  },
+  {
+    "width": 1024,
+    "bounds": [
+      {
+        "layout": "list",
+        "bottom": 277.85973358154297,
+        "stageBottom": 314.1875,
+        "overflow": false
+      },
+      {
+        "layout": "cards",
+        "bottom": 262.4902877807617,
+        "stageBottom": 314.1875,
+        "overflow": false
+      },
+      {
+        "layout": "contacts",
+        "bottom": 277.85973358154297,
+        "stageBottom": 314.1875,
+        "overflow": false
+      },
+      {
+        "layout": "web",
+        "bottom": 262.4902877807617,
+        "stageBottom": 314.1875,
+        "overflow": false
+      },
+      {
+        "layout": "directory",
+        "bottom": 277.85973358154297,
+        "stageBottom": 314.1875,
+        "overflow": false
+      },
+      {
+        "layout": "locations",
+        "bottom": 284.49654388427734,
+        "stageBottom": 314.1875,
+        "overflow": false
+      },
+      {
+        "layout": "studios",
+        "bottom": 262.4902877807617,
+        "stageBottom": 314.1875,
+        "overflow": false
+      },
+      {
+        "layout": "phone",
+        "bottom": 277.85973358154297,
+        "stageBottom": 314.1875,
+        "overflow": false
+      }
+    ],
+    "output": {
+      "heading": "start",
+      "copy": "start",
+      "link": "inline-flex"
+    }
+  },
+  {
+    "width": 1440,
+    "bounds": [
+      {
+        "layout": "list",
+        "bottom": 377.85001373291016,
+        "stageBottom": 427.25,
+        "overflow": false
+      },
+      {
+        "layout": "cards",
+        "bottom": 356.94998931884766,
+        "stageBottom": 427.25,
+        "overflow": false
+      },
+      {
+        "layout": "contacts",
+        "bottom": 377.85001373291016,
+        "stageBottom": 427.25,
+        "overflow": false
+      },
+      {
+        "layout": "web",
+        "bottom": 356.94998931884766,
+        "stageBottom": 427.25,
+        "overflow": false
+      },
+      {
+        "layout": "directory",
+        "bottom": 377.85001373291016,
+        "stageBottom": 427.25,
+        "overflow": false
+      },
+      {
+        "layout": "locations",
+        "bottom": 386.87500762939453,
+        "stageBottom": 427.25,
+        "overflow": false
+      },
+      {
+        "layout": "studios",
+        "bottom": 356.94998931884766,
+        "stageBottom": 427.25,
+        "overflow": false
+      },
+      {
+        "layout": "phone",
+        "bottom": 377.85001373291016,
+        "stageBottom": 427.25,
+        "overflow": false
+      }
+    ],
+    "output": {
+      "heading": "start",
+      "copy": "start",
+      "link": "inline-flex"
+    }
+  }
+]

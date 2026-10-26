@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
+  <!-- Wordmark: "Veri Burada" with pin dot on i -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;display=swap');
+    .brand { font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 42px; fill: #111827; }
+  </style>
+  <text x="0" y="54" class="brand">Ver</text>
+  <!-- i without dot -->
+  <text x="106" y="54" class="brand" style="font-size:42px;">ı</text>
+  <!-- Green pin dot replacing i's tittle -->
+  <circle cx="112" cy="18" r="5" fill="#10B981"/>
+  <path d="M112 18 L108.5 25 Q112 29 115.5 25 Z" fill="#10B981"/>
+  <text x="122" y="54" class="brand">Burada</text>
+</svg>

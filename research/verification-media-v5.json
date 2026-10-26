@@ -1,0 +1,118 @@
+[
+  {
+    "width": 1440,
+    "errors": [],
+    "bad": [],
+    "map": "istanbul-map-display-v4.webp",
+    "sources": [
+      "product-v5-mobile.mp4",
+      "product-v5-desktop.mp4",
+      "product-v5-mobile.mp4",
+      "product-v5-desktop.mp4"
+    ],
+    "posters": [
+      [
+        "product-v5-desktop-poster.jpg",
+        "product-v5-mobile-poster.jpg"
+      ],
+      [
+        "product-v5-desktop-poster.jpg",
+        "product-v5-mobile-poster.jpg"
+      ]
+    ],
+    "media": {
+      "src": "product-v5-desktop.mp4",
+      "width": 1440,
+      "height": 900,
+      "duration": 12,
+      "loop": false
+    },
+    "chapters": [
+      {
+        "time": 0,
+        "current": 0.050068
+      },
+      {
+        "time": 4,
+        "current": 4.038598
+      },
+      {
+        "time": 8,
+        "current": 8.041504
+      }
+    ],
+    "end": {
+      "ended": true,
+      "paused": true,
+      "time": 12
+    },
+    "lastChapter": "true",
+    "modal": {
+      "src": "product-v5-desktop.mp4",
+      "width": 1440,
+      "height": 900,
+      "playing": true
+    },
+    "modalClosed": true,
+    "retiredRequests": [],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "errors": [],
+    "bad": [],
+    "map": "istanbul-map-display-v4.webp",
+    "sources": [
+      "product-v5-mobile.mp4",
+      "product-v5-desktop.mp4",
+      "product-v5-mobile.mp4",
+      "product-v5-desktop.mp4"
+    ],
+    "posters": [
+      [
+        "product-v5-desktop-poster.jpg",
+        "product-v5-mobile-poster.jpg"
+      ],
+      [
+        "product-v5-desktop-poster.jpg",
+        "product-v5-mobile-poster.jpg"
+      ]
+    ],
+    "media": {
+      "src": "product-v5-mobile.mp4",
+      "width": 960,
+      "height": 1200,
+      "duration": 12,
+      "loop": false
+    },
+    "chapters": [
+      {
+        "time": 0,
+        "current": 0.017569
+      },
+      {
+        "time": 4,
+        "current": 4.015762
+      },
+      {
+        "time": 8,
+        "current": 8.016331
+      }
+    ],
+    "end": {
+      "ended": true,
+      "paused": true,
+      "time": 12
+    },
+    "lastChapter": "true",
+    "modal": {
+      "src": "product-v5-mobile.mp4",
+      "width": 960,
+      "height": 1200,
+      "playing": true
+    },
+    "modalClosed": true,
+    "retiredRequests": [],
+    "overflow": false
+  }
+]

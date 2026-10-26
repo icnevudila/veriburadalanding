@@ -1,0 +1,94 @@
+{
+  "origin": "http://127.0.0.1:4173",
+  "flows": [
+    {
+      "width": 1440,
+      "validation": true,
+      "customSector": true,
+      "cityReset": true,
+      "selectedFields": true,
+      "serverPreview": 5,
+      "total": 17,
+      "remaining": 12,
+      "membershipUnconnectedNotice": true,
+      "escapeFocus": true,
+      "resume": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "validation": true,
+      "customSector": true,
+      "cityReset": true,
+      "selectedFields": true,
+      "serverPreview": 5,
+      "total": 17,
+      "remaining": 12,
+      "membershipUnconnectedNotice": true,
+      "escapeFocus": true,
+      "resume": true,
+      "errors": []
+    }
+  ],
+  "states": {
+    "cancelIgnoresLateResponse": true,
+    "errorDoesNotFakeSuccess": true,
+    "retry": true,
+    "emptyWithoutFalseGate": true
+  },
+  "hero": [
+    {
+      "width": 320,
+      "overflow": false,
+      "ctaInFirstScreen": true,
+      "mediaInFirstScreen": true,
+      "eyebrows": 0,
+      "reducedMotionStable": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "ctaInFirstScreen": true,
+      "mediaInFirstScreen": true,
+      "eyebrows": 0,
+      "reducedMotionStable": true
+    },
+    {
+      "width": 582,
+      "overflow": false,
+      "ctaInFirstScreen": true,
+      "mediaInFirstScreen": true,
+      "eyebrows": 0,
+      "reducedMotionStable": true
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "ctaInFirstScreen": false,
+      "mediaInFirstScreen": true,
+      "eyebrows": 0,
+      "reducedMotionStable": true
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "ctaInFirstScreen": true,
+      "mediaInFirstScreen": true,
+      "eyebrows": 0,
+      "reducedMotionStable": true
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "ctaInFirstScreen": true,
+      "mediaInFirstScreen": true,
+      "eyebrows": 0,
+      "reducedMotionStable": true
+    }
+  ],
+  "http": {
+    "capStatus": 200,
+    "maxRecords": 5,
+    "crossSiteStatus": 403
+  }
+}

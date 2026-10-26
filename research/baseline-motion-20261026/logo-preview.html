@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Veri Burada — Logo Seçimi</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #f8fafc; min-height: 100vh; padding: 40px; }
+  h1 { text-align: center; color: #111827; font-size: 28px; margin-bottom: 8px; }
+  p.sub { text-align: center; color: #64748b; margin-bottom: 40px; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 32px; max-width: 800px; margin: 0 auto; }
+  .card {
+    background: white; border-radius: 16px; padding: 40px; text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 2px solid transparent;
+    transition: all 0.2s; cursor: pointer;
+  }
+  .card:hover { border-color: #10B981; box-shadow: 0 4px 20px rgba(16,185,129,0.15); }
+  .card img { max-width: 100%; height: 80px; }
+  .card .label { margin-top: 16px; font-size: 13px; color: #64748b; font-weight: 500; }
+  .card .name { font-size: 16px; color: #111827; font-weight: 600; margin-top: 4px; }
+
+  .dark-preview { background: #111827; border-radius: 12px; padding: 32px; margin-top: 12px; }
+  .dark-preview img { filter: brightness(0) invert(1); height: 60px; }
+
+  .divider { text-align: center; color: #94a3b8; font-size: 12px; margin: 24px 0; text-transform: uppercase; letter-spacing: 2px; }
+</style>
+</head>
+<body>
+  <h1>🎯 Veri Burada — Logo Seçimi</h1>
+  <p class="sub">SVG vektör logolar — her biri temiz, ölçeklenebilir, profesyonel</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="label">Konsept A</div>
+      <div class="name">Wordmark — "i" noktası = pin 📍</div>
+      <div style="margin-top: 20px; padding: 20px; background: #fff; border-radius: 8px;">
+        <img src="logo-a-wordmark.svg" alt="Logo A">
+      </div>
+      <div class="dark-preview">
+        <img src="logo-a-wordmark.svg" alt="Logo A dark">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Konsept B</div>
+      <div class="name">Pin İkon + Wordmark 📌</div>
+      <div style="margin-top: 20px; padding: 20px; background: #fff; border-radius: 8px;">
+        <img src="logo-b-vpin.svg" alt="Logo B">
+      </div>
+      <div class="dark-preview">
+        <img src="logo-b-vpin.svg" alt="Logo B dark">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Konsept C</div>
+      <div class="name">VB Monogram + Pin ✦</div>
+      <div style="margin-top: 20px; padding: 20px; background: #fff; border-radius: 8px;">
+        <img src="logo-c-monogram.svg" alt="Logo C">
+      </div>
+      <div class="dark-preview">
+        <img src="logo-c-monogram.svg" alt="Logo C dark">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Konsept D</div>
+      <div class="name">Radar / Hedef + Pin 🎯</div>
+      <div style="margin-top: 20px; padding: 20px; background: #fff; border-radius: 8px;">
+        <img src="logo-d-radar.svg" alt="Logo D">
+      </div>
+      <div class="dark-preview">
+        <img src="logo-d-radar.svg" alt="Logo D dark">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Konsept E</div>
+      <div class="name">Data Brackets + Pin { } 💾</div>
+      <div style="margin-top: 20px; padding: 20px; background: #fff; border-radius: 8px;">
+        <img src="logo-e-minimal.svg" alt="Logo E">
+      </div>
+      <div class="dark-preview">
+        <img src="logo-e-minimal.svg" alt="Logo E dark">
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top: 48px; color: #94a3b8; font-size: 12px;">
+    Tüm logolar SVG vektör format — sonsuz ölçeklenebilir, her boyutta keskin
+  </div>
+</body>
+</html>

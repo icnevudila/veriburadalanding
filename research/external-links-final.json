@@ -1,0 +1,42 @@
+[
+  {
+    "url": "https://www.veriburada.com/blog",
+    "status": 200,
+    "final": "https://www.veriburada.com/blog"
+  },
+  {
+    "url": "https://www.veriburada.com/eklenti-indir",
+    "status": 200,
+    "final": "https://www.veriburada.com/eklenti-indir"
+  },
+  {
+    "url": "https://www.veriburada.com/gizlilik-politikasi",
+    "status": 200,
+    "final": "https://www.veriburada.com/gizlilik-politikasi"
+  },
+  {
+    "url": "https://www.veriburada.com/hakkimizda",
+    "status": 200,
+    "final": "https://www.veriburada.com/hakkimizda"
+  },
+  {
+    "url": "https://www.veriburada.com/iletisim",
+    "status": 200,
+    "final": "https://www.veriburada.com/iletisim"
+  },
+  {
+    "url": "https://www.veriburada.com/kullanim-kosullari",
+    "status": 200,
+    "final": "https://www.veriburada.com/kullanim-kosullari"
+  },
+  {
+    "url": "https://www.veriburada.com/listeler",
+    "status": 200,
+    "final": "https://www.veriburada.com/listeler"
+  },
+  {
+    "url": "https://www.veriburada.com/pricing",
+    "status": 200,
+    "final": "https://www.veriburada.com/pricing"
+  }
+]

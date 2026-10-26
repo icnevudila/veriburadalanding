@@ -1,0 +1,31 @@
+{
+  "errors": [],
+  "cards": [
+    {
+      "sel": ".list-card",
+      "active": 10,
+      "stillRunning": 0,
+      "replay": true
+    },
+    {
+      "sel": ".auto-card",
+      "active": 7,
+      "stillRunning": 0,
+      "replay": true
+    },
+    {
+      "sel": ".details-card",
+      "active": 9,
+      "stillRunning": 0,
+      "replay": true
+    },
+    {
+      "sel": ".export-card",
+      "active": 8,
+      "stillRunning": 0,
+      "replay": true
+    }
+  ],
+  "reduced": true,
+  "reducedContent": true
+}

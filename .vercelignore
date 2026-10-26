@@ -1,0 +1,6 @@
+research/
+dist/
+node_modules/
+.git/
+*.log
+*.tmp

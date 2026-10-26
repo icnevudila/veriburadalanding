@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 80" fill="none">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;display=swap');
+    .brand { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 34px; fill: #1F2937; letter-spacing: -0.5px; }
+  </style>
+  <!-- VB Monogram - V and B merged, V bottom = pin point -->
+  <g transform="translate(4, 4)">
+    <!-- V shape -->
+    <path d="M0 0 L16 48 L24 24 L24 0 L18 0 L16 40 L6 0 Z" fill="#10B981"/>
+    <!-- B shape merged -->
+    <path d="M24 0 L24 48 L38 48 C46 48 50 44 50 38 C50 33 47 30 43 29 C46 28 48 24 48 20 C48 12 44 0 36 0 Z M30 6 L36 6 C40 6 42 10 42 16 C42 22 40 26 36 26 L30 26 Z M30 30 L38 30 C42 30 44 34 44 38 C44 42 42 44 38 44 L30 44 Z" fill="#10B981"/>
+    <!-- Pin dot at V bottom -->
+    <circle cx="16" cy="54" r="3.5" fill="#059669"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="72" y="46" class="brand">Veri Burada</text>
+</svg>

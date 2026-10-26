@@ -1,0 +1,23 @@
+{
+  "errors": [],
+  "desktop": {
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  "tab": true,
+  "step": true,
+  "faq": true,
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390
+  },
+  "mobileMenu": true,
+  "video": {
+    "ready": 4,
+    "width": 1280,
+    "duration": 6,
+    "playing": true
+  },
+  "modalClosed": true,
+  "reducedMotion": "none"
+}

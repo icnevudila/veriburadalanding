@@ -1,0 +1,109 @@
+[
+  {
+    "slug": "nasil-calisir",
+    "title": "Veri Burada nasıl çalışır? | Toplu işletme araştırması",
+    "description": "Bölge ve sektör seçiminden toplu veri toplamaya, işletme listenizi incelemekten CSV indirmeye kadar Veri Burada ürün akışını keşfedin.",
+    "scene": "story"
+  },
+  {
+    "slug": "ozellikler",
+    "title": "İşletme araştırması ve CSV özellikleri | Veri Burada",
+    "description": "Google Haritalar işletme bilgilerini bölge ve sektöre göre araştırın. Telefon, web sitesi, adres ve konum alanlarını bir listede inceleyin.",
+    "scene": "profile"
+  },
+  {
+    "slug": "kullanim-alanlari/satis-ekipleri",
+    "title": "Satış ekipleri için işletme listeleri | Veri Burada",
+    "description": "Bölge ve sektöre göre potansiyel müşteri olabilecek işletmeleri araştırın. Telefon, web sitesi ve adres bilgileriyle görüşme listenizi hazırlayın.",
+    "scene": "sales"
+  },
+  {
+    "slug": "kullanim-alanlari/ajanslar",
+    "title": "Ajanslar için sektör ve işletme araştırması | Veri Burada",
+    "description": "Ajansınız için işletmeleri bölge ve sektöre göre araştırın. Web sitelerini, telefonlarını ve adreslerini inceleyerek teklif öncesi hazırlığınızı yapın.",
+    "scene": "agency"
+  },
+  {
+    "slug": "kullanim-alanlari/yerel-isletmeler",
+    "title": "Yerel işletmeler için bölgesel araştırma | Veri Burada",
+    "description": "Çevrenizdeki işletmeleri bölge ve sektöre göre bulun. İş birliği, tedarik ve yerel pazar araştırmanız için düzenli bir liste oluşturun.",
+    "scene": "local"
+  },
+  {
+    "slug": "listeler",
+    "title": "İşletme listesi ve dolu CSV örneği | Veri Burada",
+    "description": "Veri Burada işletme listesi örneğini inceleyin. İşletme adı, telefon, web sitesi ve adres sütunlarından oluşan dolu örnek CSV dosyasını indirin.",
+    "scene": "export"
+  },
+  {
+    "slug": "pricing",
+    "title": "Veri Burada fiyatları | 1, 3, 6 ve 12 aylık kullanım",
+    "description": "Veri Burada kullanım sürelerini karşılaştırın. 1, 3, 6 ve 12 aylık kullanım seçenekleri, toplam fiyatlar ve aylık karşılıkları tek sayfada.",
+    "scene": "term"
+  },
+  {
+    "slug": "basla",
+    "title": "Veri Burada ile başlayın | Web uygulaması",
+    "description": "Kurulum gerektirmeyen Veri Burada web deneyimini keşfedin. Bölgenizi ve sektörünüzü seçin, ilk beş örnek kaydı inceleyin.",
+    "scene": "app"
+  },
+  {
+    "slug": "hakkimizda",
+    "title": "Veri Burada hakkında | İşletme araştırmasını düzenleyin",
+    "description": "Veri Burada, bölge ve sektöre göre işletme araştırmasını ve CSV listeleri oluşturmayı kolaylaştıran bir web uygulamasıdir.",
+    "scene": "brand"
+  },
+  {
+    "slug": "sss",
+    "title": "Sık sorulan sorular | Veri Burada",
+    "description": "Veri Burada kullanımı, toplu işletme toplama, CSV, mobil kullanım ve örnek arama hakkında sık sorulan sorulara yanıt bulun.",
+    "scene": "help"
+  },
+  {
+    "slug": "iletisim",
+    "title": "İletişim ve destek | Veri Burada",
+    "description": "Veri Burada kullanım, işletme araştırması, CSV ve lisans soruları için destek hazırlığı ve sık sorulan sorular.",
+    "scene": "mail"
+  },
+  {
+    "slug": "blog/bolgeye-gore-musteri-arastirmasi",
+    "title": "Bölgeye göre müşteri araştırması nasıl yapılır? | Veri Burada",
+    "description": "Bir sektör ve bölge seçerek işletme araştırmasını daraltın. Çıktıyı kontrol edin, önceliklendirin ve görüşme listenizi hazırlayın.",
+    "scene": null,
+    "article": true
+  },
+  {
+    "slug": "blog/ajanslar-icin-isletme-arastirmasi",
+    "title": "Ajanslar için teklif öncesi işletme araştırması | Veri Burada",
+    "description": "İşletmelerin web ve iletişim bilgilerini karşılaştırarak ajans teklifinizi somut gözlemlere dayandırın. Araştırmadan görüşmeye adım adım ilerleyin.",
+    "scene": null,
+    "article": true
+  },
+  {
+    "slug": "blog/isletme-listesini-excelde-duzenleme",
+    "title": "İşletme listesini Excel ve Google Sheets’te düzenleme | Veri Burada",
+    "description": "CSV işletme listesini UTF-8 ile açın, sütunları ayırın ve araştırma notlarınızı ekleyin. Telefonları metin olarak koruyarak çalışma listenizi hazırlayın.",
+    "scene": null,
+    "article": true
+  },
+  {
+    "slug": "blog",
+    "title": "İşletme araştırması rehberleri | Veri Burada",
+    "description": "Bölgesel müşteri araştırması, ajanslar için teklif hazırlığı ve CSV işletme listelerini düzenleme üzerine uygulamalı Veri Burada rehberleri.",
+    "scene": "journey"
+  },
+  {
+    "slug": "gizlilik-politikasi",
+    "title": "Gizlilik ve veri kullanımı | Veri Burada",
+    "description": "Veri Burada landing sayfasındaki arama tercihleri, oturum kaydı, örnek arama ve veri kullanımı hakkında açıklamalar.",
+    "scene": null,
+    "noindex": true
+  },
+  {
+    "slug": "kullanim-kosullari",
+    "title": "Kullanım bilgileri ve koşullar | Veri Burada",
+    "description": "Veri Burada ürün kapsamı, örnek veriler, kaynak alanların doluluğu ve satın alma bağlantıları hakkında kullanım bilgileri.",
+    "scene": null,
+    "noindex": true
+  }
+]

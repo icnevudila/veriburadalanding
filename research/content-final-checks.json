@@ -1,0 +1,107 @@
+{
+  "a11y": [
+    {
+      "width": 390,
+      "path": "/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/iletisim/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/blog/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/blog/isletme-listesini-excelde-duzenleme/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/ozellikler/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/eklenti-indir/",
+      "menuOpen": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-alanlari/ajanslar/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/iletisim/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/blog/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/blog/isletme-listesini-excelde-duzenleme/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/ozellikler/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/eklenti-indir/",
+      "menuOpen": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-alanlari/ajanslar/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "menuOpen": true,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "menuOpen": true,
+      "violations": []
+    }
+  ],
+  "interaction": [
+    {
+      "width": 390,
+      "innerPageOnboarding": true,
+      "validLogo": true,
+      "escape": true,
+      "selectedLicensePreserved": true
+    },
+    {
+      "width": 1440,
+      "innerPageOnboarding": true,
+      "validLogo": true,
+      "escape": true,
+      "selectedLicensePreserved": true
+    }
+  ],
+  "errors": [],
+  "notFound404": true,
+  "cleanRedirect": true
+}

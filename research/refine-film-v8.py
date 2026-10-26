@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('research/product-film-v8.html');s=p.read_text();s=s.replace('if(t>5+i*.65)count++','if(a>.65)count++');s=s.replace('E((t-2)/5)*(1-reset)*100','S((t-4.4)/2.1)*(1-reset)*100');s=s.replace('</style></head>','.table-footer>.table-download{color:#fff}</style></head>');s=s.replace('Web sitesi alanı','atolye.example',1).replace('Web sitesi alanı','form.example',1).replace('Web sitesi alanı','studio.example',1);p.write_text(s)

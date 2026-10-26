@@ -1,0 +1,82 @@
+{
+  "environment": "Chromium 155, mobile 390x844, cache disabled, 70ms latency, 1.6 Mbps download, CPU 4x; local preview only",
+  "cls": 0.0072604115134829485,
+  "lcp": 2636,
+  "candidates": [
+    {
+      "time": 2636,
+      "load": 0,
+      "render": 2636,
+      "size": 60680,
+      "tag": "H1",
+      "cls": "",
+      "url": ""
+    }
+  ],
+  "lcpElement": "H1",
+  "lcpClass": "",
+  "lcpUrl": "",
+  "videoLazySupport": true,
+  "resources": [
+    {
+      "name": "leaflet.css",
+      "encoded": 3546,
+      "transfer": 3846,
+      "duration": 162
+    },
+    {
+      "name": "inter-latin.woff2",
+      "encoded": 48256,
+      "transfer": 48556,
+      "duration": 1243
+    },
+    {
+      "name": "site.css",
+      "encoded": 13944,
+      "transfer": 14244,
+      "duration": 471
+    },
+    {
+      "name": "craft.css",
+      "encoded": 4985,
+      "transfer": 5285,
+      "duration": 215
+    },
+    {
+      "name": "leaflet.js",
+      "encoded": 42650,
+      "transfer": 42950,
+      "duration": 1238
+    },
+    {
+      "name": "site.js",
+      "encoded": 5186,
+      "transfer": 5486,
+      "duration": 448
+    },
+    {
+      "name": "istanbul-map-art.svg",
+      "encoded": 156879,
+      "transfer": 157179,
+      "duration": 2680
+    },
+    {
+      "name": "brand-transparent-v3.webp",
+      "encoded": 236882,
+      "transfer": 237182,
+      "duration": 3103
+    },
+    {
+      "name": "inter-latin-ext.woff2",
+      "encoded": 85068,
+      "transfer": 85368,
+      "duration": 1508
+    },
+    {
+      "name": "favicon.ico",
+      "encoded": 335,
+      "transfer": 635,
+      "duration": 97
+    }
+  ]
+}

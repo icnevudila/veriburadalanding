@@ -1,0 +1,66 @@
+{
+  "errors": [],
+  "bad": [],
+  "pauseStable": true,
+  "resumeMoved": true,
+  "startedMoved": true,
+  "geometry": [
+    {
+      "width": 320,
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "width": 1920,
+      "overflow": false,
+      "visible": true
+    }
+  ],
+  "ended": true,
+  "replay": true,
+  "reduced": {
+    "state": "static",
+    "packetHidden": true,
+    "rowsVisible": true
+  },
+  "axe": {
+    "violations": [],
+    "manual": [
+      "color-contrast"
+    ]
+  },
+  "nojs": {
+    "svg": true,
+    "controlsHidden": true
+  }
+}

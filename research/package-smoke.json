@@ -1,0 +1,17 @@
+{
+  "errors": [],
+  "bad": [],
+  "tabletNavClosed": true,
+  "tabletNavOpen": true,
+  "tabletEscape": true,
+  "mobileVideo": {
+    "src": "product-v8-mobile.mp4",
+    "width": 960,
+    "height": 1200,
+    "playing": true
+  },
+  "videoRange": {
+    "status": 206,
+    "bytes": 128
+  }
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "width": 1440,
+    "errors": [],
+    "bad": [],
+    "map": "istanbul-map-display-v4.webp",
+    "sources": [
+      "map-film-v4-mobile.mp4",
+      "map-film-v4-final.mp4",
+      "map-film-v4-mobile.mp4",
+      "map-film-v4-final.mp4"
+    ],
+    "posters": [
+      [
+        "map-film-v4-poster.jpg",
+        "map-film-v4-mobile-poster.jpg"
+      ],
+      [
+        "map-film-v4-poster.jpg",
+        "map-film-v4-mobile-poster.jpg"
+      ]
+    ],
+    "media": {
+      "src": "map-film-v4-final.mp4",
+      "width": 1440,
+      "height": 900,
+      "duration": 12,
+      "loop": false
+    },
+    "chapters": [
+      {
+        "time": 0,
+        "current": 0.026662
+      },
+      {
+        "time": 4,
+        "current": 4.029371
+      },
+      {
+        "time": 8,
+        "current": 8.042995
+      }
+    ],
+    "end": {
+      "ended": true,
+      "paused": true,
+      "time": 12
+    },
+    "lastChapter": "true",
+    "modal": {
+      "src": "map-film-v4-final.mp4",
+      "width": 1440,
+      "height": 900,
+      "playing": true
+    },
+    "modalClosed": true,
+    "retiredRequests": [],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "errors": [],
+    "bad": [],
+    "map": "istanbul-map-display-v4.webp",
+    "sources": [
+      "map-film-v4-mobile.mp4",
+      "map-film-v4-final.mp4",
+      "map-film-v4-mobile.mp4",
+      "map-film-v4-final.mp4"
+    ],
+    "posters": [
+      [
+        "map-film-v4-poster.jpg",
+        "map-film-v4-mobile-poster.jpg"
+      ],
+      [
+        "map-film-v4-poster.jpg",
+        "map-film-v4-mobile-poster.jpg"
+      ]
+    ],
+    "media": {
+      "src": "map-film-v4-mobile.mp4",
+      "width": 960,
+      "height": 1200,
+      "duration": 12,
+      "loop": false
+    },
+    "chapters": [
+      {
+        "time": 0,
+        "current": 0.063156
+      },
+      {
+        "time": 4,
+        "current": 4.051658
+      },
+      {
+        "time": 8,
+        "current": 8.035639
+      }
+    ],
+    "end": {
+      "ended": true,
+      "paused": true,
+      "time": 12
+    },
+    "lastChapter": "true",
+    "modal": {
+      "src": "map-film-v4-mobile.mp4",
+      "width": 960,
+      "height": 1200,
+      "playing": true
+    },
+    "modalClosed": true,
+    "retiredRequests": [],
+    "overflow": false
+  }
+]

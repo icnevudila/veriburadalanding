@@ -1,0 +1,46 @@
+{
+  "errors": [],
+  "widths": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  ],
+  "menu": true,
+  "tab": true,
+  "step": true,
+  "faq": true,
+  "modalVideo": {
+    "ready": 4,
+    "width": 1440,
+    "duration": 12,
+    "playing": true
+  },
+  "modalClosed": true,
+  "inlineVideo": {
+    "ready": 4,
+    "duration": 12,
+    "playing": true
+  },
+  "chapterSeek": true,
+  "pause": true,
+  "mapZoom": 13,
+  "tiles": 12,
+  "reducedMotion": "none"
+}

@@ -1,0 +1,9 @@
+{
+  "initialNoLeaflet": true,
+  "initialNoMapImage": true,
+  "loadOnExpand": true,
+  "visibleMapZoom": true,
+  "markers": 3,
+  "sectorSynchronization": true,
+  "errors": []
+}

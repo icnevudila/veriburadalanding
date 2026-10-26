@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('research/verify-motion-v8.cjs');s=p.read_text();s=s.replace("await p.locator('#product-video').evaluate(v=>{v.currentTime=5.6});await p.waitForTimeout(150);", "await p.locator('#product-video').evaluate(v=>{v.pause();v.currentTime=5.6});await p.waitForFunction(()=>{const v=document.querySelector('#product-video');return !v.seeking&&v.currentTime>5.5});");p.write_text(s)

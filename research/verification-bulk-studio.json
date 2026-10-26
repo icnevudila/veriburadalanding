@@ -1,0 +1,554 @@
+[
+  {
+    "width": 320,
+    "pinCounts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bulkBatches": [
+      0,
+      2,
+      4,
+      5
+    ],
+    "singleBulkCommand": true,
+    "noIndividualAdd": true,
+    "sectors": [
+      {
+        "layout": "list",
+        "query": "Kuaförler",
+        "count": "5",
+        "bottom": 250.65972137451172,
+        "limit": 255.54861450195312,
+        "names": [
+          "Ada Kuaför",
+          "Makas Studio",
+          "Pera Kuaför",
+          "Atölye Saç",
+          "Beyoğlu Kuaför"
+        ]
+      },
+      {
+        "layout": "cards",
+        "query": "Kafeler",
+        "count": "5",
+        "bottom": 251.5486125946045,
+        "limit": 255.54861450195312,
+        "names": [
+          "Köşe Kahve",
+          "Mahalle Atölyesi",
+          "Gün Işığı Kafe",
+          "Pera Kahve",
+          "Sokak Kahvesi"
+        ]
+      },
+      {
+        "layout": "contacts",
+        "query": "Diş klinikleri",
+        "count": "5",
+        "bottom": 250.65972137451172,
+        "limit": 255.54861450195312,
+        "names": [
+          "Gülüş Diş Kliniği",
+          "Merkez Ağız ve Diş",
+          "İnci Diş Kliniği",
+          "Pera Dental",
+          "Beyoğlu Diş"
+        ]
+      },
+      {
+        "layout": "web",
+        "query": "Restoranlar",
+        "count": "5",
+        "bottom": 251.5486125946045,
+        "limit": 255.54861450195312,
+        "names": [
+          "Pera Mutfak",
+          "Sahil Restoran",
+          "Mahalle Sofrası",
+          "Atölye Lezzet",
+          "Sokak Lokantası"
+        ]
+      },
+      {
+        "layout": "directory",
+        "query": "Mimarlık ofisleri",
+        "count": "5",
+        "bottom": 250.65972137451172,
+        "limit": 255.54861450195312,
+        "names": [
+          "Atölye Mimarlık",
+          "Form Tasarım",
+          "Studio Mimarlık",
+          "Mekân Atölyesi",
+          "Pera Mimarlık"
+        ]
+      },
+      {
+        "layout": "locations",
+        "query": "Oteller",
+        "count": "5",
+        "bottom": 239.10416412353516,
+        "limit": 255.54861450195312,
+        "names": [
+          "Pera Konak",
+          "Beyoğlu Otel",
+          "Şehir Otel",
+          "Sahil Konak",
+          "Meydan Otel"
+        ]
+      },
+      {
+        "layout": "studios",
+        "query": "Spor salonları",
+        "count": "5",
+        "bottom": 251.5486125946045,
+        "limit": 255.54861450195312,
+        "names": [
+          "Hareket Studio",
+          "Pera Spor",
+          "Mahalle Fitness",
+          "Form Studio",
+          "Beyoğlu Spor"
+        ]
+      },
+      {
+        "layout": "phone",
+        "query": "Oto servisleri",
+        "count": "5",
+        "bottom": 250.65972137451172,
+        "limit": 255.54861450195312,
+        "names": [
+          "Merkez Oto Servis",
+          "Pera Otomotiv",
+          "Şehir Oto Bakım",
+          "Güven Oto Servis",
+          "Beyoğlu Otomotiv"
+        ]
+      }
+    ],
+    "automaticSectorWrap": true,
+    "dedicatedWalkthrough": true,
+    "liveSceneAdvances": true,
+    "onboardingPausesAndResumes": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "pinCounts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bulkBatches": [
+      0,
+      2,
+      4,
+      5
+    ],
+    "singleBulkCommand": true,
+    "noIndividualAdd": true,
+    "sectors": [
+      {
+        "layout": "list",
+        "query": "Kuaförler",
+        "count": "5",
+        "bottom": 286.8645839691162,
+        "limit": 292.82293701171875,
+        "names": [
+          "Ada Kuaför",
+          "Makas Studio",
+          "Pera Kuaför",
+          "Atölye Saç",
+          "Beyoğlu Kuaför"
+        ]
+      },
+      {
+        "layout": "cards",
+        "query": "Kafeler",
+        "count": "5",
+        "bottom": 287.9479274749756,
+        "limit": 292.82293701171875,
+        "names": [
+          "Köşe Kahve",
+          "Mahalle Atölyesi",
+          "Gün Işığı Kafe",
+          "Pera Kahve",
+          "Sokak Kahvesi"
+        ]
+      },
+      {
+        "layout": "contacts",
+        "query": "Diş klinikleri",
+        "count": "5",
+        "bottom": 286.8645839691162,
+        "limit": 292.82293701171875,
+        "names": [
+          "Gülüş Diş Kliniği",
+          "Merkez Ağız ve Diş",
+          "İnci Diş Kliniği",
+          "Pera Dental",
+          "Beyoğlu Diş"
+        ]
+      },
+      {
+        "layout": "web",
+        "query": "Restoranlar",
+        "count": "5",
+        "bottom": 287.9479274749756,
+        "limit": 292.82293701171875,
+        "names": [
+          "Pera Mutfak",
+          "Sahil Restoran",
+          "Mahalle Sofrası",
+          "Atölye Lezzet",
+          "Sokak Lokantası"
+        ]
+      },
+      {
+        "layout": "directory",
+        "query": "Mimarlık ofisleri",
+        "count": "5",
+        "bottom": 286.8645839691162,
+        "limit": 292.82293701171875,
+        "names": [
+          "Atölye Mimarlık",
+          "Form Tasarım",
+          "Studio Mimarlık",
+          "Mekân Atölyesi",
+          "Pera Mimarlık"
+        ]
+      },
+      {
+        "layout": "locations",
+        "query": "Oteller",
+        "count": "5",
+        "bottom": 272.78124618530273,
+        "limit": 292.82293701171875,
+        "names": [
+          "Pera Konak",
+          "Beyoğlu Otel",
+          "Şehir Otel",
+          "Sahil Konak",
+          "Meydan Otel"
+        ]
+      },
+      {
+        "layout": "studios",
+        "query": "Spor salonları",
+        "count": "5",
+        "bottom": 287.9479274749756,
+        "limit": 292.82293701171875,
+        "names": [
+          "Hareket Studio",
+          "Pera Spor",
+          "Mahalle Fitness",
+          "Form Studio",
+          "Beyoğlu Spor"
+        ]
+      },
+      {
+        "layout": "phone",
+        "query": "Oto servisleri",
+        "count": "5",
+        "bottom": 286.8645839691162,
+        "limit": 292.82293701171875,
+        "names": [
+          "Merkez Oto Servis",
+          "Pera Otomotiv",
+          "Şehir Oto Bakım",
+          "Güven Oto Servis",
+          "Beyoğlu Otomotiv"
+        ]
+      }
+    ],
+    "automaticSectorWrap": true,
+    "dedicatedWalkthrough": true,
+    "liveSceneAdvances": true,
+    "onboardingPausesAndResumes": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 582,
+    "pinCounts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bulkBatches": [
+      0,
+      2,
+      4,
+      5
+    ],
+    "singleBulkCommand": true,
+    "noIndividualAdd": true,
+    "sectors": [
+      {
+        "layout": "list",
+        "query": "Kuaförler",
+        "count": "5",
+        "bottom": 381.2854290008545,
+        "limit": 390.1770935058594,
+        "names": [
+          "Ada Kuaför",
+          "Makas Studio",
+          "Pera Kuaför",
+          "Atölye Saç",
+          "Beyoğlu Kuaför"
+        ]
+      },
+      {
+        "layout": "cards",
+        "query": "Kafeler",
+        "count": "5",
+        "bottom": 382.90209770202637,
+        "limit": 390.1770935058594,
+        "names": [
+          "Köşe Kahve",
+          "Mahalle Atölyesi",
+          "Gün Işığı Kafe",
+          "Pera Kahve",
+          "Sokak Kahvesi"
+        ]
+      },
+      {
+        "layout": "contacts",
+        "query": "Diş klinikleri",
+        "count": "5",
+        "bottom": 381.2854290008545,
+        "limit": 390.1770935058594,
+        "names": [
+          "Gülüş Diş Kliniği",
+          "Merkez Ağız ve Diş",
+          "İnci Diş Kliniği",
+          "Pera Dental",
+          "Beyoğlu Diş"
+        ]
+      },
+      {
+        "layout": "web",
+        "query": "Restoranlar",
+        "count": "5",
+        "bottom": 382.90209770202637,
+        "limit": 390.1770935058594,
+        "names": [
+          "Pera Mutfak",
+          "Sahil Restoran",
+          "Mahalle Sofrası",
+          "Atölye Lezzet",
+          "Sokak Lokantası"
+        ]
+      },
+      {
+        "layout": "directory",
+        "query": "Mimarlık ofisleri",
+        "count": "5",
+        "bottom": 381.2854290008545,
+        "limit": 390.1770935058594,
+        "names": [
+          "Atölye Mimarlık",
+          "Form Tasarım",
+          "Studio Mimarlık",
+          "Mekân Atölyesi",
+          "Pera Mimarlık"
+        ]
+      },
+      {
+        "layout": "locations",
+        "query": "Oteller",
+        "count": "5",
+        "bottom": 360.2687454223633,
+        "limit": 390.1770935058594,
+        "names": [
+          "Pera Konak",
+          "Beyoğlu Otel",
+          "Şehir Otel",
+          "Sahil Konak",
+          "Meydan Otel"
+        ]
+      },
+      {
+        "layout": "studios",
+        "query": "Spor salonları",
+        "count": "5",
+        "bottom": 382.90209770202637,
+        "limit": 390.1770935058594,
+        "names": [
+          "Hareket Studio",
+          "Pera Spor",
+          "Mahalle Fitness",
+          "Form Studio",
+          "Beyoğlu Spor"
+        ]
+      },
+      {
+        "layout": "phone",
+        "query": "Oto servisleri",
+        "count": "5",
+        "bottom": 381.2854290008545,
+        "limit": 390.1770935058594,
+        "names": [
+          "Merkez Oto Servis",
+          "Pera Otomotiv",
+          "Şehir Oto Bakım",
+          "Güven Oto Servis",
+          "Beyoğlu Otomotiv"
+        ]
+      }
+    ],
+    "automaticSectorWrap": true,
+    "dedicatedWalkthrough": true,
+    "liveSceneAdvances": true,
+    "onboardingPausesAndResumes": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "pinCounts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bulkBatches": [
+      0,
+      2,
+      4,
+      5
+    ],
+    "singleBulkCommand": true,
+    "noIndividualAdd": true,
+    "sectors": [
+      {
+        "layout": "list",
+        "query": "Kuaförler",
+        "count": "5",
+        "bottom": 337.56941986083984,
+        "limit": 381.625,
+        "names": [
+          "Ada Kuaför",
+          "Makas Studio",
+          "Pera Kuaför",
+          "Atölye Saç",
+          "Beyoğlu Kuaför"
+        ]
+      },
+      {
+        "layout": "cards",
+        "query": "Kafeler",
+        "count": "5",
+        "bottom": 318.93053436279297,
+        "limit": 381.625,
+        "names": [
+          "Köşe Kahve",
+          "Mahalle Atölyesi",
+          "Gün Işığı Kafe",
+          "Pera Kahve",
+          "Sokak Kahvesi"
+        ]
+      },
+      {
+        "layout": "contacts",
+        "query": "Diş klinikleri",
+        "count": "5",
+        "bottom": 337.56941986083984,
+        "limit": 381.625,
+        "names": [
+          "Gülüş Diş Kliniği",
+          "Merkez Ağız ve Diş",
+          "İnci Diş Kliniği",
+          "Pera Dental",
+          "Beyoğlu Diş"
+        ]
+      },
+      {
+        "layout": "web",
+        "query": "Restoranlar",
+        "count": "5",
+        "bottom": 318.93053436279297,
+        "limit": 381.625,
+        "names": [
+          "Pera Mutfak",
+          "Sahil Restoran",
+          "Mahalle Sofrası",
+          "Atölye Lezzet",
+          "Sokak Lokantası"
+        ]
+      },
+      {
+        "layout": "directory",
+        "query": "Mimarlık ofisleri",
+        "count": "5",
+        "bottom": 337.56941986083984,
+        "limit": 381.625,
+        "names": [
+          "Atölye Mimarlık",
+          "Form Tasarım",
+          "Studio Mimarlık",
+          "Mekân Atölyesi",
+          "Pera Mimarlık"
+        ]
+      },
+      {
+        "layout": "locations",
+        "query": "Oteller",
+        "count": "5",
+        "bottom": 345.61803436279297,
+        "limit": 381.625,
+        "names": [
+          "Pera Konak",
+          "Beyoğlu Otel",
+          "Şehir Otel",
+          "Sahil Konak",
+          "Meydan Otel"
+        ]
+      },
+      {
+        "layout": "studios",
+        "query": "Spor salonları",
+        "count": "5",
+        "bottom": 318.93053436279297,
+        "limit": 381.625,
+        "names": [
+          "Hareket Studio",
+          "Pera Spor",
+          "Mahalle Fitness",
+          "Form Studio",
+          "Beyoğlu Spor"
+        ]
+      },
+      {
+        "layout": "phone",
+        "query": "Oto servisleri",
+        "count": "5",
+        "bottom": 337.56941986083984,
+        "limit": 381.625,
+        "names": [
+          "Merkez Oto Servis",
+          "Pera Otomotiv",
+          "Şehir Oto Bakım",
+          "Güven Oto Servis",
+          "Beyoğlu Otomotiv"
+        ]
+      }
+    ],
+    "automaticSectorWrap": true,
+    "dedicatedWalkthrough": true,
+    "liveSceneAdvances": true,
+    "onboardingPausesAndResumes": true,
+    "reducedMotion": true,
+    "errors": []
+  }
+]

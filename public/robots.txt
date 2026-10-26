@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /map-demo.html
+Sitemap: https://www.veriburada.com/sitemap.xml

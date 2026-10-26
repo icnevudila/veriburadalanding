@@ -1,0 +1,21 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "nodes": 2
+    },
+    {
+      "id": "color-contrast",
+      "nodes": 67
+    },
+    {
+      "id": "link-in-text-block",
+      "nodes": 1
+    },
+    {
+      "id": "video-caption",
+      "nodes": 1
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "title": "Veri Burada | Toplu işletme araştırması ve müşteri listeleri",
+      "descriptionLength": 143,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/nasil-calisir/",
+      "title": "Veri Burada nasıl çalışır? | Toplu işletme araştırması",
+      "descriptionLength": 134,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/ozellikler/",
+      "title": "İşletme araştırması ve CSV özellikleri | Veri Burada",
+      "descriptionLength": 139,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/kullanim-alanlari/satis-ekipleri/",
+      "title": "Satış ekipleri için işletme listeleri | Veri Burada",
+      "descriptionLength": 146,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/kullanim-alanlari/ajanslar/",
+      "title": "Ajanslar için sektör ve işletme araştırması | Veri Burada",
+      "descriptionLength": 151,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/kullanim-alanlari/yerel-isletmeler/",
+      "title": "Yerel işletmeler için bölgesel araştırma | Veri Burada",
+      "descriptionLength": 135,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/listeler/",
+      "title": "İşletme listesi ve dolu CSV örneği | Veri Burada",
+      "descriptionLength": 144,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/pricing/",
+      "title": "Veri Burada fiyatları | 1, 3, 6 ve 12 aylık kullanım",
+      "descriptionLength": 139,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/basla/",
+      "title": "Veri Burada ile başlayın | Web uygulaması",
+      "descriptionLength": 121,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/hakkimizda/",
+      "title": "Veri Burada hakkında | İşletme araştırmasını düzenleyin",
+      "descriptionLength": 122,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/sss/",
+      "title": "Sık sorulan sorular | Veri Burada",
+      "descriptionLength": 123,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/iletisim/",
+      "title": "İletişim ve destek | Veri Burada",
+      "descriptionLength": 111,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/blog/bolgeye-gore-musteri-arastirmasi/",
+      "title": "Bölgeye göre müşteri araştırması nasıl yapılır? | Veri Burada",
+      "descriptionLength": 130,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/blog/ajanslar-icin-isletme-arastirmasi/",
+      "title": "Ajanslar için teklif öncesi işletme araştırması | Veri Burada",
+      "descriptionLength": 147,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/blog/isletme-listesini-excelde-duzenleme/",
+      "title": "İşletme listesini Excel ve Google Sheets’te düzenleme | Veri Burada",
+      "descriptionLength": 153,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/blog/",
+      "title": "İşletme araştırması rehberleri | Veri Burada",
+      "descriptionLength": 140,
+      "h1": 1,
+      "schema": true,
+      "noindex": false
+    },
+    {
+      "path": "/gizlilik-politikasi/",
+      "title": "Gizlilik ve veri kullanımı | Veri Burada",
+      "descriptionLength": 116,
+      "h1": 1,
+      "schema": true,
+      "noindex": true
+    },
+    {
+      "path": "/kullanim-kosullari/",
+      "title": "Kullanım bilgileri ve koşullar | Veri Burada",
+      "descriptionLength": 122,
+      "h1": 1,
+      "schema": true,
+      "noindex": true
+    }
+  ],
+  "duplicateTitles": false,
+  "duplicateDescriptions": false,
+  "brokenInternalLinksOrAssets": [],
+  "sitemapUrls": 16,
+  "indexablePages": 16,
+  "legalDraftsNoindex": 2
+}

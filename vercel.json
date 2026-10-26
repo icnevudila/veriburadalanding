@@ -1,0 +1,124 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": "public",
+  "functions": {
+    "api/free-search.js": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/eklenti-indir",
+      "destination": "/basla/",
+      "permanent": true
+    },
+    {
+      "source": "/eklenti-indir/",
+      "destination": "/basla/",
+      "permanent": true
+    },
+    {
+      "source": "/nasil-calisir",
+      "destination": "/nasil-calisir/",
+      "permanent": true
+    },
+    {
+      "source": "/ozellikler",
+      "destination": "/ozellikler/",
+      "permanent": true
+    },
+    {
+      "source": "/kullanim-alanlari/satis-ekipleri",
+      "destination": "/kullanim-alanlari/satis-ekipleri/",
+      "permanent": true
+    },
+    {
+      "source": "/kullanim-alanlari/ajanslar",
+      "destination": "/kullanim-alanlari/ajanslar/",
+      "permanent": true
+    },
+    {
+      "source": "/kullanim-alanlari/yerel-isletmeler",
+      "destination": "/kullanim-alanlari/yerel-isletmeler/",
+      "permanent": true
+    },
+    {
+      "source": "/listeler",
+      "destination": "/listeler/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/basla",
+      "destination": "/basla/",
+      "permanent": true
+    },
+    {
+      "source": "/hakkimizda",
+      "destination": "/hakkimizda/",
+      "permanent": true
+    },
+    {
+      "source": "/sss",
+      "destination": "/sss/",
+      "permanent": true
+    },
+    {
+      "source": "/iletisim",
+      "destination": "/iletisim/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bolgeye-gore-musteri-arastirmasi",
+      "destination": "/blog/bolgeye-gore-musteri-arastirmasi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ajanslar-icin-isletme-arastirmasi",
+      "destination": "/blog/ajanslar-icin-isletme-arastirmasi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/isletme-listesini-excelde-duzenleme",
+      "destination": "/blog/isletme-listesini-excelde-duzenleme/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/gizlilik-politikasi",
+      "destination": "/gizlilik-politikasi/",
+      "permanent": true
+    },
+    {
+      "source": "/kullanim-kosullari",
+      "destination": "/kullanim-kosullari/",
+      "permanent": true
+    }
+  ]
+}

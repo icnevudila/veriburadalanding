@@ -1,0 +1,167 @@
+{
+  "environment": "Local Chromium 155; three isolated cold contexts; 390x844; 70ms latency; 1.6 Mbps; CPU 4x. Lab evidence, not deployed field Core Web Vitals.",
+  "runs": [
+    {
+      "cls": 0.007198490197793467,
+      "lcp": 4728,
+      "lcpElement": "DIV",
+      "lcpClass": "geo-map leaflet-container leaflet-touch leaflet-fade-anim",
+      "encodedBytes": 525977,
+      "resources": [
+        {
+          "name": "leaflet.css",
+          "bytes": 3546
+        },
+        {
+          "name": "inter-turkish.woff2",
+          "bytes": 3276
+        },
+        {
+          "name": "inter-latin.woff2",
+          "bytes": 48256
+        },
+        {
+          "name": "site.css",
+          "bytes": 13901
+        },
+        {
+          "name": "craft.css",
+          "bytes": 6669
+        },
+        {
+          "name": "leaflet.js",
+          "bytes": 42650
+        },
+        {
+          "name": "site.js",
+          "bytes": 5290
+        },
+        {
+          "name": "istanbul-map-art.svg",
+          "bytes": 156879
+        },
+        {
+          "name": "brand-transparent-v3.webp",
+          "bytes": 236882
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        }
+      ]
+    },
+    {
+      "cls": 0.007190639932005146,
+      "lcp": 7196,
+      "lcpElement": "DIV",
+      "lcpClass": "geo-map leaflet-container leaflet-touch leaflet-fade-anim",
+      "encodedBytes": 525977,
+      "resources": [
+        {
+          "name": "leaflet.css",
+          "bytes": 3546
+        },
+        {
+          "name": "inter-turkish.woff2",
+          "bytes": 3276
+        },
+        {
+          "name": "inter-latin.woff2",
+          "bytes": 48256
+        },
+        {
+          "name": "site.css",
+          "bytes": 13901
+        },
+        {
+          "name": "craft.css",
+          "bytes": 6669
+        },
+        {
+          "name": "leaflet.js",
+          "bytes": 42650
+        },
+        {
+          "name": "site.js",
+          "bytes": 5290
+        },
+        {
+          "name": "istanbul-map-art.svg",
+          "bytes": 156879
+        },
+        {
+          "name": "brand-transparent-v3.webp",
+          "bytes": 236882
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        }
+      ]
+    },
+    {
+      "cls": 0.007190639932005146,
+      "lcp": 8208,
+      "lcpElement": "DIV",
+      "lcpClass": "geo-map leaflet-container leaflet-touch leaflet-fade-anim",
+      "encodedBytes": 525977,
+      "resources": [
+        {
+          "name": "leaflet.css",
+          "bytes": 3546
+        },
+        {
+          "name": "inter-turkish.woff2",
+          "bytes": 3276
+        },
+        {
+          "name": "inter-latin.woff2",
+          "bytes": 48256
+        },
+        {
+          "name": "site.css",
+          "bytes": 13901
+        },
+        {
+          "name": "craft.css",
+          "bytes": 6669
+        },
+        {
+          "name": "leaflet.js",
+          "bytes": 42650
+        },
+        {
+          "name": "site.js",
+          "bytes": 5290
+        },
+        {
+          "name": "istanbul-map-art.svg",
+          "bytes": 156879
+        },
+        {
+          "name": "brand-transparent-v3.webp",
+          "bytes": 236882
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        }
+      ]
+    }
+  ],
+  "medianLcp": 7196,
+  "worstLcp": 8208,
+  "medianCls": 0.007190639932005146
+}

@@ -1,0 +1,127 @@
+{
+  "request": {
+    "url": "http://127.0.0.1:4173/api/free-search",
+    "header": [
+      {
+        "disabled": false,
+        "description": {
+          "content": "Header: Content-Type",
+          "type": "text/plain"
+        },
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "User-Agent",
+        "value": "PostmanRuntime/7.56.2",
+        "system": true
+      },
+      {
+        "key": "Accept",
+        "value": "*/*",
+        "system": true
+      },
+      {
+        "key": "Cache-Control",
+        "value": "no-cache",
+        "system": true
+      },
+      {
+        "key": "Postman-Token",
+        "value": "a156336d-88d9-4e5f-94df-b3d9a6f57356",
+        "system": true
+      },
+      {
+        "key": "Host",
+        "value": "127.0.0.1:4173",
+        "system": true
+      },
+      {
+        "key": "Accept-Encoding",
+        "value": "gzip, deflate, br",
+        "system": true
+      },
+      {
+        "key": "Connection",
+        "value": "keep-alive",
+        "system": true
+      },
+      {
+        "key": "Content-Length",
+        "value": "140",
+        "system": true
+      }
+    ],
+    "method": "POST",
+    "body": "{\"purpose\":\"sales\",\"sector\":\"Kafeler\",\"city\":\"İstanbul\",\"district\":\"Beyoğlu\",\"fields\":[\"phone\",\"website\",\"address\",\"location\",\"rating\"]}\r\n"
+  },
+  "response": {
+    "id": "1d45eb31-7e07-4952-bf83-4baf6bf55d49",
+    "status": "OK",
+    "code": 200,
+    "header": [
+      {
+        "key": "Cache-Control",
+        "value": "no-store"
+      },
+      {
+        "key": "X-Content-Type-Options",
+        "value": "nosniff"
+      },
+      {
+        "key": "Content-Type",
+        "value": "application/json; charset=utf-8"
+      },
+      {
+        "key": "Date",
+        "value": "Mon, 26 Oct 2026 19:33:21 GMT"
+      },
+      {
+        "key": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "key": "Keep-Alive",
+        "value": "timeout=5"
+      },
+      {
+        "key": "Content-Length",
+        "value": "1857"
+      }
+    ],
+    "cookie": [],
+    "responseTime": 30,
+    "responseSize": 1857,
+    "downloadedBytes": 1857,
+    "body": "{\"mode\":\"demo\",\"demo\":true,\"requestId\":\"135bfe7b-c5da-4e5f-b053-14ca651b513a\",\"searchId\":\"demo-135bfe7b-c5da-4e5f-b053-14ca651b513a\",\"query\":{\"purpose\":\"sales\",\"sector\":\"Kafeler\",\"city\":\"İstanbul\",\"district\":\"Beyoğlu\",\"fields\":[\"phone\",\"website\",\"address\",\"location\",\"rating\"],\"previewLimit\":5},\"previewLimit\":5,\"total\":17,\"shown\":5,\"remaining\":12,\"results\":[{\"id\":\"demo-1\",\"name\":\"Merkez Kafe\",\"category\":\"Kafeler\",\"city\":\"İstanbul\",\"district\":\"Beyoğlu\",\"phone\":\"+90 (000) 000 10 01\",\"website\":\"https://ornek-isletme-1.example/\",\"address\":\"Örnek Sokak No: 1, Beyoğlu, İstanbul\",\"location\":{\"latitude\":41.032,\"longitude\":28.977},\"rating\":4.7},{\"id\":\"demo-2\",\"name\":\"Park Kafe\",\"category\":\"Kafeler\",\"city\":\"İstanbul\",\"district\":\"Beyoğlu\",\"phone\":\"+90 (000) 000 10 02\",\"website\":\"https://ornek-isletme-2.example/\",\"address\":\"Örnek Sokak No: 2, Beyoğlu, İstanbul\",\"location\":{\"latitude\":41.032399999999996,\"longitude\":28.9773},\"rating\":4.8},{\"id\":\"demo-3\",\"name\":\"Mavi Kafe\",\"category\":\"Kafeler\",\"city\":\"İstanbul\",\"district\":\"Beyoğlu\",\"phone\":\"+90 (000) 000 10 03\",\"website\":\"https://ornek-isletme-3.example/\",\"address\":\"Örnek Sokak No: 3, Beyoğlu, İstanbul\",\"location\":{\"latitude\":41.032799999999995,\"longitude\":28.9776},\"rating\":4.6},{\"id\":\"demo-4\",\"name\":\"Kent Kafe\",\"category\":\"Kafeler\",\"city\":\"İstanbul\",\"district\":\"Beyoğlu\",\"phone\":\"+90 (000) 000 10 04\",\"website\":\"https://ornek-isletme-4.example/\",\"address\":\"Örnek Sokak No: 4, Beyoğlu, İstanbul\",\"location\":{\"latitude\":41.033199999999994,\"longitude\":28.9779},\"rating\":4.9},{\"id\":\"demo-5\",\"name\":\"Yeni Kafe\",\"category\":\"Kafeler\",\"city\":\"İstanbul\",\"district\":\"Beyoğlu\",\"phone\":\"+90 (000) 000 10 05\",\"website\":\"https://ornek-isletme-5.example/\",\"address\":\"Örnek Sokak No: 5, Beyoğlu, İstanbul\",\"location\":{\"latitude\":41.0336,\"longitude\":28.9782},\"rating\":4.5}],\"signupUrl\":null}"
+  },
+  "timestamp": "2026-10-26T19:33:21.818Z",
+  "tests": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "results": [
+      {
+        "name": "Local demo responds successfully",
+        "passed": true,
+        "consoleLogs": []
+      },
+      {
+        "name": "Explicit demo and first-five cap remain",
+        "passed": true,
+        "consoleLogs": []
+      },
+      {
+        "name": "All requested preview fields are filled",
+        "passed": true,
+        "consoleLogs": []
+      },
+      {
+        "name": "Missing membership is not faked",
+        "passed": true,
+        "consoleLogs": []
+      }
+    ]
+  },
+  "scriptLogs": []
+}

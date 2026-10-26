@@ -1,0 +1,11 @@
+{
+  "manifestFiles": 80,
+  "sourceMatchesRelease": true,
+  "hashesMatch": true,
+  "staticAssetsOrPages": 71,
+  "authoredSvgIllustrations": 13,
+  "legacyRedirect": "/eklenti-indir/ -> /basla/",
+  "noOpaqueFooterVideo": true,
+  "noApiRedirects": true,
+  "published": false
+}

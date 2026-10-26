@@ -1,0 +1,47 @@
+{
+  "sizes": [
+    {
+      "width": 320,
+      "constantHeight": true,
+      "fourPhrasesFit": true
+    },
+    {
+      "width": 390,
+      "constantHeight": true,
+      "fourPhrasesFit": true
+    },
+    {
+      "width": 582,
+      "constantHeight": true,
+      "fourPhrasesFit": true
+    },
+    {
+      "width": 768,
+      "constantHeight": true,
+      "fourPhrasesFit": true
+    },
+    {
+      "width": 1024,
+      "constantHeight": true,
+      "fourPhrasesFit": true
+    },
+    {
+      "width": 1440,
+      "constantHeight": true,
+      "fourPhrasesFit": true
+    },
+    {
+      "width": 1920,
+      "constantHeight": true,
+      "fourPhrasesFit": true
+    }
+  ],
+  "variants": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "sectorStable": true,
+  "errors": []
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 80" fill="none">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;display=swap');
+    .brand { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 34px; fill: #1F2937; letter-spacing: -0.5px; }
+  </style>
+  <!-- Radar/target icon with pin center -->
+  <g transform="translate(32, 40)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="28" stroke="#10B981" stroke-width="3" fill="none" opacity="0.3"/>
+    <!-- Middle ring -->
+    <circle cx="0" cy="0" r="18" stroke="#10B981" stroke-width="2.5" fill="none" opacity="0.6"/>
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="9" stroke="#10B981" stroke-width="2" fill="none"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="4" fill="#10B981"/>
+    <!-- Pin tail pointing down -->
+    <path d="M-2.5 4 L0 14 L2.5 4" fill="#10B981"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="76" y="50" class="brand">Veri Burada</text>
+</svg>

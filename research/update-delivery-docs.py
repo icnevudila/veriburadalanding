@@ -1,0 +1,7 @@
+from pathlib import Path
+p=Path('README.md');s=p.read_text(encoding='utf-8');s=s.replace('Build veya npm kurulumu gerektirmez.','Önizleme için build veya npm kurulumu gerektirmez. Kaynak CSS/JS değiştiğinde `py -3 research/build-landing.py` ile iki çalışma dosyasını yeniden oluşturun.')
+s=s.replace('- `public/site.css`, `craft.css`, `final.css`: temel, marka ve son düzen sistemi.','- `public/landing.css` ve `landing.js`: sayfanın yüklediği birleştirilmiş çalışma dosyaları.\n- `public/site.css`, `craft.css`, `final.css`: temel, marka ve son düzen kaynakları.')
+s=s.replace('kullanılan 26 çalışma varlığı','kullanılan 19 çalışma varlığı')
+s=s.replace('Yerel tasarım/uygulama teslimidir.','Açılış logosu ve amblem ekran boyutuna göre hafifletildi, CSS/JS istekleri birleştirildi, ekran altındaki karmaşık çizimler gerektiğinde render edilir. Güncel yavaş ağ laboratuvar ölçümü `research/performance-delivery.json` içindedir; gerçek saha Core Web Vitals sonucu değildir.\n\nYerel tasarım/uygulama teslimidir.')
+p.write_text(s,encoding='utf-8')
+p=Path('public/vendor/ASSET-SOURCES.md');s=p.read_text(encoding='utf-8');s=s.replace('UI SVG icons in premium.js:','UI SVG icons in the active landing source files:');s+='\nDisplay-size brand exports: brand-wordmark.webp (640 px wide) and brand-emblem-small.webp (144 px) are lossless WebP exports resized from the already preserved brand extraction assets. They are used in the current landing and package to avoid transferring full-resolution originals for small UI placements.\n';p.write_text(s,encoding='utf-8')

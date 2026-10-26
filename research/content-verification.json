@@ -1,0 +1,451 @@
+{
+  "pages": [
+    {
+      "width": 390,
+      "path": "/",
+      "status": 200,
+      "title": "Veri Burada | Toplu işletme araştırması ve müşteri listeleri",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/nasil-calisir/",
+      "status": 200,
+      "title": "Veri Burada nasıl çalışır? | Toplu işletme araştırması",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/ozellikler/",
+      "status": 200,
+      "title": "İşletme araştırması ve CSV özellikleri | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-alanlari/satis-ekipleri/",
+      "status": 200,
+      "title": "Satış ekipleri için işletme listeleri | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-alanlari/ajanslar/",
+      "status": 200,
+      "title": "Ajanslar için sektör ve işletme araştırması | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-alanlari/yerel-isletmeler/",
+      "status": 200,
+      "title": "Yerel işletmeler için bölgesel araştırma | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/listeler/",
+      "status": 200,
+      "title": "İşletme listesi ve dolu CSV örneği | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/pricing/",
+      "status": 200,
+      "title": "Veri Burada fiyatları | 1, 3, 6 ve 12 aylık lisans",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/eklenti-indir/",
+      "status": 200,
+      "title": "Veri Burada eklenti kurulumu | Chrome ve Chromium tarayıcılar",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/hakkimizda/",
+      "status": 200,
+      "title": "Veri Burada hakkında | İşletme araştırmasını düzenleyin",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/sss/",
+      "status": 200,
+      "title": "Sık sorulan sorular | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/iletisim/",
+      "status": 200,
+      "title": "İletişim ve destek | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/bolgeye-gore-musteri-arastirmasi/",
+      "status": 200,
+      "title": "Bölgeye göre müşteri araştırması nasıl yapılır? | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/ajanslar-icin-isletme-arastirmasi/",
+      "status": 200,
+      "title": "Ajanslar için teklif öncesi işletme araştırması | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/isletme-listesini-excelde-duzenleme/",
+      "status": 200,
+      "title": "İşletme listesini Excel ve Google Sheets’te düzenleme | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/",
+      "status": 200,
+      "title": "İşletme araştırması rehberleri | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/gizlilik-politikasi/",
+      "status": 200,
+      "title": "Gizlilik ve veri kullanımı | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-kosullari/",
+      "status": 200,
+      "title": "Kullanım bilgileri ve koşullar | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "status": 200,
+      "title": "Veri Burada | Toplu işletme araştırması ve müşteri listeleri",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/nasil-calisir/",
+      "status": 200,
+      "title": "Veri Burada nasıl çalışır? | Toplu işletme araştırması",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/ozellikler/",
+      "status": 200,
+      "title": "İşletme araştırması ve CSV özellikleri | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-alanlari/satis-ekipleri/",
+      "status": 200,
+      "title": "Satış ekipleri için işletme listeleri | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-alanlari/ajanslar/",
+      "status": 200,
+      "title": "Ajanslar için sektör ve işletme araştırması | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-alanlari/yerel-isletmeler/",
+      "status": 200,
+      "title": "Yerel işletmeler için bölgesel araştırma | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/listeler/",
+      "status": 200,
+      "title": "İşletme listesi ve dolu CSV örneği | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/pricing/",
+      "status": 200,
+      "title": "Veri Burada fiyatları | 1, 3, 6 ve 12 aylık lisans",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/eklenti-indir/",
+      "status": 200,
+      "title": "Veri Burada eklenti kurulumu | Chrome ve Chromium tarayıcılar",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/hakkimizda/",
+      "status": 200,
+      "title": "Veri Burada hakkında | İşletme araştırmasını düzenleyin",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/sss/",
+      "status": 200,
+      "title": "Sık sorulan sorular | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/iletisim/",
+      "status": 200,
+      "title": "İletişim ve destek | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/bolgeye-gore-musteri-arastirmasi/",
+      "status": 200,
+      "title": "Bölgeye göre müşteri araştırması nasıl yapılır? | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/ajanslar-icin-isletme-arastirmasi/",
+      "status": 200,
+      "title": "Ajanslar için teklif öncesi işletme araştırması | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/isletme-listesini-excelde-duzenleme/",
+      "status": 200,
+      "title": "İşletme listesini Excel ve Google Sheets’te düzenleme | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/",
+      "status": 200,
+      "title": "İşletme araştırması rehberleri | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/gizlilik-politikasi/",
+      "status": 200,
+      "title": "Gizlilik ve veri kullanımı | Veri Burada",
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-kosullari/",
+      "status": 200,
+      "title": "Kullanım bilgileri ve koşullar | Veri Burada",
+      "noOverflow": true
+    }
+  ],
+  "menu": [
+    {
+      "width": 390,
+      "noLayoutJump": true,
+      "focus": "<a href=\"/nasil-calisir/\">Nasıl çalışır? <span>↗</span></a>",
+      "escape": true
+    },
+    {
+      "width": 1440,
+      "noLayoutJump": true,
+      "focus": "<a href=\"/nasil-calisir/\">Nasıl çalışır? <span>↗</span></a>",
+      "escape": true
+    }
+  ],
+  "downloads": [
+    {
+      "width": 390,
+      "rows": 5,
+      "filledPhoneAndWeb": true
+    },
+    {
+      "width": 1440,
+      "rows": 5,
+      "filledPhoneAndWeb": true
+    }
+  ],
+  "errors": [],
+  "a11y": [
+    {
+      "width": 390,
+      "path": "/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".hero-type"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-alanlari/ajanslar/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/listeler/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/pricing/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/sss/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/iletisim/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".support-address"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "path": "/blog/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "a:nth-child(1) > strong"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a:nth-child(2) > strong"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a:nth-child(3) > strong"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".hero-type"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-alanlari/ajanslar/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/listeler/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/pricing/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/sss/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/iletisim/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".support-address"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 15.8pt (21px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "path": "/blog/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "a:nth-child(1) > strong"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a:nth-child(2) > strong"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a:nth-child(3) > strong"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #198754, background color: #fbfdfb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 80" fill="none">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;display=swap');
+    .brand { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 36px; fill: #1F2937; letter-spacing: -0.5px; }
+  </style>
+  <!-- V shape = map pin icon -->
+  <path d="M20 8 C20 8 4 8 4 26 C4 38 20 56 20 56 C20 56 36 38 36 26 C36 8 20 8 20 8 Z" fill="#10B981"/>
+  <circle cx="20" cy="24" r="7" fill="white"/>
+  <circle cx="20" cy="24" r="3" fill="#10B981"/>
+  <!-- Wordmark -->
+  <text x="52" y="46" class="brand">Veri Burada</text>
+</svg>

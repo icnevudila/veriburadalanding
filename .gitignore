@@ -1,0 +1,21 @@
+# Dependencies & build outputs
+node_modules/
+dist/
+
+# Environment files
+.env*.local
+.env
+
+# Vercel
+.vercel
+
+# Logs & temporary files
+*.log
+*.tmp
+
+# Research raw extracted frames & large render dumps (>1GB)
+research/*-frames/
+research/*-desktop/
+research/*-mobile/
+research/video-frames/
+research/shortimize/

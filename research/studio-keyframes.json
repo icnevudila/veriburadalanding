@@ -1,0 +1,424 @@
+[
+  {
+    "width": 390,
+    "errors": [],
+    "shots": [
+      {
+        "name": "connection",
+        "t": 1,
+        "path": "research/studio-keyframes/390-connection-1.png"
+      },
+      {
+        "name": "connection",
+        "t": 4,
+        "path": "research/studio-keyframes/390-connection-4.png"
+      },
+      {
+        "name": "connection",
+        "t": 8,
+        "path": "research/studio-keyframes/390-connection-8.png"
+      },
+      {
+        "name": "connection",
+        "t": 11,
+        "path": "research/studio-keyframes/390-connection-11.png"
+      },
+      {
+        "name": "sales",
+        "t": 1,
+        "path": "research/studio-keyframes/390-sales-1.png"
+      },
+      {
+        "name": "sales",
+        "t": 4,
+        "path": "research/studio-keyframes/390-sales-4.png"
+      },
+      {
+        "name": "sales",
+        "t": 6,
+        "path": "research/studio-keyframes/390-sales-6.png"
+      },
+      {
+        "name": "sales",
+        "t": 10,
+        "path": "research/studio-keyframes/390-sales-10.png"
+      },
+      {
+        "name": "agency",
+        "t": 1,
+        "path": "research/studio-keyframes/390-agency-1.png"
+      },
+      {
+        "name": "agency",
+        "t": 4,
+        "path": "research/studio-keyframes/390-agency-4.png"
+      },
+      {
+        "name": "agency",
+        "t": 8,
+        "path": "research/studio-keyframes/390-agency-8.png"
+      },
+      {
+        "name": "agency",
+        "t": 12,
+        "path": "research/studio-keyframes/390-agency-12.png"
+      },
+      {
+        "name": "local",
+        "t": 1,
+        "path": "research/studio-keyframes/390-local-1.png"
+      },
+      {
+        "name": "local",
+        "t": 4,
+        "path": "research/studio-keyframes/390-local-4.png"
+      },
+      {
+        "name": "local",
+        "t": 9,
+        "path": "research/studio-keyframes/390-local-9.png"
+      },
+      {
+        "name": "local",
+        "t": 13,
+        "path": "research/studio-keyframes/390-local-13.png"
+      },
+      {
+        "name": "collector",
+        "t": 1,
+        "path": "research/studio-keyframes/390-collector-1.png"
+      },
+      {
+        "name": "collector",
+        "t": 4,
+        "path": "research/studio-keyframes/390-collector-4.png"
+      },
+      {
+        "name": "collector",
+        "t": 6,
+        "path": "research/studio-keyframes/390-collector-6.png"
+      },
+      {
+        "name": "collector",
+        "t": 11,
+        "path": "research/studio-keyframes/390-collector-11.png"
+      },
+      {
+        "name": "contact",
+        "t": 0.7,
+        "path": "research/studio-keyframes/390-contact-0.7.png"
+      },
+      {
+        "name": "contact",
+        "t": 3,
+        "path": "research/studio-keyframes/390-contact-3.png"
+      },
+      {
+        "name": "contact",
+        "t": 5.5,
+        "path": "research/studio-keyframes/390-contact-5.5.png"
+      },
+      {
+        "name": "contact",
+        "t": 9,
+        "path": "research/studio-keyframes/390-contact-9.png"
+      },
+      {
+        "name": "setup0",
+        "t": 1,
+        "path": "research/studio-keyframes/390-setup0-1.png"
+      },
+      {
+        "name": "setup0",
+        "t": 4,
+        "path": "research/studio-keyframes/390-setup0-4.png"
+      },
+      {
+        "name": "setup0",
+        "t": 8,
+        "path": "research/studio-keyframes/390-setup0-8.png"
+      },
+      {
+        "name": "setup1",
+        "t": 1,
+        "path": "research/studio-keyframes/390-setup1-1.png"
+      },
+      {
+        "name": "setup1",
+        "t": 4,
+        "path": "research/studio-keyframes/390-setup1-4.png"
+      },
+      {
+        "name": "setup1",
+        "t": 8,
+        "path": "research/studio-keyframes/390-setup1-8.png"
+      },
+      {
+        "name": "setup2",
+        "t": 1,
+        "path": "research/studio-keyframes/390-setup2-1.png"
+      },
+      {
+        "name": "setup2",
+        "t": 4,
+        "path": "research/studio-keyframes/390-setup2-4.png"
+      },
+      {
+        "name": "setup2",
+        "t": 8,
+        "path": "research/studio-keyframes/390-setup2-8.png"
+      },
+      {
+        "name": "csv",
+        "t": 1,
+        "path": "research/studio-keyframes/390-csv-1.png"
+      },
+      {
+        "name": "csv",
+        "t": 4.5,
+        "path": "research/studio-keyframes/390-csv-4.5.png"
+      },
+      {
+        "name": "csv",
+        "t": 7,
+        "path": "research/studio-keyframes/390-csv-7.png"
+      },
+      {
+        "name": "csv",
+        "t": 10,
+        "path": "research/studio-keyframes/390-csv-10.png"
+      },
+      {
+        "name": "closing",
+        "t": 2,
+        "path": "research/studio-keyframes/390-closing-2.png"
+      },
+      {
+        "name": "closing",
+        "t": 7,
+        "path": "research/studio-keyframes/390-closing-7.png"
+      },
+      {
+        "name": "closing",
+        "t": 12,
+        "path": "research/studio-keyframes/390-closing-12.png"
+      },
+      {
+        "name": "closing",
+        "t": 18,
+        "path": "research/studio-keyframes/390-closing-18.png"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "errors": [],
+    "shots": [
+      {
+        "name": "connection",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-connection-1.png"
+      },
+      {
+        "name": "connection",
+        "t": 4,
+        "path": "research/studio-keyframes/1440-connection-4.png"
+      },
+      {
+        "name": "connection",
+        "t": 8,
+        "path": "research/studio-keyframes/1440-connection-8.png"
+      },
+      {
+        "name": "connection",
+        "t": 11,
+        "path": "research/studio-keyframes/1440-connection-11.png"
+      },
+      {
+        "name": "sales",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-sales-1.png"
+      },
+      {
+        "name": "sales",
+        "t": 4,
+        "path": "research/studio-keyframes/1440-sales-4.png"
+      },
+      {
+        "name": "sales",
+        "t": 6,
+        "path": "research/studio-keyframes/1440-sales-6.png"
+      },
+      {
+        "name": "sales",
+        "t": 10,
+        "path": "research/studio-keyframes/1440-sales-10.png"
+      },
+      {
+        "name": "agency",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-agency-1.png"
+      },
+      {
+        "name": "agency",
+        "t": 4,
+        "path": "research/studio-keyframes/1440-agency-4.png"
+      },
+      {
+        "name": "agency",
+        "t": 8,
+        "path": "research/studio-keyframes/1440-agency-8.png"
+      },
+      {
+        "name": "agency",
+        "t": 12,
+        "path": "research/studio-keyframes/1440-agency-12.png"
+      },
+      {
+        "name": "local",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-local-1.png"
+      },
+      {
+        "name": "local",
+        "t": 4,
+        "path": "research/studio-keyframes/1440-local-4.png"
+      },
+      {
+        "name": "local",
+        "t": 9,
+        "path": "research/studio-keyframes/1440-local-9.png"
+      },
+      {
+        "name": "local",
+        "t": 13,
+        "path": "research/studio-keyframes/1440-local-13.png"
+      },
+      {
+        "name": "collector",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-collector-1.png"
+      },
+      {
+        "name": "collector",
+        "t": 4,
+        "path": "research/studio-keyframes/1440-collector-4.png"
+      },
+      {
+        "name": "collector",
+        "t": 6,
+        "path": "research/studio-keyframes/1440-collector-6.png"
+      },
+      {
+        "name": "collector",
+        "t": 11,
+        "path": "research/studio-keyframes/1440-collector-11.png"
+      },
+      {
+        "name": "contact",
+        "t": 0.7,
+        "path": "research/studio-keyframes/1440-contact-0.7.png"
+      },
+      {
+        "name": "contact",
+        "t": 3,
+        "path": "research/studio-keyframes/1440-contact-3.png"
+      },
+      {
+        "name": "contact",
+        "t": 5.5,
+        "path": "research/studio-keyframes/1440-contact-5.5.png"
+      },
+      {
+        "name": "contact",
+        "t": 9,
+        "path": "research/studio-keyframes/1440-contact-9.png"
+      },
+      {
+        "name": "setup0",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-setup0-1.png"
+      },
+      {
+        "name": "setup0",
+        "t": 4,
+        "path": "research/studio-keyframes/1440-setup0-4.png"
+      },
+      {
+        "name": "setup0",
+        "t": 8,
+        "path": "research/studio-keyframes/1440-setup0-8.png"
+      },
+      {
+        "name": "setup1",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-setup1-1.png"
+      },
+      {
+        "name": "setup1",
+        "t": 4,
+        "path": "research/studio-keyframes/1440-setup1-4.png"
+      },
+      {
+        "name": "setup1",
+        "t": 8,
+        "path": "research/studio-keyframes/1440-setup1-8.png"
+      },
+      {
+        "name": "setup2",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-setup2-1.png"
+      },
+      {
+        "name": "setup2",
+        "t": 4,
+        "path": "research/studio-keyframes/1440-setup2-4.png"
+      },
+      {
+        "name": "setup2",
+        "t": 8,
+        "path": "research/studio-keyframes/1440-setup2-8.png"
+      },
+      {
+        "name": "csv",
+        "t": 1,
+        "path": "research/studio-keyframes/1440-csv-1.png"
+      },
+      {
+        "name": "csv",
+        "t": 4.5,
+        "path": "research/studio-keyframes/1440-csv-4.5.png"
+      },
+      {
+        "name": "csv",
+        "t": 7,
+        "path": "research/studio-keyframes/1440-csv-7.png"
+      },
+      {
+        "name": "csv",
+        "t": 10,
+        "path": "research/studio-keyframes/1440-csv-10.png"
+      },
+      {
+        "name": "closing",
+        "t": 2,
+        "path": "research/studio-keyframes/1440-closing-2.png"
+      },
+      {
+        "name": "closing",
+        "t": 7,
+        "path": "research/studio-keyframes/1440-closing-7.png"
+      },
+      {
+        "name": "closing",
+        "t": 12,
+        "path": "research/studio-keyframes/1440-closing-12.png"
+      },
+      {
+        "name": "closing",
+        "t": 18,
+        "path": "research/studio-keyframes/1440-closing-18.png"
+      }
+    ]
+  }
+]

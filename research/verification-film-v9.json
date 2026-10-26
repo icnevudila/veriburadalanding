@@ -1,0 +1,34 @@
+[
+  {
+    "width": 390,
+    "metadata": {
+      "duration": 16,
+      "width": 1080,
+      "height": 780,
+      "src": "http://127.0.0.1:4173/product-v9-hero-mobile-web.mp4"
+    },
+    "loop": true,
+    "userPause": true,
+    "largePlayer": true,
+    "modalPausesHero": true,
+    "onboardingPausesHero": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "metadata": {
+      "duration": 16,
+      "width": 1440,
+      "height": 900,
+      "src": "http://127.0.0.1:4173/product-v9-desktop-final.mp4"
+    },
+    "loop": true,
+    "userPause": true,
+    "largePlayer": true,
+    "modalPausesHero": true,
+    "onboardingPausesHero": true,
+    "reducedMotion": true,
+    "errors": []
+  }
+]

@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('research/product-film-v8.html');s=p.read_text();s=s.replace('</style></head>','.film-attribution{display:none}@media(max-width:1000px){.attribution{visibility:hidden}.film-attribution{display:block;position:fixed;bottom:0;left:0;z-index:30;background:#fffffff7;padding:5px 8px;font:12px Arial;color:#41674d;min-width:248px;height:24px;border-radius:3px}} </style></head>');s=s.replace('</body>','<div class="film-attribution">© OpenStreetMap contributors</div></body>');p.write_text(s)

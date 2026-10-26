@@ -1,0 +1,62 @@
+[
+  {
+    "width": 390,
+    "audience": 0,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "audience": 1,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "audience": 2,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "selector": ".film-section",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "selector": ".contact-profile",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "selector": ".collection-demo",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "audience": 0,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "audience": 1,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "audience": 2,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "selector": ".film-section",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "selector": ".contact-profile",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "selector": ".collection-demo",
+    "violations": []
+  }
+]

@@ -1,0 +1,151 @@
+{
+  "environment": "Local Chromium 155; three isolated cold contexts; 390x844; 70ms latency; 1.6 Mbps; CPU 4x. Lab evidence, not deployed field Core Web Vitals.",
+  "runs": [
+    {
+      "cls": 0.00972076402183297,
+      "lcp": 5388,
+      "lcpElement": "H1",
+      "lcpClass": "",
+      "encodedBytes": 339885,
+      "resources": [
+        {
+          "name": "leaflet.css",
+          "bytes": 3546
+        },
+        {
+          "name": "landing.css",
+          "bytes": 24337
+        },
+        {
+          "name": "inter-turkish.woff2",
+          "bytes": 3276
+        },
+        {
+          "name": "inter-latin.woff2",
+          "bytes": 48256
+        },
+        {
+          "name": "leaflet.js",
+          "bytes": 42650
+        },
+        {
+          "name": "landing.js",
+          "bytes": 7994
+        },
+        {
+          "name": "brand-wordmark.webp",
+          "bytes": 29710
+        },
+        {
+          "name": "brand-emblem-small.webp",
+          "bytes": 19240
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        },
+        {
+          "name": "istanbul-map-display-v4.webp",
+          "bytes": 156562
+        }
+      ]
+    },
+    {
+      "cls": 0.000007937049585934382,
+      "lcp": 0,
+      "encodedBytes": 339885,
+      "resources": [
+        {
+          "name": "leaflet.css",
+          "bytes": 3546
+        },
+        {
+          "name": "landing.css",
+          "bytes": 24337
+        },
+        {
+          "name": "inter-turkish.woff2",
+          "bytes": 3276
+        },
+        {
+          "name": "inter-latin.woff2",
+          "bytes": 48256
+        },
+        {
+          "name": "leaflet.js",
+          "bytes": 42650
+        },
+        {
+          "name": "landing.js",
+          "bytes": 7994
+        },
+        {
+          "name": "brand-wordmark.webp",
+          "bytes": 29710
+        },
+        {
+          "name": "brand-emblem-small.webp",
+          "bytes": 19240
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        },
+        {
+          "name": "istanbul-map-display-v4.webp",
+          "bytes": 156562
+        }
+      ]
+    },
+    {
+      "cls": 0.009712826972247035,
+      "lcp": 0,
+      "encodedBytes": 339885,
+      "resources": [
+        {
+          "name": "leaflet.css",
+          "bytes": 3546
+        },
+        {
+          "name": "landing.css",
+          "bytes": 24337
+        },
+        {
+          "name": "inter-turkish.woff2",
+          "bytes": 3276
+        },
+        {
+          "name": "inter-latin.woff2",
+          "bytes": 48256
+        },
+        {
+          "name": "leaflet.js",
+          "bytes": 42650
+        },
+        {
+          "name": "landing.js",
+          "bytes": 7994
+        },
+        {
+          "name": "brand-wordmark.webp",
+          "bytes": 29710
+        },
+        {
+          "name": "brand-emblem-small.webp",
+          "bytes": 19240
+        },
+        {
+          "name": "favicon.ico",
+          "bytes": 4314
+        },
+        {
+          "name": "istanbul-map-display-v4.webp",
+          "bytes": 156562
+        }
+      ]
+    }
+  ],
+  "medianLcp": 0,
+  "worstLcp": 5388,
+  "medianCls": 0.009712826972247035
+}

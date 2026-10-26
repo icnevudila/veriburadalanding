@@ -1,0 +1,425 @@
+{
+  "pages": [
+    {
+      "width": 390,
+      "path": "/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/nasil-calisir/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/ozellikler/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-alanlari/satis-ekipleri/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-alanlari/ajanslar/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-alanlari/yerel-isletmeler/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/listeler/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/pricing/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/basla/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/hakkimizda/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/sss/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/iletisim/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/bolgeye-gore-musteri-arastirmasi/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/ajanslar-icin-isletme-arastirmasi/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/isletme-listesini-excelde-duzenleme/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/gizlilik-politikasi/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 390,
+      "path": "/kullanim-kosullari/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/nasil-calisir/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/ozellikler/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-alanlari/satis-ekipleri/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-alanlari/ajanslar/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-alanlari/yerel-isletmeler/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/listeler/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/pricing/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/basla/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/hakkimizda/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/sss/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/iletisim/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/bolgeye-gore-musteri-arastirmasi/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/ajanslar-icin-isletme-arastirmasi/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/isletme-listesini-excelde-duzenleme/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/gizlilik-politikasi/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    },
+    {
+      "width": 1440,
+      "path": "/kullanim-kosullari/",
+      "noOverflow": true,
+      "validImages": true,
+      "webAppCopy": true
+    }
+  ],
+  "icons": [
+    {
+      "width": 32,
+      "selector": ".collector-app-icon",
+      "fits": true,
+      "height": 32
+    },
+    {
+      "width": 58,
+      "selector": ".contact-profile-icon",
+      "fits": true,
+      "height": 58
+    },
+    {
+      "width": 32,
+      "selector": ".output-file-icon",
+      "fits": true,
+      "height": 38
+    },
+    {
+      "width": 36,
+      "selector": ".collector-app-icon",
+      "fits": true,
+      "height": 36
+    },
+    {
+      "width": 64,
+      "selector": ".contact-profile-icon",
+      "fits": true,
+      "height": 64
+    },
+    {
+      "width": 37,
+      "selector": ".output-file-icon",
+      "fits": true,
+      "height": 43
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "termSelection": true,
+      "helpNavigation": true
+    },
+    {
+      "width": 1440,
+      "termSelection": true,
+      "helpNavigation": true
+    }
+  ],
+  "errors": [],
+  "a11y": [
+    {
+      "width": 390,
+      "path": "/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/ozellikler/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/listeler/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/pricing/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/basla/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".app-mini-record:nth-child(2) > span > b[data-app-name=\"\"]"
+            ],
+            [
+              ".app-mini-record:nth-child(2) > span > small"
+            ],
+            [
+              ".app-mini-record:nth-child(3) > span > b[data-app-name=\"\"]"
+            ],
+            [
+              ".app-mini-record:nth-child(3) > span > small"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "path": "/sss/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/iletisim/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "path": "/blog/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/ozellikler/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/listeler/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/pricing/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/basla/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".app-mini-record:nth-child(2) > span > b[data-app-name=\"\"]"
+            ],
+            [
+              ".app-mini-record:nth-child(2) > span > small"
+            ],
+            [
+              ".app-mini-record:nth-child(3) > span > b[data-app-name=\"\"]"
+            ],
+            [
+              ".app-mini-record:nth-child(3) > span > small"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "path": "/sss/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/iletisim/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "path": "/blog/",
+      "violations": []
+    }
+  ]
+}

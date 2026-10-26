@@ -1,0 +1,4 @@
+/* Render the project-owned SVG artwork for a lighter on-screen map layer.
+   The SVG remains the geographic/vector master and film source. */
+const fs=require('fs');const{chromium}=require('C:/Users/TP2/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const b=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});const p=await b.newPage();await p.goto('http://127.0.0.1:4173/');const data=await p.evaluate(async()=>{const image=new Image();image.src='istanbul-map-v4.svg';await image.decode();const c=document.createElement('canvas');c.width=1400;c.height=1200;c.getContext('2d').drawImage(image,0,0,1400,1200);return c.toDataURL('image/webp',.85).split(',')[1]});fs.writeFileSync('public/istanbul-map-display-v4.webp',Buffer.from(data,'base64'));await b.close();console.log('Map display raster ready')})();

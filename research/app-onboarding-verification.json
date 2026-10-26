@@ -1,0 +1,34 @@
+{
+  "demo": [
+    {
+      "width": 390,
+      "durationMs": 11636,
+      "phases": 4,
+      "firstFive": true,
+      "remaining": 12,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "durationMs": 11333,
+      "phases": 4,
+      "firstFive": true,
+      "remaining": 12,
+      "noOverflow": true
+    }
+  ],
+  "states": [
+    {
+      "cancelStopsCinema": true,
+      "noLateResults": true
+    },
+    {
+      "liveNoArtificialDelay": true,
+      "milliseconds": 61
+    },
+    {
+      "failureNotReplacedByDemo": true
+    }
+  ],
+  "errors": []
+}

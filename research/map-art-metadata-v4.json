@@ -1,0 +1,12 @@
+{
+  "source": "OpenStreetMap API read-only bounding box extract",
+  "bounds": [
+    28.975,
+    41.025,
+    28.995,
+    41.04
+  ],
+  "buildings": 4268,
+  "roads": 1267,
+  "bytes": 620212
+}

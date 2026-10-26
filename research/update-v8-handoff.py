@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('research/build-landing.py');s=p.read_text();s=s.replace("for l in s.select('link[href]'):","for l in s.select('link[href]'):")
+p=Path('README.md');s=p.read_text(encoding='utf-8');s=s.replace('`public/product-motion-loop.js ve product-motion.css`','`public/product-motion-loop.js`, `product-motion.css` ve `motion-upgrade.css`');s+='\nV8 mobil filminde işletme bilgisi sahnesine kamera yaklaşımı vardır; küçük ekranda tüm masaüstü arayüzünü küçültmek yerine seçilen kart büyütülür. Otomasyon kartı ve büyük SVG tekrar düğmesi kullanmadan döngüde çalışır. Eski sonlu animasyon testleri araştırma geçmişidir; güncel davranış verification-motion-v8.json ile kayıtlıdır.\n';p.write_text(s,encoding='utf-8')

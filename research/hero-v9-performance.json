@@ -1,0 +1,61 @@
+{
+  "lcp": 3576,
+  "cls": 0.0012591207903400814,
+  "firstPlaying": 4553,
+  "video": 7.241985,
+  "paused": false,
+  "resources": [
+    {
+      "name": "hero-v9-mobile-poster.webp",
+      "bytes": 52296,
+      "duration": 1323
+    },
+    {
+      "name": "inter-turkish.woff2",
+      "bytes": 3276,
+      "duration": 249
+    },
+    {
+      "name": "inter-latin.woff2",
+      "bytes": 48256,
+      "duration": 1303.7999999970198
+    },
+    {
+      "name": "landing.css",
+      "bytes": 31082,
+      "duration": 1001.5
+    },
+    {
+      "name": "landing.js",
+      "bytes": 16751,
+      "duration": 1212.3999999985099
+    },
+    {
+      "name": "brand-wordmark.webp",
+      "bytes": 29710,
+      "duration": 970.3000000044703
+    },
+    {
+      "name": "brand-emblem-small.webp",
+      "bytes": 19240,
+      "duration": 666.2000000029802
+    },
+    {
+      "name": "favicon.ico",
+      "bytes": 4314,
+      "duration": 1177.8999999985099
+    },
+    {
+      "name": "closing-map.svg",
+      "bytes": 29444,
+      "duration": 1146.2000000029802
+    },
+    {
+      "name": "favicon.ico",
+      "bytes": 4314,
+      "duration": 145.59999999403954
+    }
+  ],
+  "cta": 758.15625,
+  "overflow": false
+}

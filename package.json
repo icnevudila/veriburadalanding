@@ -1,0 +1,7 @@
+{
+  "name": "veriburadalanding",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": "22.x" },
+  "scripts": { "start": "node research/dev-server.cjs", "test:onboarding": "node --test research/onboarding-service.test.cjs" }
+}
