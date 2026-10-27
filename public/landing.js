@@ -15,25 +15,39 @@
    pins.forEach((pin,i)=>{const a=demo?Math.max(0,Math.min(1,(seconds-1.8-i*.4)/.45)):0;pin.style.opacity=String(a);pin.style.transform=`translateY(${(1-a)*12}px) scale(${.82+.18*a})`;pin.classList.toggle('pin-complete',seconds>5.5+i*.4)});
    if(elapsed>=duration&&settle){const done=settle;settle=null;waitSignal?.removeEventListener('abort',abortHandler);done.resolve()}
   }
-  function tick(now){if(stopped)return;const dt=Math.min(80,now-last);last=now;if(!document.hidden){elapsed+=dt;draw()}raf=requestAnimationFrame(tick)}draw();raf=requestAnimationFrame(tick);
+  function tick(now){if(stopped)return;const dt=Math.min(80,now-last);last=now;if(!document.hidden){elapsed+=dt*(reduced.matches?1:2);draw()}raf=requestAnimationFrame(tick)}draw();raf=requestAnimationFrame(tick);
   return{setResults(records){data=records;if(records?.length){root.querySelector('.cinema-business-name').textContent=records[0].name;root.querySelectorAll('.cinema-list-name').forEach((el,i)=>el.textContent=records[i]?.name||records[0].name)}},wait(signal){if(!demo)return Promise.resolve();if(signal.aborted)return Promise.reject(new DOMException('Cancelled','AbortError'));return new Promise((resolve,reject)=>{settle={resolve,reject};waitSignal=signal;abortHandler=()=>{if(settle){settle.reject(new DOMException('Cancelled','AbortError'));settle=null}};signal.addEventListener('abort',abortHandler,{once:true});if(elapsed>=duration){settle=null;signal.removeEventListener('abort',abortHandler);resolve()}})},stop(){stopped=true;cancelAnimationFrame(raf);waitSignal?.removeEventListener('abort',abortHandler);if(settle){settle.reject(new DOMException('Cancelled','AbortError'));settle=null}}};
  }};
 })();
 
 ;
-/* Small timeline coordinator. Compositions and timing are authored per scene. */
+/* One foreground composition at a time; ambient detail keeps a quieter tempo. */
 (() => {
- const scenes=new Set(),reduced=matchMedia('(prefers-reduced-motion:reduce)');let paused=false,frame=0,last=0;
+ const scenes=new Set(),external=new Set(),reduced=matchMedia('(prefers-reduced-motion:reduce)');let paused=false,frame=0,last=0,focus=null,scrollFrame=0;
  const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>1-Math.pow(1-clamp(x),3),smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
- function active(s){return s.visible&&s.enabled&&!paused&&!reduced.matches&&!document.hidden&&!document.body.classList.contains('onboarding-open')}
+ const blocked=()=>paused||reduced.matches||document.hidden||document.body.classList.contains('onboarding-open')||document.body.classList.contains('navigation-open');
+ function score(s){const r=s.target.getBoundingClientRect(),h=Math.min(innerHeight,r.bottom)-Math.max(0,r.top),w=Math.min(innerWidth,r.right)-Math.max(0,r.left);return h>0&&w>0?(h*w/Math.max(1,r.width*r.height))/(1+Math.abs((Math.max(0,r.top)+Math.min(innerHeight,r.bottom))/2-innerHeight/2)/innerHeight):-1}
+ function active(s){return !blocked()&&s.visible&&s.enabled&&(s.ambient||focus===s)}
  function schedule(){if(!frame&&[...scenes].some(active)){last=performance.now();frame=requestAnimationFrame(tick)}}
- function tick(now){frame=0;const dt=Math.min(80,now-last);if(dt<30){frame=requestAnimationFrame(tick);return}last=now;for(const s of scenes)if(active(s)){s.time=(s.time+dt)%s.duration;s.render(s.time/1000);s.root.dataset.motionTime=(s.time/1000).toFixed(2)}schedule()}
- function update(){for(const s of scenes){s.root.classList.toggle('studio-running',active(s));if(reduced.matches)s.render(s.staticAt/1000)}if(![...scenes].some(active)){cancelAnimationFrame(frame);frame=0}else schedule()}
- window.VBMotion={clamp,ease,smooth,sample(root,seconds){const s=[...scenes].find(s=>s.root===root);if(!s)return false;s.enabled=false;s.time=seconds*1000;s.render(seconds);s.root.dataset.motionTime=seconds.toFixed(2);update();return true},create(root,{duration,render,staticAt=duration-2000,target=root,enabled=true}){
-  const s={root,duration,render,staticAt,enabled,visible:false,time:0};scenes.add(s);render(reduced.matches?staticAt/1000:0);
+ function tick(now){frame=0;if(blocked()){update();return}const dt=Math.min(80,now-last);if(dt<30){frame=requestAnimationFrame(tick);return}last=now;for(const s of scenes)if(active(s)){
+  if(s.ambient)s.time=(s.time+dt*.65)%s.duration;
+  else if(s.time>=s.staticAt){s.hold+=dt;if(s.hold>=2800){s.time=0;s.hold=0}}
+  else s.time=Math.min(s.staticAt,s.time+dt*2);
+  s.render(s.time/1000);s.root.dataset.motionTime=(s.time/1000).toFixed(2);
+ }schedule()}
+ function update(){const candidates=[...scenes].filter(s=>!s.ambient&&s.visible&&s.enabled).concat([...external].filter(s=>s.enabled));let next=null,best=-1;for(const s of candidates){const value=score(s);if(value>best){best=value;next=s}}focus=blocked()?null:next;
+  for(const s of scenes){s.root.classList.toggle('studio-running',active(s));if(reduced.matches)s.render(s.staticAt/1000)}
+  for(const s of external){const on=s===focus;if(on!==s.running){s.running=on;s.onchange(on)}}
+  if(![...scenes].some(active)){cancelAnimationFrame(frame);frame=0}else schedule();
+ }
+ window.VBMotion={clamp,ease,smooth,registerPlayer(root,onchange){const s={target:root,enabled:false,running:false,onchange};external.add(s);return{enable(value){s.enabled=value;update()}}},sample(root,seconds){const s=[...scenes].find(s=>s.root===root);if(!s)return false;s.enabled=false;s.time=seconds*1000;s.render(seconds);s.root.dataset.motionTime=seconds.toFixed(2);update();return true},create(root,{duration,render,staticAt=duration-2000,target=root,enabled=true,ambient=false}){
+  const s={root,target,duration,render,staticAt,enabled,ambient,visible:false,time:0,hold:0};scenes.add(s);render(reduced.matches?staticAt/1000:0);
   new IntersectionObserver(es=>{s.visible=es[0].isIntersecting;update()},{threshold:.15}).observe(target);
-  return{enable(value){s.enabled=value;if(value){s.time=0;s.render(reduced.matches?s.staticAt/1000:0)}update()},restart(){s.time=0;s.render(reduced.matches?s.staticAt/1000:0);schedule()},get time(){return s.time}};
+  return{enable(value){s.enabled=value;if(value){s.time=0;s.hold=0;s.render(reduced.matches?s.staticAt/1000:0)}update()},restart(){s.time=0;s.hold=0;s.render(reduced.matches?s.staticAt/1000:0);schedule()},get time(){return s.time}};
  }};
+ function queueUpdate(){if(!scrollFrame)scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;update()})}
+ addEventListener('scroll',queueUpdate,{passive:true});addEventListener('resize',queueUpdate);
+ new MutationObserver(update).observe(document.body,{attributes:true,attributeFilter:['class']});
  window.addEventListener('veriburada:motion',e=>{paused=e.detail.paused;update()});document.addEventListener('visibilitychange',update);document.addEventListener('veriburada:onboarding-open',update);document.addEventListener('veriburada:onboarding-close',update);reduced.addEventListener('change',update);
 })();
 
@@ -411,8 +425,9 @@
  }
  const players=[...document.querySelectorAll('[data-motion]')].map(s=>new DemoPlayer(s));
 
+ players.forEach(p=>{p.focus=window.VBMotion?.registerPlayer(p.shell,on=>{if(on)p.play();else p.pause()})});
  const canAuto=p=>p.visible&&!globalPaused&&!document.hidden&&!document.body.classList.contains('onboarding-open')&&!reduced.matches;
- function update(){for(const p of players){if(canAuto(p))p.play();else p.pause()}}
+ function update(){for(const p of players){if(p.focus)p.focus.enable(canAuto(p));else if(canAuto(p))p.play();else p.pause()}}
  addEventListener('message',e=>{if(e.data?.channel!=='veriburada-map')return;const player=players.find(p=>p.frame.contentWindow===e.source);if(player)player.receive(e.data)});
  const io=new IntersectionObserver(es=>{es.forEach(e=>{const p=players.find(p=>p.shell===e.target);if(p)p.visible=e.isIntersecting});update()},{threshold:[0, 0.1, 0.2]});players.forEach(p=>io.observe(p.shell));
  window.addEventListener('veriburada:motion',e=>{globalPaused=e.detail.paused;update()});document.addEventListener('visibilitychange',update);document.addEventListener('veriburada:onboarding-open',update);document.addEventListener('veriburada:onboarding-close',update);
@@ -458,7 +473,7 @@
   all('[data-demo-download],#download-demo').forEach(b=>b.addEventListener('click',()=>{csv.classList.add('csv-downloaded');setTimeout(()=>csv.classList.remove('csv-downloaded'),2200)}));
  }
  // 11. Closing: authored depth and cadence; keep the central text area visually quiet.
- const closing=$('.closing');if(closing){const pins=all('.closing-place',closing);pins.forEach(p=>p.style.animation='none');M.create(closing,{duration:24000,staticAt:11000,render:t=>{pins.forEach((pin,i)=>{const local=(t+i*1.85)%24,a=e(local,1.1,.55)*fade(local,9.5,1.5);pin.style.opacity=String(a*(i%3===0?.36:.58));pin.style.transform=`translateY(${(1-a)*8}px) scale(${(.75+i%3*.16)*(.94+.06*a)})`;pin.style.filter=`blur(${i%3===0?1.4:.45}px)`})}})}
+ const closing=$('.closing');if(closing){const pins=all('.closing-place',closing);pins.forEach(p=>p.style.animation='none');M.create(closing,{ambient:true,duration:24000,staticAt:11000,render:t=>{pins.forEach((pin,i)=>{const local=(t+i*1.85)%24,a=e(local,1.1,.55)*fade(local,9.5,1.5);pin.style.opacity=String(a*(i%3===0?.22:.36));pin.style.transform=`translateY(${(1-a)*8}px) scale(${(.75+i%3*.16)*(.94+.06*a)})`;pin.style.filter=`blur(${i%3===0?1.4:.45}px)`})}})}
 })();
 
 ;

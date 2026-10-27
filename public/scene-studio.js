@@ -29,5 +29,5 @@
   all('[data-demo-download],#download-demo').forEach(b=>b.addEventListener('click',()=>{csv.classList.add('csv-downloaded');setTimeout(()=>csv.classList.remove('csv-downloaded'),2200)}));
  }
  // 11. Closing: authored depth and cadence; keep the central text area visually quiet.
- const closing=$('.closing');if(closing){const pins=all('.closing-place',closing);pins.forEach(p=>p.style.animation='none');M.create(closing,{duration:24000,staticAt:11000,render:t=>{pins.forEach((pin,i)=>{const local=(t+i*1.85)%24,a=e(local,1.1,.55)*fade(local,9.5,1.5);pin.style.opacity=String(a*(i%3===0?.36:.58));pin.style.transform=`translateY(${(1-a)*8}px) scale(${(.75+i%3*.16)*(.94+.06*a)})`;pin.style.filter=`blur(${i%3===0?1.4:.45}px)`})}})}
+ const closing=$('.closing');if(closing){const pins=all('.closing-place',closing);pins.forEach(p=>p.style.animation='none');M.create(closing,{ambient:true,duration:24000,staticAt:11000,render:t=>{pins.forEach((pin,i)=>{const local=(t+i*1.85)%24,a=e(local,1.1,.55)*fade(local,9.5,1.5);pin.style.opacity=String(a*(i%3===0?.22:.36));pin.style.transform=`translateY(${(1-a)*8}px) scale(${(.75+i%3*.16)*(.94+.06*a)})`;pin.style.filter=`blur(${i%3===0?1.4:.45}px)`})}})}
 })();

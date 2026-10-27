@@ -11,7 +11,7 @@
    pins.forEach((pin,i)=>{const a=demo?Math.max(0,Math.min(1,(seconds-1.8-i*.4)/.45)):0;pin.style.opacity=String(a);pin.style.transform=`translateY(${(1-a)*12}px) scale(${.82+.18*a})`;pin.classList.toggle('pin-complete',seconds>5.5+i*.4)});
    if(elapsed>=duration&&settle){const done=settle;settle=null;waitSignal?.removeEventListener('abort',abortHandler);done.resolve()}
   }
-  function tick(now){if(stopped)return;const dt=Math.min(80,now-last);last=now;if(!document.hidden){elapsed+=dt;draw()}raf=requestAnimationFrame(tick)}draw();raf=requestAnimationFrame(tick);
+  function tick(now){if(stopped)return;const dt=Math.min(80,now-last);last=now;if(!document.hidden){elapsed+=dt*(reduced.matches?1:2);draw()}raf=requestAnimationFrame(tick)}draw();raf=requestAnimationFrame(tick);
   return{setResults(records){data=records;if(records?.length){root.querySelector('.cinema-business-name').textContent=records[0].name;root.querySelectorAll('.cinema-list-name').forEach((el,i)=>el.textContent=records[i]?.name||records[0].name)}},wait(signal){if(!demo)return Promise.resolve();if(signal.aborted)return Promise.reject(new DOMException('Cancelled','AbortError'));return new Promise((resolve,reject)=>{settle={resolve,reject};waitSignal=signal;abortHandler=()=>{if(settle){settle.reject(new DOMException('Cancelled','AbortError'));settle=null}};signal.addEventListener('abort',abortHandler,{once:true});if(elapsed>=duration){settle=null;signal.removeEventListener('abort',abortHandler);resolve()}})},stop(){stopped=true;cancelAnimationFrame(raf);waitSignal?.removeEventListener('abort',abortHandler);if(settle){settle.reject(new DOMException('Cancelled','AbortError'));settle=null}}};
  }};
 })();

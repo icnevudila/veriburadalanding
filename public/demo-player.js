@@ -23,8 +23,9 @@
  }
  const players=[...document.querySelectorAll('[data-motion]')].map(s=>new DemoPlayer(s));
 
+ players.forEach(p=>{p.focus=window.VBMotion?.registerPlayer(p.shell,on=>{if(on)p.play();else p.pause()})});
  const canAuto=p=>p.visible&&!globalPaused&&!document.hidden&&!document.body.classList.contains('onboarding-open')&&!reduced.matches;
- function update(){for(const p of players){if(canAuto(p))p.play();else p.pause()}}
+ function update(){for(const p of players){if(p.focus)p.focus.enable(canAuto(p));else if(canAuto(p))p.play();else p.pause()}}
  addEventListener('message',e=>{if(e.data?.channel!=='veriburada-map')return;const player=players.find(p=>p.frame.contentWindow===e.source);if(player)player.receive(e.data)});
  const io=new IntersectionObserver(es=>{es.forEach(e=>{const p=players.find(p=>p.shell===e.target);if(p)p.visible=e.isIntersecting});update()},{threshold:[0, 0.1, 0.2]});players.forEach(p=>io.observe(p.shell));
  window.addEventListener('veriburada:motion',e=>{globalPaused=e.detail.paused;update()});document.addEventListener('visibilitychange',update);document.addEventListener('veriburada:onboarding-open',update);document.addEventListener('veriburada:onboarding-close',update);

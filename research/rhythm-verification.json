@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "selector": ".hero-cinema",
+      "active": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "selector": ".connection-section",
+      "active": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "selector": ".collection-demo",
+      "active": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "selector": ".output-window",
+      "active": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "selector": ".closing",
+      "active": 0,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "selector": ".hero-cinema",
+      "active": 0,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "selector": ".connection-section",
+      "active": 1,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "selector": ".collection-demo",
+      "active": 1,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "selector": ".output-window",
+      "active": 1,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "selector": ".closing",
+      "active": 0,
+      "overflow": false
+    }
+  ],
+  "readyStateHold": true,
+  "mapListStaysVisible": true,
+  "reducedMotion": true,
+  "errors": []
+}
