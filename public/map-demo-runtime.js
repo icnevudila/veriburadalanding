@@ -2,14 +2,14 @@
 (() => {
  document.documentElement.classList.toggle('embedded-demo',window.parent!==window);
  const sectors=[
-  {query:'Kuaförler',type:'Kuaför',slug:'kuafor',layout:'list',names:['Ada Kuaför','Makas Studio','Pera Kuaför','Atölye Saç','Beyoğlu Kuaför']},
-  {query:'Kafeler',type:'Kafe',slug:'kafe',layout:'cards',names:['Köşe Kahve','Mahalle Atölyesi','Gün Işığı Kafe','Pera Kahve','Sokak Kahvesi']},
-  {query:'Diş klinikleri',type:'Diş kliniği',slug:'klinik',layout:'contacts',names:['Gülüş Diş Kliniği','Merkez Ağız ve Diş','İnci Diş Kliniği','Pera Dental','Beyoğlu Diş']},
-  {query:'Restoranlar',type:'Restoran',slug:'restoran',layout:'web',names:['Pera Mutfak','Sahil Restoran','Mahalle Sofrası','Atölye Lezzet','Sokak Lokantası']},
-  {query:'Mimarlık ofisleri',type:'Mimarlık ofisi',slug:'mimarlik',layout:'directory',names:['Atölye Mimarlık','Form Tasarım','Studio Mimarlık','Mekân Atölyesi','Pera Mimarlık']},
-  {query:'Oteller',type:'Otel',slug:'otel',layout:'locations',names:['Pera Konak','Beyoğlu Otel','Şehir Otel','Sahil Konak','Meydan Otel']},
-  {query:'Spor salonları',type:'Spor salonu',slug:'spor',layout:'studios',names:['Hareket Studio','Pera Spor','Mahalle Fitness','Form Studio','Beyoğlu Spor']},
-  {query:'Oto servisleri',type:'Oto servisi',slug:'servis',layout:'phone',names:['Merkez Oto Servis','Pera Otomotiv','Şehir Oto Bakım','Güven Oto Servis','Beyoğlu Otomotiv']}
+  {query:'Kuaförler',type:'Kuaför',slug:'kuafor',layout:'list',names:['Ada Kuaför Salonu','Makas Saç Tasarım','Pera Güzellik & Kuaför','Stil Erkek Kuaförü','Beyoğlu Saç Stüdyosu']},
+  {query:'Kafeler',type:'Kafe',slug:'kafe',layout:'cards',names:['Köşe Kahve Evi','Moda Kahvecisi','Gün Işığı Kafe','Pera Roastery & Kahve','Sokak Kafe & Bistro']},
+  {query:'Diş klinikleri',type:'Diş kliniği',slug:'klinik',layout:'contacts',names:['Gülüş Diş Kliniği','Merkez Diş Polikliniği','İnci Ağız ve Diş Sağlığı','Pera Dental Klinik','Beyoğlu Diş Merkezi']},
+  {query:'Restoranlar',type:'Restoran',slug:'restoran',layout:'web',names:['Pera Gurme Restoran','Sahil Balık Lokantası','Mahalle Kebap & Izgara','Köşk Ev Yemekleri & Restoran','Boğaziçi Et & Ocakbaşı']},
+  {query:'Mimarlık ofisleri',type:'Mimarlık ofisi',slug:'mimarlik',layout:'directory',names:['Atölye Mimarlık','Form Mimarlık & Tasarım','Studio Mimarlık Ofisi','Mekân İç Mimarlık','Pera Mimarlık ve Proje']},
+  {query:'Oteller',type:'Otel',slug:'otel',layout:'locations',names:['Pera Konak Butik Otel','Beyoğlu Palas Otel','Grand Şehir Oteli','Sahil Butik Otel','Meydan Park Otel']},
+  {query:'Spor salonları',type:'Spor salonu',slug:'spor',layout:'studios',names:['Hareket Fitness & Gym','Pera Spor ve Fitness Salonu','Mahalle Fitness Club','Form Pilates & Spor Salonu','Power Gym Spor Merkezi']},
+  {query:'Oto servisleri',type:'Oto servisi',slug:'servis',layout:'phone',names:['Merkez Oto Tamir & Servis','Pera Oto Mekanik Servisi','Şehir Oto Bakım Onarım','Güven Oto Servis & Tamir','Usta Oto Bakım Servisi']}
  ];
  let episode=walkthrough?4:0,time=0,playing=false,last=0,raf=0,lastState=0,ready=false;const duration=walkthrough?46:32;
  function send(type){parent.postMessage({channel:'veriburada-map',type,episode,sector:sectors[episode].query,time,duration,playing,ready},'*')}
