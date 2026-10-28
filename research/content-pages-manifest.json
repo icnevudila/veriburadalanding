@@ -94,15 +94,15 @@
   },
   {
     "slug": "gizlilik-politikasi",
-    "title": "Gizlilik Politikası | Veri Burada",
-    "description": "Veri Burada tanıtım sitesinde arama tercihleri, tarayıcı depolaması, örnek sonuçlar, iletişim ve kişisel veri hakları hakkında açıklamalar.",
+    "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni | Veri Burada",
+    "description": "Veri Burada platformu, web uygulaması ve tarayıcı eklentisi için KVKK Aydınlatma Metni, veri işleme amaçları, çerezler ve haklar.",
     "scene": null,
     "noindex": true
   },
   {
     "slug": "kullanim-kosullari",
-    "title": "Kullanım Koşulları ve Sözleşme Kapsamı | Veri Burada",
-    "description": "Veri Burada tanıtım sitesi, ücretsiz örnek arama, örnek CSV, kullanım sınırları ve ücretli işlemlerden ayrılan kapsam hakkında kullanım koşulları.",
+    "title": "Kullanım Koşulları ve Hizmet Sözleşmesi | Veri Burada",
+    "description": "Veri Burada web uygulaması, eklenti, kredi paketleri, kullanım sınırları, kamuya açık işletme verileri ve hizmet şartları.",
     "scene": null,
     "noindex": true
   }

@@ -1,0 +1,2 @@
+const{chromium}=require('C:/Users/TP2/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');(async()=>{let b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});let p=await b.newPage({viewport:{width:720,height:520}});await p.goto('http://127.0.0.1:4173/map-demo.html?mobile');await p.evaluate(()=>{document.documentElement.classList.add('embedded-demo');window.seek(28)});await p.waitForTimeout(550);await p.screenshot({path:'research/final-craft-proof/account-list-final.png'});await b.close()})();
+
