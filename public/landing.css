@@ -92,6 +92,9 @@
 .connection-stage{margin:30px -9px 0;position:relative;background-image:radial-gradient(#88ab931f .8px,transparent .8px);background-size:18px 18px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
 .flow-scene{display:block;width:100%;height:auto;overflow:visible;font-family:Inter,sans-serif}.flow-phone{display:none}
 .flow-trace{opacity:.3}.flow-packet{pointer-events:none}.flow-hub{transform-box:fill-box;transform-origin:center}.flow-input,.flow-output{transform-box:fill-box;transform-origin:center}
+.flow-success{cursor:pointer;transition:transform .15s ease}
+.flow-success:hover rect{fill:#157347}
+.flow-success:active rect{fill:#0f4c30}
 .connection-footer{display:flex;align-items:center;gap:20px;border-top:1px solid #e0eae2;padding-top:20px;margin-top:5px;min-height:55px;color:#60786a;font-size:10px}
 .connection-footer>span{display:flex;align-items:center;gap:8px}.connection-footer>span i{width:5px;height:5px;border-radius:50%;background:#198754}.connection-footer>small{font-size:9px;color:#607567;margin-left:auto}
 .connection-controls{display:flex;align-items:center;gap:8px}.connection-controls[hidden]{display:none}.connection-controls button{border:1px solid #d4e3d8;background:white;color:#3f6850;font:500 10px Inter,sans-serif;padding:8px 12px;min-height:33px;border-radius:20px;cursor:pointer}.connection-controls button:hover{border-color:#198754}.connection-controls button:focus-visible{outline:2px solid #198754;outline-offset:3px}.connection-toggle{min-width:85px}.connection-section[data-state="ended"] .connection-toggle,.connection-section[data-state="static"] .connection-controls{display:none}
