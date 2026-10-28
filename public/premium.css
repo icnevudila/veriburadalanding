@@ -115,3 +115,69 @@ h1,h2,h3{font-family:"LINE Seed JP",Inter,Arial,sans-serif;font-weight:700}
   .site-business > span{font-size:10px!important;}
   .site-business{padding:8px 7px!important;}
 }
+
+
+/* User requested UI refinements */
+/* 1. Hamburger menu: remove top title bar, center the action buttons */
+.menu-panel-top {
+  display: none !important;
+}
+
+.menu-auth {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 auto 24px !important;
+  padding: 0 0 24px !important;
+  border-bottom: 1px solid #dce8df !important;
+  width: 100% !important;
+}
+
+.menu-auth > a {
+  min-width: 140px !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+@media(max-width:760px) {
+  .menu-auth {
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+  .menu-auth > a {
+    flex: 1 !important;
+    max-width: 180px !important;
+    min-width: 0 !important;
+  }
+}
+
+/* 2. Remove confusing progress text/bars and command lines from collection card */
+.collector-command,
+.collector-progress,
+.collector-live,
+.collector-bottom {
+  display: none !important;
+}
+
+.collector-results {
+  padding-top: 8px !important;
+}
+
+.collector-result {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.collector-result em {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* 3. Remove scattered small helper lines and captions between sections */
+.connection-footer,
+.scene-note,
+.film-footnote,
+.narrative-caption {
+  display: none !important;
+}
