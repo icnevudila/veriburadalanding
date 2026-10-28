@@ -20,7 +20,7 @@
   q('.complete strong').textContent=s.slug+'-listem.csv';
  }
  function draw(){window.seek(time)}
- function tick(now){if(!playing||document.hidden){raf=0;return}time+=Math.min(100,now-last)*2/1000;last=now;if(time>=duration){time=0;episode=walkthrough?4:([0,2,4][([0,2,4].indexOf(episode)+1)%3]);applyEpisode()}draw();if(now-lastState>250){send('state');lastState=now}raf=requestAnimationFrame(tick)}
+ function tick(now){if(!playing||document.hidden){raf=0;return}time+=Math.min(100,now-last)*1.5/1000;last=now;if(time>=duration){time=0;episode=walkthrough?4:([0,2,4][([0,2,4].indexOf(episode)+1)%3]);applyEpisode()}draw();if(now-lastState>250){send('state');lastState=now}raf=requestAnimationFrame(tick)}
  function play(){if(playing)return;playing=true;last=performance.now();raf=requestAnimationFrame(tick);send('state')}
  function pause(){playing=false;cancelAnimationFrame(raf);raf=0;send('state')}
  addEventListener('message',e=>{if(e.source!==parent||e.data?.channel!=='veriburada-map-control')return;const d=e.data;if(d.action==='play')play();if(d.action==='pause')pause();if(d.action==='seek'){time=Math.max(0,Math.min(duration-.01,Number(d.time)||0));draw();send('state')}if(d.action==='next'||d.action==='sector'){episode=d.action==='next'?(episode+1)%sectors.length:Math.max(0,Math.min(7,Number(d.episode)||0));time=0;applyEpisode();draw();send('state')}if(d.action==='state')send('ready')});
