@@ -12,7 +12,7 @@
 /* Account choice hands off to the real application; no login form lives on the landing. */
 (()=>{
  const dialog=document.createElement('dialog');dialog.className='account-dialog';dialog.setAttribute('aria-labelledby','account-title');
- dialog.innerHTML='<button class="account-close" type="button" aria-label="Pencereyi kapat">×</button><img class="account-brand" src="/brand-wordmark.webp" alt="Veri Burada" width="1200" height="375"><h2 id="account-title">Veri Burada’ya başlayın.</h2><p>Hesabınıza giriş yapın veya yeni hesap oluşturun.</p><div class="account-options"><a data-account-option="signUp" class="button primary" href="#">Kaydol </a><a data-account-option="signIn" class="button account-secondary" href="#">Giriş yap </a></div><p class="account-status" role="status" hidden></p>';document.body.append(dialog);
+ dialog.innerHTML='<button class="account-close" type="button" aria-label="Pencereyi kapat">×</button><img class="account-brand" src="/brand-wordmark.webp" alt="Veri Burada" width="1200" height="375"><h2 id="account-title">Veri Burada’ya başlayın.</h2><p>Hesabınıza giriş yapın veya yeni hesap oluşturun.</p><div class="account-options"><a data-account-option="signUp" class="button primary" href="#">Kaydol</a><a data-account-option="signIn" class="button account-secondary" href="#">Giriş yap</a></div><p class="account-status" role="status" hidden></p>';document.body.append(dialog);
  let previous;
  function destination(kind){try{const u=new URL(window.VBAuthLinks?.[kind]);return u.protocol==='https:'?u.href:null}catch{return null}}
  function refresh(){dialog.querySelectorAll('[data-account-option]').forEach(a=>{const url=destination(a.dataset.accountOption);a.href=url||'#';a.setAttribute('aria-disabled',String(!url))})}
