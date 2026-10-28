@@ -40,7 +40,7 @@
 <path class="flow-rail" d="M254 169 C 380 169, 410 255, 528 255" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
 <path class="flow-rail-core" d="M254 169 C 380 169, 410 255, 528 255" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
 <path class="flow-trace-glow" d="M254 169 C 380 169, 410 255, 528 255" data-route="0" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-trace" d="M254 169 C 380 169, 410 255, 528 255" data-route="0" fill="none" pathlength="1" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
+<path class="flow-trace" d="M254 169 C 380 169, 410 255, 528 255" data-route="0" fill="none" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
 <circle class="flow-packet" data-route="0" fill="url(#orb-sphere)" opacity="0" r="6" stroke="#ffffff" stroke-width="1.5"></circle>
 </g>
 <!-- Route 1: Arama terimi -> Hub (Layered 3D Pipe) -->
@@ -49,7 +49,7 @@
 <path class="flow-rail" d="M254 341 C 380 341, 410 255, 528 255" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
 <path class="flow-rail-core" d="M254 341 C 380 341, 410 255, 528 255" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
 <path class="flow-trace-glow" d="M254 341 C 380 341, 410 255, 528 255" data-route="1" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-trace" d="M254 341 C 380 341, 410 255, 528 255" data-route="1" fill="none" pathlength="1" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
+<path class="flow-trace" d="M254 341 C 380 341, 410 255, 528 255" data-route="1" fill="none" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
 <circle class="flow-packet" data-route="1" fill="url(#orb-sphere)" opacity="0" r="6" stroke="#ffffff" stroke-width="1.5"></circle>
 </g>
 <!-- Route 2: Hub -> Output List (Layered 3D Pipe) -->
@@ -58,7 +58,7 @@
 <path class="flow-rail" d="M672 255 H915" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
 <path class="flow-rail-core" d="M672 255 H915" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
 <path class="flow-trace-glow" d="M672 255 H915" data-route="2" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-trace" d="M672 255 H915" data-route="2" fill="none" pathlength="1" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
+<path class="flow-trace" d="M672 255 H915" data-route="2" fill="none" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
 <circle class="flow-packet" data-route="2" fill="url(#orb-sphere)" opacity="0" r="6" stroke="#ffffff" stroke-width="1.5"></circle>
 </g>
 <!-- Input Cards -->
@@ -110,7 +110,7 @@
 <text fill="#198754" font-size="13" font-weight="600" text-anchor="middle" x="1056" y="341">Listeyi indir (CSV)</text>
 </g>
 </g>
-</svg><svg aria-labelledby="flow-title-phone flow-desc-phone" class="flow-scene flow-phone" role="img" viewbox="0 0 420 645" xmlns="http://www.w3.org/2000/svg">
+</svg><svg aria-labelledby="flow-title-phone flow-desc-phone" class="flow-scene flow-phone" role="img" viewbox="0 0 420 670" xmlns="http://www.w3.org/2000/svg">
 <title id="flow-title-phone">İşletme bilgilerinden düzenli listeye</title>
 <desc id="flow-desc-phone">Konum ve arama terimi Veri Burada'da birleşir, güncel işletme listesi ve CSV olarak sunulur. Temsili akış.</desc>
 <defs>
@@ -120,33 +120,41 @@
 <filter height="240%" id="flow-hub-shadow-phone" width="220%" x="-60%" y="-60%">
 <fedropshadow dx="0" dy="12" flood-color="#0f4c30" flood-opacity=".12" stddeviation="24"></fedropshadow>
 </filter>
-</defs>
+<lineargradient id="flow-tube-gradient-phone" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#198754"></stop>
+<stop offset="50%" stop-color="#20c997"></stop>
+<stop offset="100%" stop-color="#38ef7d"></stop>
+</lineargradient><radialgradient cx="35%" cy="35%" id="orb-sphere-phone" r="65%">
+<stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="45%" stop-color="#4ae3ae"></stop>
+<stop offset="100%" stop-color="#127845"></stop>
+</radialgradient></defs>
 <!-- Route 0: Konum -> Hub (Layered 3D Pipe) -->
 <g class="flow-pipe-group">
-<path class="flow-shadow-rail" d="M109 136 C 109 180, 210 180, 210 227" fill="none" stroke="rgba(15, 76, 48, 0.08)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-rail" d="M109 136 C 109 180, 210 180, 210 227" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
-<path class="flow-rail-core" d="M109 136 C 109 180, 210 180, 210 227" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
-<path class="flow-trace-glow" d="M109 136 C 109 180, 210 180, 210 227" data-route="0" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-trace" d="M109 136 C 109 180, 210 180, 210 227" data-route="0" fill="none" pathlength="1" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
-<circle class="flow-packet" data-route="0" fill="url(#orb-sphere)" opacity="0" r="6" stroke="#ffffff" stroke-width="1.5"></circle>
+<path class="flow-shadow-rail" d="M109 136 C 109 170, 210 170, 210 200" fill="none" stroke="rgba(15, 76, 48, 0.08)" stroke-linecap="round" stroke-width="8"></path>
+<path class="flow-rail" d="M109 136 C 109 170, 210 170, 210 200" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
+<path class="flow-rail-core" d="M109 136 C 109 170, 210 170, 210 200" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
+<path class="flow-trace-glow" d="M109 136 C 109 170, 210 170, 210 200" data-route="0" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
+<path class="flow-trace" d="M109 136 C 109 170, 210 170, 210 200" data-route="0" fill="none" stroke="url(#flow-tube-gradient-phone)" stroke-linecap="round" stroke-width="4"></path>
+<circle class="flow-packet" data-route="0" fill="url(#orb-sphere-phone)" opacity="0" r="7" stroke="#ffffff" stroke-width="2"></circle>
 </g>
 <!-- Route 1: Arama terimi -> Hub (Layered 3D Pipe) -->
 <g class="flow-pipe-group">
-<path class="flow-shadow-rail" d="M311 136 C 311 180, 210 180, 210 227" fill="none" stroke="rgba(15, 76, 48, 0.08)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-rail" d="M311 136 C 311 180, 210 180, 210 227" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
-<path class="flow-rail-core" d="M311 136 C 311 180, 210 180, 210 227" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
-<path class="flow-trace-glow" d="M311 136 C 311 180, 210 180, 210 227" data-route="1" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-trace" d="M311 136 C 311 180, 210 180, 210 227" data-route="1" fill="none" pathlength="1" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
-<circle class="flow-packet" data-route="1" fill="url(#orb-sphere)" opacity="0" r="6" stroke="#ffffff" stroke-width="1.5"></circle>
+<path class="flow-shadow-rail" d="M311 136 C 311 170, 210 170, 210 200" fill="none" stroke="rgba(15, 76, 48, 0.08)" stroke-linecap="round" stroke-width="8"></path>
+<path class="flow-rail" d="M311 136 C 311 170, 210 170, 210 200" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
+<path class="flow-rail-core" d="M311 136 C 311 170, 210 170, 210 200" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
+<path class="flow-trace-glow" d="M311 136 C 311 170, 210 170, 210 200" data-route="1" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
+<path class="flow-trace" d="M311 136 C 311 170, 210 170, 210 200" data-route="1" fill="none" stroke="url(#flow-tube-gradient-phone)" stroke-linecap="round" stroke-width="4"></path>
+<circle class="flow-packet" data-route="1" fill="url(#orb-sphere-phone)" opacity="0" r="7" stroke="#ffffff" stroke-width="2"></circle>
 </g>
 <!-- Route 2: Hub -> Output List (Layered 3D Pipe) -->
 <g class="flow-pipe-group">
-<path class="flow-shadow-rail" d="M210 323 V 375" fill="none" stroke="rgba(15, 76, 48, 0.08)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-rail" d="M210 323 V 375" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
-<path class="flow-rail-core" d="M210 323 V 375" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
-<path class="flow-trace-glow" d="M210 323 V 375" data-route="2" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
-<path class="flow-trace" d="M210 323 V 375" data-route="2" fill="none" pathlength="1" stroke="url(#flow-tube-gradient)" stroke-linecap="round" stroke-width="4"></path>
-<circle class="flow-packet" data-route="2" fill="url(#orb-sphere)" opacity="0" r="6" stroke="#ffffff" stroke-width="1.5"></circle>
+<path class="flow-shadow-rail" d="M210 290 V 390" fill="none" stroke="rgba(15, 76, 48, 0.08)" stroke-linecap="round" stroke-width="8"></path>
+<path class="flow-rail" d="M210 290 V 390" fill="none" stroke="#d5e8db" stroke-linecap="round" stroke-width="4.5"></path>
+<path class="flow-rail-core" d="M210 290 V 390" fill="none" stroke="#f4faf5" stroke-linecap="round" stroke-width="1.8"></path>
+<path class="flow-trace-glow" d="M210 290 V 390" data-route="2" fill="none" stroke="rgba(32, 201, 151, 0.35)" stroke-linecap="round" stroke-width="8"></path>
+<path class="flow-trace" d="M210 290 V 390" data-route="2" fill="none" stroke="url(#flow-tube-gradient-phone)" stroke-linecap="round" stroke-width="4"></path>
+<circle class="flow-packet" data-route="2" fill="url(#orb-sphere-phone)" opacity="0" r="7" stroke="#ffffff" stroke-width="2"></circle>
 </g>
 <!-- Input Cards -->
 <g class="flow-input" data-node="map">
@@ -163,38 +171,38 @@
 </g>
 <!-- Hub -->
 <g class="flow-hub">
-<circle class="flow-halo" cx="210.0" cy="275.0" fill="none" opacity="0" r="96.0" stroke="#20c997" stroke-width="1"></circle>
-<image height="96" href="brand-emblem-small.webp" width="96" x="162" y="227"/>
+<circle class="flow-halo" cx="210.0" cy="245.0" fill="none" opacity="0" r="90.0" stroke="#20c997" stroke-width="1"></circle>
+<image height="90" href="brand-emblem-small.webp" width="90" x="165" y="200"/>
 </g>
 <!-- Output List -->
 <g class="flow-output flow-list">
-<rect fill="#fff" filter="url(#flow-shadow-phone)" height="246" rx="12" stroke="#dce8df" width="332" x="44" y="375"></rect>
-<text fill="#244f35" font-size="18" font-weight="600" x="61" y="404">İşletme listeniz</text>
-<rect fill="#eaf7f1" height="22" rx="11" stroke="none" width="58" x="303" y="389"></rect>
-<text fill="#198754" font-size="11" font-weight="550" text-anchor="middle" x="332" y="404">3 kayıt</text>
-<path d="M44 422h332" stroke="#e6eee8"></path>
+<rect fill="#fff" filter="url(#flow-shadow-phone)" height="246" rx="12" stroke="#dce8df" width="332" x="44" y="390"></rect>
+<text fill="#244f35" font-size="18" font-weight="600" x="61" y="419">İşletme listeniz</text>
+<rect fill="#eaf7f1" height="22" rx="11" stroke="none" width="58" x="303" y="404"></rect>
+<text fill="#198754" font-size="11" font-weight="550" text-anchor="middle" x="332" y="419">3 kayıt</text>
+<path d="M44 437h332" stroke="#e6eee8"></path>
 <g class="flow-result-row">
-<rect fill="#f4f8f5" height="30" rx="5" stroke="none" width="308" x="56" y="434"></rect>
-<circle cx="70" cy="449" fill="#b7d9c3" r="4"></circle>
-<text fill="#46664f" font-size="14" font-weight="450" x="84" y="454">Atölye Mimarlık</text>
-<path d="m340 449 4 4 10-10" fill="none" stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<rect fill="#f4f8f5" height="30" rx="5" stroke="none" width="308" x="56" y="449"></rect>
+<circle cx="70" cy="464" fill="#b7d9c3" r="4"></circle>
+<text fill="#46664f" font-size="14" font-weight="450" x="84" y="469">Atölye Mimarlık</text>
+<path d="m340 464 4 4 10-10" fill="none" stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </g>
 <g class="flow-result-row">
-<rect fill="#fff" height="30" rx="5" stroke="none" width="308" x="56" y="470"></rect>
-<circle cx="70" cy="485" fill="#b7d9c3" r="4"></circle>
-<text fill="#46664f" font-size="14" font-weight="450" x="84" y="490">Form Tasarım</text>
-<path d="m340 485 4 4 10-10" fill="none" stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<rect fill="#fff" height="30" rx="5" stroke="none" width="308" x="56" y="485"></rect>
+<circle cx="70" cy="500" fill="#b7d9c3" r="4"></circle>
+<text fill="#46664f" font-size="14" font-weight="450" x="84" y="505">Form Tasarım</text>
+<path d="m340 500 4 4 10-10" fill="none" stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </g>
 <g class="flow-result-row">
-<rect fill="#f4f8f5" height="30" rx="5" stroke="none" width="308" x="56" y="506"></rect>
-<circle cx="70" cy="521" fill="#b7d9c3" r="4"></circle>
-<text fill="#46664f" font-size="14" font-weight="450" x="84" y="526">Studio Mimarlık</text>
-<path d="m340 521 4 4 10-10" fill="none" stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<rect fill="#f4f8f5" height="30" rx="5" stroke="none" width="308" x="56" y="521"></rect>
+<circle cx="70" cy="536" fill="#b7d9c3" r="4"></circle>
+<text fill="#46664f" font-size="14" font-weight="450" x="84" y="541">Studio Mimarlık</text>
+<path d="m340 536 4 4 10-10" fill="none" stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </g>
 <g class="flow-success" data-demo-download="" role="button" style="cursor:pointer" tabindex="0">
-<rect fill="#ffffff" height="42" rx="8" stroke="#198754" stroke-width="1.5" width="308" x="56" y="558"></rect>
-<path d="M128 570v10m-4-4 4 4 4-4M122 584v2h12v-2" fill="none" stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-<text fill="#198754" font-size="15" font-weight="600" text-anchor="middle" x="218" y="584">Listeyi indir (CSV)</text>
+<rect fill="#ffffff" height="42" rx="8" stroke="#198754" stroke-width="1.5" width="308" x="56" y="573"></rect>
+<path d="M128 585v10m-4-4 4 4 4-4M122 599v2h12v-2" fill="none" stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<text fill="#198754" font-size="15" font-weight="600" text-anchor="middle" x="218" y="599">Listeyi indir (CSV)</text>
 </g>
 </g>
 </svg></div><div class="connection-footer"><span>Bölgenizi seçin. Bilgiler tek listede toplansın.</span><div class="connection-controls" hidden=""><button aria-label="Bağlantı animasyonunu duraklat" class="connection-toggle" type="button">Duraklat</button></div></div></div></section>
