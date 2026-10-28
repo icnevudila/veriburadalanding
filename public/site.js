@@ -29,9 +29,9 @@
 
 
   const audiences = {
-    sales: ['Satış ekibiniz için<br>işletme listeleri.', 'Seçtiğiniz bölgedeki işletmeleri telefon, adres ve web bilgileriyle listeleyin.'],
-    agency: ['Hangi işletmeye<br>ne sunacağınızı görün.', 'Hedef sektörünüzü seçin. İşletmelerin web sitesi ve iletişim alanlarını inceleyip araştırmanızı buna göre daraltın.'],
-    local: ['Çevrenizdeki işletmeleri<br>haritada keşfedin.', 'İş birliği yapabileceğiniz işletmeleri yakın çevrenizde bulun. Konum ve iletişim bilgilerini birlikte inceleyin.']
+    sales: ['Görüşeceğiniz işletmeleri belirleyin.', 'Seçtiğiniz bölgedeki işletmeleri iletişim bilgileriyle listeleyin.'],
+    agency: ['Tekliften önce işletmeyi tanıyın.', 'Web sitesi ve iletişim bilgilerini inceleyerek teklifinizi hazırlayın.'],
+    local: ['Yakınınızdaki işletmeleri keşfedin.', 'Çevrenizdeki işletmeleri konum ve iletişim bilgileriyle keşfedin.']
   };
   const tabs = $$('[data-audience]');
   tabs.forEach((tab, index) => {
@@ -73,139 +73,11 @@
     if (detail.open) $$('.faq-list details').forEach(other => { if (other !== detail) other.open = false; });
   }));
 
-  // All business names below are illustrative. No contact information is invented.
-  const sectors = {
-    architecture: { label: 'Mimarlık ofisleri', type: 'Mimarlık ofisi', names: ['Atölye Mimarlık', 'Form Tasarım', 'Studio Mimarlık'] },
-    cafe: { label: 'Kafeler', type: 'Kafe', names: ['Köşe Kahve', 'Mahalle Atölyesi', 'Gün Işığı Kafe'] },
-    clinic: { label: 'Diş klinikleri', type: 'Diş kliniği', names: ['Gülüş Diş Kliniği', 'Merkez Ağız ve Diş', 'İnci Diş Kliniği'] }
-  };
-  const positions = [[41.0330, 28.9798], [41.0300, 28.9815], [41.0321, 28.9850]];
-  let sector = 'architecture';
-  let timers = [];
-  let markers = [];
-  let map = null;
-  let baseZoom = 15;
-  const records = $$('.panel-record');
-  const sectorSelect = $('#demo-sector-select');
-  sectorSelect.disabled = false;
-  const status = $('#demo-status');
-  function highlightRecord(index) {
-    records.forEach((record, i) => record.classList.toggle('record-focused', i === index));
-    markers.forEach((marker, i) => marker.getElement()?.querySelector('.business-marker').classList.toggle('selected-marker', i === index));
-  }
-  function renderRecords() {
-    const data = sectors[sector];
-    $('.panel-title small').textContent = `Beyoğlu · ${data.label}`;
-    records.forEach((record, i) => {
-      $('.business-monogram', record).innerHTML = window.VBArt.icon(window.VBArt.industry(data.type),38);
-      record.querySelector(':scope>div>strong').textContent = data.names[i];
-      const small = record.querySelector(':scope>div>small');
-      small.textContent = `${data.type} · Örnek işletme`;
-      const fields = $('.record-fields', record);
-      fields.innerHTML = `<span>${icon('phone')} +90 (212) 000 10 0${i+1}</span><span>${icon('globe')} işletme-${i+1}.example</span><span>${icon('pin')} Beyoğlu, İstanbul</span>`;
-      const markerElement = markers[i]?.getElement();
-      if (markerElement) {
-        markerElement.removeAttribute('aria-label');
-        markerElement.setAttribute('aria-hidden', 'true');
-        markerElement.title = `${data.names[i]} · Temsili kayıt`;
-      }
-    });
-    $('#workflow-sector').firstChild.textContent = data.label + ' ';
-    $('#workflow-records').innerHTML = data.names.map(name => `<div><strong>${name}</strong><span>Beyoğlu</span><i>✓</i></div>`).join('');
-  }
-  function runDiscovery(announce = true) {
-    timers.forEach(clearTimeout); timers = [];
-    renderRecords();
-    $('.discovery-panel').classList.remove('discovery-finished');
-    records.forEach(record => record.classList.remove('record-entered', 'record-focused'));
-    $('#business-count').textContent = motion.matches ? '3' : '0';
-    const revealRecord = i => {
-      records[i].classList.add('record-entered');
-      $('#business-count').textContent = i + 1;
-      highlightRecord(i);
-      if (i === 2) {
-        $('.discovery-panel').classList.add('discovery-finished');
-        if (announce) status.textContent = `${sectors[sector].label} için üç temsili kayıt birlikte gösteriliyor.`;
-      }
-    };
-    const revealBatch = () => {
-      records.forEach((record, i) => revealRecord(i));
-      records.forEach(record => record.classList.remove('record-focused'));
-      markers.forEach(marker => marker.getElement()?.querySelector('.business-marker')?.classList.add('selected-marker'));
-    };
-    if (motion.matches) revealBatch();
-    else timers.push(setTimeout(revealBatch, 900));
-  }
-  records.forEach((record, index) => record.addEventListener('mouseenter', () => highlightRecord(index)));
-  sectorSelect.addEventListener('change', () => { sector = sectorSelect.value; runDiscovery(); });
-  $('.map-search-button').addEventListener('click', runDiscovery);
-  $('#download-demo').addEventListener('click', () => {
-    const data = sectors[sector];
-    const rows = [['İşletme adı', 'Sektör', 'İl', 'İlçe', 'Telefon', 'Web sitesi', 'Not'], ...data.names.map((name,i) => [name, data.type, 'İstanbul', 'Beyoğlu', '+90 (212) 000 10 0'+(i+1), name.toLocaleLowerCase('tr-TR').replaceAll('ı','i').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'')+'.example', 'Örnek kayıt; gerçek iletişim bilgisi değildir.'])];
-    const csv = '\uFEFF' + rows.map(row => row.map(value => `"${value.replaceAll('"', '""')}"`).join(';')).join('\r\n');
-    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
-    const a = document.createElement('a'); a.href = url; a.download = 'veriburada-temsili-ornek.csv'; a.hidden = true;
-    document.body.append(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 10000);
-    status.textContent = 'Temsili örnek CSV dosyanız indirildi.';
-  });
-  $$('[data-demo-download]').forEach(button => button.addEventListener('click', () => $('#download-demo').click()));
-  function initializeMap() {
-    if (map || !window.L) return;
-    map = L.map('discovery-map', { zoomControl: false, scrollWheelZoom: false, dragging: false, touchZoom: false, doubleClickZoom: false, boxZoom: false, keyboard: false, attributionControl: true, zoomSnap: .25, zoomAnimation: !motion.matches });
-    map.attributionControl.setPosition('bottomleft');
-    const bounds = [[41.025, 28.975], [41.04, 28.995]];
-    L.imageOverlay('istanbul-map-display-v4.webp', bounds, { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · Harita çizimi: Veriburada' }).addTo(map);
-    map.attributionControl.setPrefix(false);
-    function fitMap() {
-      if (!$('.hero-visual').clientWidth || !$('#discovery-map').clientHeight) return;
-      map.invalidateSize();
-      baseZoom = map.getBoundsZoom(bounds, true);
-      map.setMinZoom(baseZoom); map.setMaxZoom(baseZoom + 1);
-      map.setView([41.0325, 28.985], baseZoom, { animate: false });
-      updateZoomButtons();
-    }
-    markers = positions.map((pos, i) => L.marker(pos, {
-      title: sectors[sector].names[i], keyboard: false, interactive: false,
-      icon: L.divIcon({ className: 'business-marker-wrap', html: `<div class="business-marker" style="--pin-order:${i}">${icon('building')}<span></span></div>`, iconSize: [36, 44], iconAnchor: [18, 44] })
-    }).addTo(map).on('click', () => highlightRecord(i)));
-    function updateZoomButtons() {
-      const buttons = $$('.geo-zoom button');
-      buttons[0].disabled = map.getZoom() >= map.getMaxZoom();
-      buttons[1].disabled = map.getZoom() <= map.getMinZoom();
-    }
-    $('.geo-zoom button:first-child').addEventListener('click', () => map.zoomIn(.5));
-    $('.geo-zoom button:last-child').addEventListener('click', () => map.zoomOut(.5));
-    map.on('zoomend', updateZoomButtons);
-    new ResizeObserver(fitMap).observe($('.hero-visual'));
-    fitMap();
-    window.veriburadaMap = map;
-    renderRecords();
-  }
-  let mapLoading = null;
-  function ensureMap() {
-    if (map) return Promise.resolve();
-    if (!mapLoading) mapLoading = new Promise((resolve, reject) => {
-      if (window.L) { initializeMap(); resolve(); return; }
-      const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'vendor/leaflet.css'; document.head.append(css);
-      const script = document.createElement('script'); script.src = 'vendor/leaflet.js';
-      script.onload = () => { initializeMap(); resolve(); };
-      script.onerror = () => { script.remove(); mapLoading = null; reject(new Error('Map could not be loaded')); };
-      document.head.append(script);
-    });
-    return mapLoading;
-  }
-  const mapExample = $('.interactive-example');
-  const loadExample = () => { if (mapExample.open) ensureMap().catch(() => { status.textContent = 'Etkileşimli harita yüklenemedi. Örnek listeyi inceleyebilir veya tekrar deneyebilirsiniz.'; }); };
-  mapExample.addEventListener('toggle', loadExample);
-  loadExample();
-  runDiscovery();
-  let discoveryInView = false;
-  new IntersectionObserver(entries => entries.forEach(entry => { discoveryInView = entry.isIntersecting; }), { threshold: .3 }).observe($('.hero-visual'));
-  setInterval(() => {
-    if (discoveryInView && !document.hidden && !motion.matches && !document.body.classList.contains('motion-paused') && !$('.hero-visual').contains(document.activeElement)) runDiscovery(false);
-  }, 7600);
-
-  motion.addEventListener('change', e => { if (e.matches) runDiscovery(); });
-  $('#year').textContent = new Date().getFullYear();
+  $$('[data-demo-download]').forEach(button=>button.addEventListener('click',()=>{
+ const table=$('.output-window table');if(!table)return;
+ const lines=$$('tr',table).map(row=>$$('th,td',row).map(cell=>'"'+cell.textContent.trim().replaceAll('"','""')+'"').join(';'));
+ const blob=new Blob(['\ufeff'+lines.join('\r\n')],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='veriburada-ornek-liste.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ }));
+ const year=$('#year');if(year)year.textContent=new Date().getFullYear();
 })();

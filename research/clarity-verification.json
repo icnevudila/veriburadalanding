@@ -1,0 +1,36 @@
+{
+  "report": [
+    {
+      "width": 320,
+      "noOverflow": true,
+      "headerCtaRemoved": true,
+      "duplicateRemoved": true,
+      "logos": 5
+    },
+    {
+      "width": 390,
+      "noOverflow": true,
+      "headerCtaRemoved": true,
+      "duplicateRemoved": true,
+      "logos": 5
+    },
+    {
+      "width": 768,
+      "noOverflow": true,
+      "headerCtaRemoved": true,
+      "duplicateRemoved": true,
+      "logos": 5
+    },
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "headerCtaRemoved": true,
+      "duplicateRemoved": true,
+      "logos": 5
+    }
+  ],
+  "stableHero": true,
+  "requestScene": true,
+  "exportLabel": true,
+  "errors": []
+}

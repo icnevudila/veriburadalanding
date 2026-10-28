@@ -4,7 +4,9 @@ import shutil,json,hashlib,zipfile
 root=Path(__file__).resolve().parent.parent
 release=root/'dist'/'vercel-release';release.mkdir(parents=True,exist_ok=True)
 assets=['index.html','landing.css','landing.js','brand-wordmark.webp','brand-emblem-small.webp','closing-map.svg','favicon.ico','istanbul-map-display-v4.webp','story-bulk-desktop.webp','story-bulk-mobile.webp','hero-bulk-mobile.webp','hero-bulk-desktop.webp','map-demo.html','map-demo-runtime.js','map-demo-base.js','map-demo-scene.js','map-demo-craft.css','fonts/inter-latin.woff2','fonts/inter-turkish.woff2','fonts/LICENSE.txt','vendor/leaflet.js','vendor/leaflet.css','vendor/LEAFLET-LICENSE.txt','vendor/ASSET-SOURCES.md']
-assets+=['brand-ui.js','onboarding-cinema.js','page-narratives.js','page-narratives.css','editorial.css','editorial.js','navigation.js','motion-core.js','onboarding.js','social-card.png','robots.txt','sitemap.xml','404.html']
+assets += ['fonts/'+p.name for p in sorted((root/'public'/'fonts').glob('line-seed-*.woff2'))]
+assets += ['fonts/LINE-SEED-OFL.txt']
+assets+=['auth-links.js','brand-ui.js','onboarding-cinema.js','page-narratives.js','page-narratives.css','editorial.css','editorial.js','navigation.js','motion-core.js','onboarding.js','social-card.png','robots.txt','sitemap.xml','404.html']
 assets += ['media/'+p.name for p in sorted((root/'public'/'media').glob('*.webp'))]
 assets += ['media/icons/'+p.name for p in sorted((root/'public'/'media'/'icons').glob('*.svg'))]
 for page in json.loads((root/'research'/'content-pages-manifest.json').read_text(encoding='utf-8')):

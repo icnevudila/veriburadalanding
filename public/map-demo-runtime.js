@@ -1,5 +1,6 @@
 /* Eight real-world research scenarios. All names and contact fields are illustrative. */
 (() => {
+ document.documentElement.classList.toggle('embedded-demo',window.parent!==window);
  const sectors=[
   {query:'Kuaförler',type:'Kuaför',slug:'kuafor',layout:'list',names:['Ada Kuaför','Makas Studio','Pera Kuaför','Atölye Saç','Beyoğlu Kuaför']},
   {query:'Kafeler',type:'Kafe',slug:'kafe',layout:'cards',names:['Köşe Kahve','Mahalle Atölyesi','Gün Işığı Kafe','Pera Kahve','Sokak Kahvesi']},
@@ -10,19 +11,19 @@
   {query:'Spor salonları',type:'Spor salonu',slug:'spor',layout:'studios',names:['Hareket Studio','Pera Spor','Mahalle Fitness','Form Studio','Beyoğlu Spor']},
   {query:'Oto servisleri',type:'Oto servisi',slug:'servis',layout:'phone',names:['Merkez Oto Servis','Pera Otomotiv','Şehir Oto Bakım','Güven Oto Servis','Beyoğlu Otomotiv']}
  ];
- let episode=walkthrough?4:0,time=0,playing=false,last=0,raf=0,lastState=0,ready=false,hold=0;const duration=walkthrough?40:26;
+ let episode=walkthrough?4:0,time=0,playing=false,last=0,raf=0,lastState=0,ready=false;const duration=walkthrough?46:32;
  function send(type){parent.postMessage({channel:'veriburada-map',type,episode,sector:sectors[episode].query,time,duration,playing,ready},'*')}
- function applyEpisode(){const s=sectors[episode];currentSector=s;names=s.names;domains=s.names.map((_,i)=>`${s.slug}-${i+1}`);stage.dataset.layout=walkthrough?'directory':s.layout;stage.dataset.industry=['hair','cafe','clinic','restaurant','architecture','hotel','gym','garage'][episode];const order=[[0,1,2,3,4],[2,0,4,1,3],[1,3,0,4,2],[4,2,1,0,3],[0,4,3,2,1],[3,0,2,1,4],[1,4,2,3,0],[2,3,1,4,0]][episode];const geo=[[336,576],[546,756],[840,612],[924,324],[630,400]];order.forEach((n,i)=>{points[i]=geo[n].slice()});
+ function applyEpisode(){const s=sectors[episode];currentSector=s;names=s.names;domains=s.names.map((_,i)=>`${s.slug}-${i+1}`);stage.dataset.layout='list';stage.dataset.industry=['hair','cafe','clinic','restaurant','architecture','hotel','gym','garage'][episode];const order=[[0,1,2,3,4],[2,0,4,1,3],[1,3,0,4,2],[4,2,1,0,3],[0,4,3,2,1],[3,0,2,1,4],[1,4,2,3,0],[2,3,1,4,0]][episode];const geo=[[336,576],[546,756],[840,612],[924,324],[630,400]];order.forEach((n,i)=>{points[i]=geo[n].slice()});
   qa('.place-label').forEach((el,i)=>el.textContent=names[i]);q('.business small').textContent=s.type+' · Beyoğlu';
   q('.results-header small').textContent='Beyoğlu / '+s.query;
-  qa('.row').forEach((el,i)=>{el.querySelector('.avatar').innerHTML='<img alt="" src="/media/icons/'+(['hair','cafe','clinic','restaurant','architecture','hotel','gym','garage'][episode])+'.svg">';el.querySelector('strong').textContent=names[i];el.querySelector('small').textContent=s.layout==='phone'||s.layout==='contacts'?'+90 (212) 000 10 01':s.layout==='web'?'Web sitesi · Telefon':s.layout==='locations'?'Beyoğlu, İstanbul':'Telefon · Web sitesi · Adres'});
+  qa('.row').forEach((el,i)=>{el.querySelector('.avatar').innerHTML='<img alt="" src="/media/icons/'+(['hair','cafe','clinic','restaurant','architecture','hotel','gym','garage'][episode])+'.svg">';if(!walkthrough)el.querySelector('.avatar').textContent=String(i+1);el.querySelector('strong').textContent=names[i];el.querySelector('small').textContent=s.layout==='phone'||s.layout==='contacts'?'+90 (212) 000 10 01':s.layout==='web'?'Web sitesi · Telefon':s.layout==='locations'?'Beyoğlu, İstanbul':'Telefon · Web sitesi · Adres'});
   q('.complete strong').textContent=s.slug+'-listem.csv';
  }
  function draw(){window.seek(time)}
- function tick(now){if(!playing||document.hidden){raf=0;return}const dt=Math.min(100,now-last)/1000;last=now;const resolvedAt=walkthrough?36:23;if(time>=resolvedAt){hold+=dt;if(hold>=2.8){hold=0;time=0;episode=walkthrough?4:(episode+1)%sectors.length;applyEpisode()}}else time=Math.min(resolvedAt,time+dt*2);draw();if(now-lastState>250){send('state');lastState=now}raf=requestAnimationFrame(tick)}
+ function tick(now){if(!playing||document.hidden){raf=0;return}time+=Math.min(100,now-last)*2/1000;last=now;if(time>=duration){time=0;episode=walkthrough?4:(episode+1)%sectors.length;applyEpisode()}draw();if(now-lastState>250){send('state');lastState=now}raf=requestAnimationFrame(tick)}
  function play(){if(playing)return;playing=true;last=performance.now();raf=requestAnimationFrame(tick);send('state')}
  function pause(){playing=false;cancelAnimationFrame(raf);raf=0;send('state')}
- addEventListener('message',e=>{if(e.source!==parent||e.data?.channel!=='veriburada-map-control')return;const d=e.data;if(d.action==='play')play();if(d.action==='pause')pause();if(d.action==='seek'){hold=0;time=Math.max(0,Math.min(duration-.01,Number(d.time)||0));draw();send('state')}if(d.action==='next'||d.action==='sector'){episode=d.action==='next'?(episode+1)%sectors.length:Math.max(0,Math.min(7,Number(d.episode)||0));time=0;hold=0;applyEpisode();draw();send('state')}if(d.action==='state')send('ready')});
+ addEventListener('message',e=>{if(e.source!==parent||e.data?.channel!=='veriburada-map-control')return;const d=e.data;if(d.action==='play')play();if(d.action==='pause')pause();if(d.action==='seek'){time=Math.max(0,Math.min(duration-.01,Number(d.time)||0));draw();send('state')}if(d.action==='next'||d.action==='sector'){episode=d.action==='next'?(episode+1)%sectors.length:Math.max(0,Math.min(7,Number(d.episode)||0));time=0;applyEpisode();draw();send('state')}if(d.action==='state')send('ready')});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});
  document.querySelectorAll('button').forEach(b=>{b.tabIndex=-1;b.setAttribute('aria-hidden','true')});stage.setAttribute('aria-hidden','true');
  const css=document.createElement('style');css.textContent=`

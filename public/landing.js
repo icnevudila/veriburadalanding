@@ -1,3 +1,7 @@
+/* Public application destinations. No credentials belong in this file. */
+window.VBAuthLinks={signIn:'https://app.veriburada.com/signin',signUp:'https://app.veriburada.com/signup'};
+
+;
 /* Original illustrated object system. Product identity always uses the supplied mark. */
 (() => {const types=['architecture','cafe','clinic','hair','restaurant','hotel','gym','garage','map','contact','csv','webapp','research'];const industry=label=>{label=String(label).toLocaleLowerCase('tr-TR');return /diş|klinik/.test(label)?'clinic':/kafe|kahve/.test(label)?'cafe':/restoran/.test(label)?'restaurant':/kuaför|güzellik/.test(label)?'hair':/otel/.test(label)?'hotel':/spor/.test(label)?'gym':/oto |servis/.test(label)?'garage':'architecture'};window.VBArt={industry,icon(kind,size=48){kind=types.includes(kind)?kind:'research';return `<img class="brand-illustration" src="/media/icons/${kind}.svg" width="${size}" height="${size}" alt="" aria-hidden="true">`},mark(size=32){return `<img class="product-mark" src="/brand-emblem-small.webp" width="${size}" height="${size}" alt="" aria-hidden="true">`}}})();
 
@@ -21,33 +25,19 @@
 })();
 
 ;
-/* One foreground composition at a time; ambient detail keeps a quieter tempo. */
+/* Small timeline coordinator. Compositions and timing are authored per scene. */
 (() => {
- const scenes=new Set(),external=new Set(),reduced=matchMedia('(prefers-reduced-motion:reduce)');let paused=false,frame=0,last=0,focus=null,scrollFrame=0;
+ const scenes=new Set(),reduced=matchMedia('(prefers-reduced-motion:reduce)');let paused=false,frame=0,last=0;
  const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>1-Math.pow(1-clamp(x),3),smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
- const blocked=()=>paused||reduced.matches||document.hidden||document.body.classList.contains('onboarding-open')||document.body.classList.contains('navigation-open');
- function score(s){const r=s.target.getBoundingClientRect(),h=Math.min(innerHeight,r.bottom)-Math.max(0,r.top),w=Math.min(innerWidth,r.right)-Math.max(0,r.left);return h>0&&w>0?(h*w/Math.max(1,r.width*r.height))/(1+Math.abs((Math.max(0,r.top)+Math.min(innerHeight,r.bottom))/2-innerHeight/2)/innerHeight):-1}
- function active(s){return !blocked()&&s.visible&&s.enabled&&(s.ambient||focus===s)}
+ function active(s){return s.visible&&s.enabled&&!paused&&!reduced.matches&&!document.hidden&&!document.body.classList.contains('onboarding-open')}
  function schedule(){if(!frame&&[...scenes].some(active)){last=performance.now();frame=requestAnimationFrame(tick)}}
- function tick(now){frame=0;if(blocked()){update();return}const dt=Math.min(80,now-last);if(dt<30){frame=requestAnimationFrame(tick);return}last=now;for(const s of scenes)if(active(s)){
-  if(s.ambient)s.time=(s.time+dt*.65)%s.duration;
-  else if(s.time>=s.staticAt){s.hold+=dt;if(s.hold>=2800){s.time=0;s.hold=0}}
-  else s.time=Math.min(s.staticAt,s.time+dt*2);
-  s.render(s.time/1000);s.root.dataset.motionTime=(s.time/1000).toFixed(2);
- }schedule()}
- function update(){const candidates=[...scenes].filter(s=>!s.ambient&&s.visible&&s.enabled).concat([...external].filter(s=>s.enabled));let next=null,best=-1;for(const s of candidates){const value=score(s);if(value>best){best=value;next=s}}focus=blocked()?null:next;
-  for(const s of scenes){s.root.classList.toggle('studio-running',active(s));if(reduced.matches)s.render(s.staticAt/1000)}
-  for(const s of external){const on=s===focus;if(on!==s.running){s.running=on;s.onchange(on)}}
-  if(![...scenes].some(active)){cancelAnimationFrame(frame);frame=0}else schedule();
- }
- window.VBMotion={clamp,ease,smooth,registerPlayer(root,onchange){const s={target:root,enabled:false,running:false,onchange};external.add(s);return{enable(value){s.enabled=value;update()}}},sample(root,seconds){const s=[...scenes].find(s=>s.root===root);if(!s)return false;s.enabled=false;s.time=seconds*1000;s.render(seconds);s.root.dataset.motionTime=seconds.toFixed(2);update();return true},create(root,{duration,render,staticAt=duration-2000,target=root,enabled=true,ambient=false}){
-  const s={root,target,duration,render,staticAt,enabled,ambient,visible:false,time:0,hold:0};scenes.add(s);render(reduced.matches?staticAt/1000:0);
+ function tick(now){frame=0;const dt=Math.min(80,now-last);if(dt<30){frame=requestAnimationFrame(tick);return}last=now;for(const s of scenes)if(active(s)){s.time=(s.time+dt*2)%s.duration;s.render(s.time/1000);s.root.dataset.motionTime=(s.time/1000).toFixed(2)}schedule()}
+ function update(){for(const s of scenes){s.root.classList.toggle('studio-running',active(s));if(reduced.matches)s.render(s.staticAt/1000)}if(![...scenes].some(active)){cancelAnimationFrame(frame);frame=0}else schedule()}
+ window.VBMotion={clamp,ease,smooth,sample(root,seconds){const s=[...scenes].find(s=>s.root===root);if(!s)return false;s.enabled=false;s.time=seconds*1000;s.render(seconds);s.root.dataset.motionTime=seconds.toFixed(2);update();return true},create(root,{duration,render,staticAt=duration-2000,target=root,enabled=true}){
+  const s={root,duration,render,staticAt,enabled,visible:false,time:0};scenes.add(s);render(reduced.matches?staticAt/1000:0);
   new IntersectionObserver(es=>{s.visible=es[0].isIntersecting;update()},{threshold:.15}).observe(target);
-  return{enable(value){s.enabled=value;if(value){s.time=0;s.hold=0;s.render(reduced.matches?s.staticAt/1000:0)}update()},restart(){s.time=0;s.hold=0;s.render(reduced.matches?s.staticAt/1000:0);schedule()},get time(){return s.time}};
+  return{enable(value){s.enabled=value;if(value){s.time=0;s.render(reduced.matches?s.staticAt/1000:0)}update()},restart(){s.time=0;s.render(reduced.matches?s.staticAt/1000:0);schedule()},get time(){return s.time}};
  }};
- function queueUpdate(){if(!scrollFrame)scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;update()})}
- addEventListener('scroll',queueUpdate,{passive:true});addEventListener('resize',queueUpdate);
- new MutationObserver(update).observe(document.body,{attributes:true,attributeFilter:['class']});
  window.addEventListener('veriburada:motion',e=>{paused=e.detail.paused;update()});document.addEventListener('visibilitychange',update);document.addEventListener('veriburada:onboarding-open',update);document.addEventListener('veriburada:onboarding-close',update);reduced.addEventListener('change',update);
 })();
 
@@ -83,9 +73,9 @@
 
 
   const audiences = {
-    sales: ['Satış ekibiniz için<br>işletme listeleri.', 'Seçtiğiniz bölgedeki işletmeleri telefon, adres ve web bilgileriyle listeleyin.'],
-    agency: ['Hangi işletmeye<br>ne sunacağınızı görün.', 'Hedef sektörünüzü seçin. İşletmelerin web sitesi ve iletişim alanlarını inceleyip araştırmanızı buna göre daraltın.'],
-    local: ['Çevrenizdeki işletmeleri<br>haritada keşfedin.', 'İş birliği yapabileceğiniz işletmeleri yakın çevrenizde bulun. Konum ve iletişim bilgilerini birlikte inceleyin.']
+    sales: ['Görüşeceğiniz işletmeleri belirleyin.', 'Seçtiğiniz bölgedeki işletmeleri iletişim bilgileriyle listeleyin.'],
+    agency: ['Tekliften önce işletmeyi tanıyın.', 'Web sitesi ve iletişim bilgilerini inceleyerek teklifinizi hazırlayın.'],
+    local: ['Yakınınızdaki işletmeleri keşfedin.', 'Çevrenizdeki işletmeleri konum ve iletişim bilgileriyle keşfedin.']
   };
   const tabs = $$('[data-audience]');
   tabs.forEach((tab, index) => {
@@ -127,141 +117,13 @@
     if (detail.open) $$('.faq-list details').forEach(other => { if (other !== detail) other.open = false; });
   }));
 
-  // All business names below are illustrative. No contact information is invented.
-  const sectors = {
-    architecture: { label: 'Mimarlık ofisleri', type: 'Mimarlık ofisi', names: ['Atölye Mimarlık', 'Form Tasarım', 'Studio Mimarlık'] },
-    cafe: { label: 'Kafeler', type: 'Kafe', names: ['Köşe Kahve', 'Mahalle Atölyesi', 'Gün Işığı Kafe'] },
-    clinic: { label: 'Diş klinikleri', type: 'Diş kliniği', names: ['Gülüş Diş Kliniği', 'Merkez Ağız ve Diş', 'İnci Diş Kliniği'] }
-  };
-  const positions = [[41.0330, 28.9798], [41.0300, 28.9815], [41.0321, 28.9850]];
-  let sector = 'architecture';
-  let timers = [];
-  let markers = [];
-  let map = null;
-  let baseZoom = 15;
-  const records = $$('.panel-record');
-  const sectorSelect = $('#demo-sector-select');
-  sectorSelect.disabled = false;
-  const status = $('#demo-status');
-  function highlightRecord(index) {
-    records.forEach((record, i) => record.classList.toggle('record-focused', i === index));
-    markers.forEach((marker, i) => marker.getElement()?.querySelector('.business-marker').classList.toggle('selected-marker', i === index));
-  }
-  function renderRecords() {
-    const data = sectors[sector];
-    $('.panel-title small').textContent = `Beyoğlu · ${data.label}`;
-    records.forEach((record, i) => {
-      $('.business-monogram', record).innerHTML = window.VBArt.icon(window.VBArt.industry(data.type),38);
-      record.querySelector(':scope>div>strong').textContent = data.names[i];
-      const small = record.querySelector(':scope>div>small');
-      small.textContent = `${data.type} · Örnek işletme`;
-      const fields = $('.record-fields', record);
-      fields.innerHTML = `<span>${icon('phone')} +90 (212) 000 10 0${i+1}</span><span>${icon('globe')} işletme-${i+1}.example</span><span>${icon('pin')} Beyoğlu, İstanbul</span>`;
-      const markerElement = markers[i]?.getElement();
-      if (markerElement) {
-        markerElement.removeAttribute('aria-label');
-        markerElement.setAttribute('aria-hidden', 'true');
-        markerElement.title = `${data.names[i]} · Temsili kayıt`;
-      }
-    });
-    $('#workflow-sector').firstChild.textContent = data.label + ' ';
-    $('#workflow-records').innerHTML = data.names.map(name => `<div><strong>${name}</strong><span>Beyoğlu</span><i>✓</i></div>`).join('');
-  }
-  function runDiscovery(announce = true) {
-    timers.forEach(clearTimeout); timers = [];
-    renderRecords();
-    $('.discovery-panel').classList.remove('discovery-finished');
-    records.forEach(record => record.classList.remove('record-entered', 'record-focused'));
-    $('#business-count').textContent = motion.matches ? '3' : '0';
-    const revealRecord = i => {
-      records[i].classList.add('record-entered');
-      $('#business-count').textContent = i + 1;
-      highlightRecord(i);
-      if (i === 2) {
-        $('.discovery-panel').classList.add('discovery-finished');
-        if (announce) status.textContent = `${sectors[sector].label} için üç temsili kayıt birlikte gösteriliyor.`;
-      }
-    };
-    const revealBatch = () => {
-      records.forEach((record, i) => revealRecord(i));
-      records.forEach(record => record.classList.remove('record-focused'));
-      markers.forEach(marker => marker.getElement()?.querySelector('.business-marker')?.classList.add('selected-marker'));
-    };
-    if (motion.matches) revealBatch();
-    else timers.push(setTimeout(revealBatch, 900));
-  }
-  records.forEach((record, index) => record.addEventListener('mouseenter', () => highlightRecord(index)));
-  sectorSelect.addEventListener('change', () => { sector = sectorSelect.value; runDiscovery(); });
-  $('.map-search-button').addEventListener('click', runDiscovery);
-  $('#download-demo').addEventListener('click', () => {
-    const data = sectors[sector];
-    const rows = [['İşletme adı', 'Sektör', 'İl', 'İlçe', 'Telefon', 'Web sitesi', 'Not'], ...data.names.map((name,i) => [name, data.type, 'İstanbul', 'Beyoğlu', '+90 (212) 000 10 0'+(i+1), name.toLocaleLowerCase('tr-TR').replaceAll('ı','i').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'')+'.example', 'Örnek kayıt; gerçek iletişim bilgisi değildir.'])];
-    const csv = '\uFEFF' + rows.map(row => row.map(value => `"${value.replaceAll('"', '""')}"`).join(';')).join('\r\n');
-    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
-    const a = document.createElement('a'); a.href = url; a.download = 'veriburada-temsili-ornek.csv'; a.hidden = true;
-    document.body.append(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 10000);
-    status.textContent = 'Temsili örnek CSV dosyanız indirildi.';
-  });
-  $$('[data-demo-download]').forEach(button => button.addEventListener('click', () => $('#download-demo').click()));
-  function initializeMap() {
-    if (map || !window.L) return;
-    map = L.map('discovery-map', { zoomControl: false, scrollWheelZoom: false, dragging: false, touchZoom: false, doubleClickZoom: false, boxZoom: false, keyboard: false, attributionControl: true, zoomSnap: .25, zoomAnimation: !motion.matches });
-    map.attributionControl.setPosition('bottomleft');
-    const bounds = [[41.025, 28.975], [41.04, 28.995]];
-    L.imageOverlay('istanbul-map-display-v4.webp', bounds, { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · Harita çizimi: Veriburada' }).addTo(map);
-    map.attributionControl.setPrefix(false);
-    function fitMap() {
-      if (!$('.hero-visual').clientWidth || !$('#discovery-map').clientHeight) return;
-      map.invalidateSize();
-      baseZoom = map.getBoundsZoom(bounds, true);
-      map.setMinZoom(baseZoom); map.setMaxZoom(baseZoom + 1);
-      map.setView([41.0325, 28.985], baseZoom, { animate: false });
-      updateZoomButtons();
-    }
-    markers = positions.map((pos, i) => L.marker(pos, {
-      title: sectors[sector].names[i], keyboard: false, interactive: false,
-      icon: L.divIcon({ className: 'business-marker-wrap', html: `<div class="business-marker" style="--pin-order:${i}">${icon('building')}<span></span></div>`, iconSize: [36, 44], iconAnchor: [18, 44] })
-    }).addTo(map).on('click', () => highlightRecord(i)));
-    function updateZoomButtons() {
-      const buttons = $$('.geo-zoom button');
-      buttons[0].disabled = map.getZoom() >= map.getMaxZoom();
-      buttons[1].disabled = map.getZoom() <= map.getMinZoom();
-    }
-    $('.geo-zoom button:first-child').addEventListener('click', () => map.zoomIn(.5));
-    $('.geo-zoom button:last-child').addEventListener('click', () => map.zoomOut(.5));
-    map.on('zoomend', updateZoomButtons);
-    new ResizeObserver(fitMap).observe($('.hero-visual'));
-    fitMap();
-    window.veriburadaMap = map;
-    renderRecords();
-  }
-  let mapLoading = null;
-  function ensureMap() {
-    if (map) return Promise.resolve();
-    if (!mapLoading) mapLoading = new Promise((resolve, reject) => {
-      if (window.L) { initializeMap(); resolve(); return; }
-      const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'vendor/leaflet.css'; document.head.append(css);
-      const script = document.createElement('script'); script.src = 'vendor/leaflet.js';
-      script.onload = () => { initializeMap(); resolve(); };
-      script.onerror = () => { script.remove(); mapLoading = null; reject(new Error('Map could not be loaded')); };
-      document.head.append(script);
-    });
-    return mapLoading;
-  }
-  const mapExample = $('.interactive-example');
-  const loadExample = () => { if (mapExample.open) ensureMap().catch(() => { status.textContent = 'Etkileşimli harita yüklenemedi. Örnek listeyi inceleyebilir veya tekrar deneyebilirsiniz.'; }); };
-  mapExample.addEventListener('toggle', loadExample);
-  loadExample();
-  runDiscovery();
-  let discoveryInView = false;
-  new IntersectionObserver(entries => entries.forEach(entry => { discoveryInView = entry.isIntersecting; }), { threshold: .3 }).observe($('.hero-visual'));
-  setInterval(() => {
-    if (discoveryInView && !document.hidden && !motion.matches && !document.body.classList.contains('motion-paused') && !$('.hero-visual').contains(document.activeElement)) runDiscovery(false);
-  }, 7600);
-
-  motion.addEventListener('change', e => { if (e.matches) runDiscovery(); });
-  $('#year').textContent = new Date().getFullYear();
+  $$('[data-demo-download]').forEach(button=>button.addEventListener('click',()=>{
+ const table=$('.output-window table');if(!table)return;
+ const lines=$$('tr',table).map(row=>$$('th,td',row).map(cell=>'"'+cell.textContent.trim().replaceAll('"','""')+'"').join(';'));
+ const blob=new Blob(['\ufeff'+lines.join('\r\n')],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='veriburada-ornek-liste.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ }));
+ const year=$('#year');if(year)year.textContent=new Date().getFullYear();
 })();
 
 ;
@@ -280,34 +142,11 @@
 })();
 
 ;
-/* Final landing behavior: transparent duration choices and synchronized sample. */
-(() => {
- const choices=[...document.querySelectorAll('[data-plan-choice]')];
- const cards=[...document.querySelectorAll('[data-plan]')];
- choices.forEach(button=>button.addEventListener('click',()=>{
-   choices.forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
-   cards.forEach(card=>card.classList.toggle('selected-plan',card.dataset.plan===button.dataset.planChoice));
-   const selected=cards.find(card=>card.dataset.plan===button.dataset.planChoice);
-   if(!matchMedia('(prefers-reduced-motion:reduce)').matches)selected.animate([{opacity:.4,transform:'translateY(9px)'},{opacity:1,transform:'translateY(0)'}],{duration:350,easing:'cubic-bezier(.22,1,.36,1)'});
- }));
- function syncSample(){
-   const records=[...document.querySelectorAll('.panel-record')];
-   const rows=[...document.querySelectorAll('.output-window tbody tr')];
-   records.forEach((record,i)=>{
-     const name=record.querySelector(':scope>div>strong').textContent;
-     const type=record.querySelector(':scope>div>small').textContent.split('·')[0].trim();
-     rows[i].querySelector('th').replaceChildren();
-     const avatar=document.createElement('i');avatar.className='output-avatar';avatar.innerHTML=window.VBArt.icon(window.VBArt.industry(type),38);
-     rows[i].querySelector('th').append(avatar,document.createTextNode(name));
-     rows[i].querySelector('td').textContent=type;
-     rows[i].querySelectorAll('td')[1].textContent='+90 (212) 000 10 0'+(i+1);
-     rows[i].querySelectorAll('td')[2].textContent=name.toLocaleLowerCase('tr-TR').replaceAll('ı','i').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'')+'.example';
-   });
-   document.querySelector('.output-toolbar small').textContent=document.querySelector('.panel-title small').textContent.replace(' · ',' / ');
- }
- document.querySelector('#demo-sector-select').addEventListener('change',()=>requestAnimationFrame(syncSample));
- document.querySelector('.map-search-button').addEventListener('click',()=>requestAnimationFrame(syncSample));
- syncSample();
+/* One shared feature set; duration changes the total, never the billing claim. */
+(()=>{const buttons=[...document.querySelectorAll('[data-duration]')];if(!buttons.length)return;
+const plans={1:['₺499','₺499'],3:['₺999','₺333'],6:['₺1.499','₺249,83'],12:['₺2.499','₺208,25']};
+function choose(button){const term=button.dataset.duration;buttons.forEach(b=>{b.setAttribute('aria-checked',String(b===button));b.tabIndex=b===button?0:-1});document.querySelector('[data-duration-label]').textContent=term+' ay kullanım';document.querySelector('[data-duration-total]').textContent=plans[term][0];document.querySelector('[data-duration-monthly]').textContent=plans[term][1];document.querySelector('[data-duration-link]').href='/pricing/?sure='+term}
+buttons.forEach((b,i)=>{b.addEventListener('click',()=>choose(b));b.addEventListener('keydown',e=>{let n;if(['ArrowRight','ArrowDown'].includes(e.key))n=(i+1)%buttons.length;if(['ArrowLeft','ArrowUp'].includes(e.key))n=(i+buttons.length-1)%buttons.length;if(e.key==='Home')n=0;if(e.key==='End')n=buttons.length-1;if(n!==undefined){e.preventDefault();buttons[n].focus();choose(buttons[n])}})});
 })();
 
 ;
@@ -341,7 +180,7 @@
  try{const saved=JSON.parse(sessionStorage.getItem('vb-search-draft')||'null');if(saved&&typeof saved==='object'){for(const k of['purpose','sector','city','district'])if(typeof saved[k]==='string')draft[k]=saved[k].slice(0,100);if(Array.isArray(saved.fields))draft.fields=saved.fields.filter(x=>fieldOptions.some(f=>f[0]===x));if(!purposes.some(p=>p[0]===draft.purpose))draft.purpose='sales';if(!cities.includes(draft.city))draft.city='İstanbul';step=Number.isInteger(saved.step)?Math.max(0,Math.min(4,saved.step)):0;}}catch{}
  const persist=()=>{try{sessionStorage.setItem('vb-search-draft',JSON.stringify({...draft,step}))}catch{}};
  const dialog=document.createElement('dialog');dialog.className='onboarding-dialog';dialog.setAttribute('aria-labelledby','ob-title');
- dialog.innerHTML=`<div class="ob-shell"><aside class="ob-sidebar"><img src="/brand-wordmark.webp" alt="Veri Burada" width="640" height="214"><div class="ob-sidebar-title">İlk aramanız</div><p>Bölgeyi ve işletme türünü seçin.<br>İlk 5 sonucu ücretsiz görün.</p><ol class="ob-steps">${steps.map((s,i)=>`<li data-ob-rail="${i}"><span>${i+1}</span><div>${s}</div></li>`).join('')}</ol><div class="ob-side-summary"><span>ARAMANIZ</span><strong></strong><small></small></div><div class="ob-side-note">Hesap veya kart bilgisi istemiyoruz.</div></aside><div class="ob-main"><header class="ob-header"><span class="ob-step-label"></span><button type="button" class="ob-close" aria-label="Ücretsiz aramayı kapat">×</button></header><div class="ob-mode" role="status"></div><div class="ob-legal-links"><a href="/gizlilik-politikasi/" target="_blank" rel="noopener noreferrer">Gizlilik Politikası ↗</a><span aria-hidden="true">·</span><a href="/kullanim-kosullari/" target="_blank" rel="noopener noreferrer">Kullanım Koşulları ↗</a></div><div class="ob-content" tabindex="0" role="region" aria-label="Arama adımları ve sonuçları"></div><footer class="ob-footer"><button type="button" class="ob-back">← Geri</button><span class="ob-footer-note"></span><button type="button" class="ob-next">Devam et ${icon('arrow')}</button></footer></div></div>`;
+ dialog.innerHTML=`<div class="ob-shell"><aside class="ob-sidebar"><img src="/brand-wordmark.webp" alt="Veri Burada" width="1200" height="375"><div class="ob-sidebar-title">İlk aramanız</div><p>Bölgeyi ve işletme türünü seçin.<br>İlk 5 sonucu ücretsiz görün.</p><ol class="ob-steps">${steps.map((s,i)=>`<li data-ob-rail="${i}"><span>${i+1}</span><div>${s}</div></li>`).join('')}</ol><div class="ob-side-summary"><span>ARAMANIZ</span><strong></strong><small></small></div><div class="ob-side-note">Hesap veya kart bilgisi istemiyoruz.</div></aside><div class="ob-main"><header class="ob-header"><span class="ob-step-label"></span><button type="button" class="ob-close" aria-label="Ücretsiz aramayı kapat">×</button></header><div class="ob-mode" role="status"></div><div class="ob-legal-links"><a href="/gizlilik-politikasi/" target="_blank" rel="noopener noreferrer">Gizlilik Politikası ↗</a><span aria-hidden="true">·</span><a href="/kullanim-kosullari/" target="_blank" rel="noopener noreferrer">Kullanım Koşulları ↗</a></div><div class="ob-content" tabindex="0" role="region" aria-label="Arama adımları ve sonuçları"></div><footer class="ob-footer"><button type="button" class="ob-back">← Geri</button><span class="ob-footer-note"></span><button type="button" class="ob-next">Devam et ${icon('arrow')}</button></footer></div></div>`;
  document.body.append(dialog);const content=$('.ob-content',dialog),next=$('.ob-next',dialog),back=$('.ob-back',dialog),mode=$('.ob-mode',dialog),footer=$('.ob-footer',dialog);
  function modeLabel(){if(configError){mode.className='ob-mode ob-mode-error';mode.innerHTML='Arama bağlantısı yüklenemedi. <button type="button" data-ob-config-retry>Yeniden dene</button>';return}mode.className='ob-mode';mode.textContent=config?.mode==='demo'?'Örnek mod: gerçek arama bağlantısı henüz aktif değil.':config?.mode==='live'?'Ücretsiz önizleme · Arama başına ilk 5 sonuç':'Ücretsiz önizleme · İlk 5 sonuç';mode.hidden=false;}
  async function loadConfig(){configError=false;try{const r=await fetch('/api/onboarding-config',{cache:'no-store'});if(!r.ok)throw Error();const c=await r.json();if(!['demo','live'].includes(c.mode)||c.previewLimit!==5)throw Error();config=c;}catch{config=null;configError=true;}modeLabel();if(view==='form'&&step===4)next.disabled=!config;}
@@ -402,7 +241,7 @@
 ;
 /* Shared responsive player for the hero, product walkthrough and expanded view. */
 (() => {
- const reduced=matchMedia('(prefers-reduced-motion:reduce)'),mobile=matchMedia('(max-width:760px)');
+ const reduced=matchMedia('(prefers-reduced-motion:reduce)'),mobile=matchMedia('(max-width:1100px)');
  let globalPaused=false;
  class DemoPlayer {
   constructor(shell){this.shell=shell;this.frame=shell.querySelector('iframe');this.kind=shell.dataset.motion;this.ready=false;this.playing=false;this.wanted=false;this.time=0;this.duration=26;this.episode=0;this.visible=false;this.userPaused=false;this.explicit=false;this.url='';this.onchange=()=>{};}
@@ -425,9 +264,8 @@
  }
  const players=[...document.querySelectorAll('[data-motion]')].map(s=>new DemoPlayer(s));
 
- players.forEach(p=>{p.focus=window.VBMotion?.registerPlayer(p.shell,on=>{if(on)p.play();else p.pause()})});
  const canAuto=p=>p.visible&&!globalPaused&&!document.hidden&&!document.body.classList.contains('onboarding-open')&&!reduced.matches;
- function update(){for(const p of players){if(p.focus)p.focus.enable(canAuto(p));else if(canAuto(p))p.play();else p.pause()}}
+ function update(){for(const p of players){if(canAuto(p))p.play();else p.pause()}}
  addEventListener('message',e=>{if(e.data?.channel!=='veriburada-map')return;const player=players.find(p=>p.frame.contentWindow===e.source);if(player)player.receive(e.data)});
  const io=new IntersectionObserver(es=>{es.forEach(e=>{const p=players.find(p=>p.shell===e.target);if(p)p.visible=e.isIntersecting});update()},{threshold:[0, 0.1, 0.2]});players.forEach(p=>io.observe(p.shell));
  window.addEventListener('veriburada:motion',e=>{globalPaused=e.detail.paused;update()});document.addEventListener('visibilitychange',update);document.addEventListener('veriburada:onboarding-open',update);document.addEventListener('veriburada:onboarding-close',update);
@@ -449,7 +287,7 @@
  // 3. Sales: one research command, a batch of clinics, then phone/web/address focus.
  const sales=$('.sales-scene');if(sales){
   const rows=all('.sales-record',sales),fields=all('.sales-fields',sales),action=$('.sales-search-strip b',sales),file=$('.audience-bottom>b',sales);
-  const timeline=M.create(sales,{duration:13000,staticAt:10500,render:t=>{const out=fade(t,12);stage(sales,t<2.8?'research':t<5.4?'batch':t<8.7?'fields':'ready');action.classList.toggle('command-active',t>1.5&&t<3.8);action.textContent=t<2.8?'Toplu araştır':'3 işletme bulundu';rows.forEach(row=>alpha(row,e(t,3.2)*out));fields.forEach(f=>all('i',f).forEach((v,i)=>{const a=e(t,4.6+i*.85);alpha(v,(.12+.88*a)*out);v.classList.toggle('field-focus',t>4.6+i*.85&&t<5.4+i*.85)}));all('.sales-fields b',sales).forEach(b=>alpha(b,e(t,7.5)*out));alpha(file,e(t,8.8)*out)}});
+  const timeline=M.create(sales,{duration:13000,staticAt:10500,render:t=>{const out=fade(t,12);stage(sales,t<2.8?'research':t<5.4?'batch':t<8.7?'fields':'ready');rows.forEach(row=>alpha(row,e(t,3.2)*out));fields.forEach(f=>all('i',f).forEach((v,i)=>{const a=e(t,4.6+i*.85);alpha(v,(.12+.88*a)*out);v.classList.toggle('field-focus',t>4.6+i*.85&&t<5.4+i*.85)}));all('.sales-fields b',sales).forEach(b=>alpha(b,e(t,7.5)*out));alpha(file,e(t,8.8)*out)}});
   sales._scene=timeline;
  }
  // 4. Agency: compare actual field availability. Missing web data never becomes a fake site.
@@ -460,7 +298,7 @@
  // 6. Collector: shared command, two records plus remainder; field completion is synchronized.
  const collector=$('.collection-demo');if(collector){const rows=all('.collector-result',collector),command=$('.collector-command',collector);M.create(collector,{duration:14000,staticAt:11500,render:t=>{const out=fade(t,13),count=t>=7.2?3:t>=5?2:0;stage(collector,t<2.7?'configure':t<8.8?'bulk':'ready');command.classList.toggle('command-active',t>2&&t<8);$('span',command).textContent=t<2.7?'3 işletmenin bilgilerini birlikte topla':count===3?'Toplu işlem tamamlandı':'İşletme bilgileri birlikte alınıyor';$('.collector-count',collector).textContent=count;$('.collector-state',collector).textContent=count===3?'Liste hazır':t<2.7?'Arama hazır':'Toplu toplanıyor';$('.collector-live',collector).lastChild.textContent=count===3?' Tamamlandı':t<2.7?' Hazır':' Toplanıyor';$('.collector-progress>div>i',collector).style.width=count/3*100+'%';rows.forEach((row,i)=>{const a=e(t,i<2?4.7:6.9);alpha(row,(.08+.92*a)*out);reveal($('span',row),e(t,i<2?5.3:7.5));alpha($('em',row),e(t,i<2?6.1:8.2)*out)});alpha($('.collector-bottom',collector),e(t,9.5)*out)}})}
  // 7. Contact: resolve fields in place, then retain the complete profile for reading.
- const profile=$('.contact-profile');if(profile){const fields=all('.profile-field',profile);M.create(profile,{duration:12000,staticAt:9500,render:t=>{const out=fade(t,11.2);stage(profile,t<1.5?'identity':t<6.8?'fields':'ready');fields.forEach((field,i)=>{const a=e(t,1.5+i*1.25,.65);alpha(field,(.18+.82*a)*out);reveal($('.profile-field-copy',field),a);const badge=field.lastElementChild;alpha(badge,e(t,2.2+i*1.25)*out);field.classList.toggle('profile-field-active',t>1.5+i*1.25&&t<2.7+i*1.25)});profile.style.setProperty('--identity-resolve',String(e(t,.25)))}})}
+ const profile=$('.contact-profile');if(profile){const fields=all('.profile-field',profile);M.create(profile,{duration:12000,staticAt:9500,render:t=>{const out=fade(t,11.2);stage(profile,t<1.5?'identity':t<6.8?'fields':'ready');fields.forEach((field,i)=>{const a=e(t,1.5+i*1.25,.65);alpha(field,1);reveal($('.profile-field-copy',field),1);const badge=field.lastElementChild;alpha(badge,e(t,2.2+i*1.25)*out);field.classList.toggle('profile-field-active',t>1.5+i*1.25&&t<2.7+i*1.25)});profile.style.setProperty('--identity-resolve',String(e(t,.25)))}})}
  // 9. Setup: package -> toolbar; real region controls; actual downloadable example.
  const guide=$('.workflow-scenes');if(guide){const scenes=all('[data-workflow-scene]',guide),timelines=[];scenes.forEach((root,i)=>timelines.push(M.create(root,{duration:i===0?11000:i===1?12000:11500,staticAt:8500,enabled:i===0,render:t=>{const out=fade(t,i===1?11:10.3);stage(root,t<3?'prepare':t<6.5?'configure':'ready');if(i===0){alpha($('.install-file',root),e(t,.7)*out);const path=$('.install-guide-path path',root);path.setAttribute('pathLength','1');path.style.strokeDasharray='1';path.style.strokeDashoffset=1-e(t,2.4,1.8);alpha(path,out);$('.install-browser-toolbar b',root).classList.toggle('toolbar-extension-active',t>3.8&&t<8.7);alpha($('.install-browser-panel',root),e(t,4.8)*out)}else if(i===1){const a=e(t,1,2);$('.target-area',root).style.clipPath=`inset(0 ${(1-a)*100}% 0 0)`;alpha($('.target-point',root),e(t,3.1)*out);all('.target-fields>div',root).forEach((f,n)=>{f.classList.toggle('setup-field-active',t>3.5+n*1.7&&t<5.1+n*1.7);alpha(f,.45+.55*e(t,3.5+n*1.7))});alpha($('.target-hint',root),e(t,7.2)*out)}else{all('#workflow-records>div',root).forEach(v=>alpha(v,e(t,1.9)*out));alpha($('.workflow-download',root),e(t,4.6)*out);alpha($('.workflow-file-receipt',root),e(t,6.4)*out)}}})));
   const browser=$('.install-browser',guide),route=$('.install-guide-path path',guide);
@@ -469,11 +307,11 @@
   const choose=()=>{const index=scenes.findIndex(v=>!v.hidden);timelines.forEach((s,i)=>s.enable(i===index))};all('.step').forEach(b=>b.addEventListener('click',choose));choose();
  }
  // 10. CSV: headers establish the schema, batch records arrive, then a quiet export hold.
- const csv=$('.output-window');if(csv){const rows=all('tbody tr',csv),headers=all('thead th',csv),button=$('.output-download',csv);M.create(csv,{duration:13000,staticAt:10500,render:t=>{const out=fade(t,12.2);stage(csv,t<3?'columns':t<6.8?'batch':'ready');headers.forEach((h,i)=>h.classList.toggle('csv-column-active',t>1+i*.45&&t<1.8+i*.45));rows.forEach(row=>{alpha(row,(.1+.9*e(t,3.9))*out);all('th,td',row).forEach((cell,i)=>cell.classList.toggle('csv-cell-resolved',t>4.2+i*.42))});$('.output-build-line i',csv).style.width=e(t,3.8,2.7)*100+'%';button.classList.toggle('csv-export-ready',t>7.2&&t<12)}});
+ const csv=$('.output-window');if(csv){const rows=all('tbody tr',csv),headers=all('thead th',csv),button=$('.output-download',csv);M.create(csv,{duration:13000,staticAt:10500,render:t=>{const out=fade(t,12.2);stage(csv,t<3?'columns':t<6.8?'batch':'ready');headers.forEach((h,i)=>h.classList.toggle('csv-column-active',t>1+i*.45&&t<1.8+i*.45));rows.forEach(row=>{alpha(row,1);all('th,td',row).forEach((cell,i)=>cell.classList.toggle('csv-cell-resolved',t>4.2+i*.42))});$('.output-build-line i',csv).style.width=e(t,3.8,2.7)*100+'%';button.classList.toggle('csv-export-ready',t>7.2&&t<12)}});
   all('[data-demo-download],#download-demo').forEach(b=>b.addEventListener('click',()=>{csv.classList.add('csv-downloaded');setTimeout(()=>csv.classList.remove('csv-downloaded'),2200)}));
  }
  // 11. Closing: authored depth and cadence; keep the central text area visually quiet.
- const closing=$('.closing');if(closing){const pins=all('.closing-place',closing);pins.forEach(p=>p.style.animation='none');M.create(closing,{ambient:true,duration:24000,staticAt:11000,render:t=>{pins.forEach((pin,i)=>{const local=(t+i*1.85)%24,a=e(local,1.1,.55)*fade(local,9.5,1.5);pin.style.opacity=String(a*(i%3===0?.22:.36));pin.style.transform=`translateY(${(1-a)*8}px) scale(${(.75+i%3*.16)*(.94+.06*a)})`;pin.style.filter=`blur(${i%3===0?1.4:.45}px)`})}})}
+ const closing=$('.closing');if(closing){const pins=all('.closing-place',closing);pins.forEach(p=>p.style.animation='none');M.create(closing,{duration:24000,staticAt:11000,render:t=>{pins.forEach((pin,i)=>{const local=(t+i*1.85)%24,a=e(local,1.1,.55)*fade(local,9.5,1.5);pin.style.opacity=String(a*(i%3===0?.36:.58));pin.style.transform=`translateY(${(1-a)*8}px) scale(${(.75+i%3*.16)*(.94+.06*a)})`;pin.style.filter=`blur(${i%3===0?1.4:.45}px)`})}})}
 })();
 
 ;
@@ -488,14 +326,36 @@
  addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20),{passive:true});set(false);
 })();
 
+/* Account choice hands off to the real application; no login form lives on the landing. */
+(()=>{
+ const dialog=document.createElement('dialog');dialog.className='account-dialog';dialog.setAttribute('aria-labelledby','account-title');
+ dialog.innerHTML='<button class="account-close" type="button" aria-label="Pencereyi kapat">×</button><img class="account-brand" src="/brand-wordmark.webp" alt="Veri Burada" width="1200" height="375"><h2 id="account-title">Veri Burada’ya başlayın.</h2><p>Hesabınıza giriş yapın veya yeni hesap oluşturun.</p><div class="account-options"><a data-account-option="signUp" class="button primary" href="#">Kaydol </a><a data-account-option="signIn" class="button account-secondary" href="#">Giriş yap </a></div><p class="account-status" role="status" hidden></p>';document.body.append(dialog);
+ let previous;
+ function destination(kind){try{const u=new URL(window.VBAuthLinks?.[kind]);return u.protocol==='https:'?u.href:null}catch{return null}}
+ function refresh(){dialog.querySelectorAll('[data-account-option]').forEach(a=>{const url=destination(a.dataset.accountOption);a.href=url||'#';a.setAttribute('aria-disabled',String(!url))})}
+ function open(kind){previous=document.activeElement;refresh();const status=dialog.querySelector('.account-status');status.hidden=!!destination('signIn')&&!!destination('signUp');status.textContent='Giriş ve kayıt bağlantıları henüz eklenmedi.';dialog.dataset.intent=kind||'choice';dialog.showModal();document.body.classList.add('account-open');window.dispatchEvent(new CustomEvent('veriburada:motion',{detail:{paused:true}}));dialog.querySelector('.account-close').focus()}
+ function close(){dialog.close()}
+ dialog.querySelector('.account-close').addEventListener('click',close);dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close()}const a=e.target.closest('[data-account-option]');if(a&&!destination(a.dataset.accountOption))e.preventDefault()});dialog.addEventListener('close',()=>{document.body.classList.remove('account-open');window.dispatchEvent(new CustomEvent('veriburada:motion',{detail:{paused:document.body.classList.contains('motion-paused')}}));previous?.focus({preventScroll:true})});
+ document.querySelectorAll('[data-auth-open],[data-auth-signup],[data-auth-signin]').forEach(el=>{const kind=el.hasAttribute('data-auth-signin')?'signIn':'signUp';const url=destination(kind);if(!el.hasAttribute('data-auth-open')&&url)el.href=url;el.addEventListener('click',e=>{if(el.hasAttribute('data-auth-open')){e.preventDefault();open();return}const url=destination(kind);if(url){e.preventDefault();location.assign(url)}else{e.preventDefault();open(kind)}})});
+})();
+
 ;
 /* Two independent authored text tracks. State messages cannot restart an active word. */
 (() => {
  const shell=document.querySelector('[data-motion=hero]'),target=document.querySelector('.hero-type'),heading=document.querySelector('.hero-slogan');if(!shell)return;const reduced=matchMedia('(prefers-reduced-motion:reduce)');let sectorWord='',sectorTimer=0,sloganTimer=0,visible=true,blocked=false;
  const sectors=word=>{if(word===sectorWord)return;sectorWord=word;clearTimeout(sectorTimer);if(!target)return;if(reduced.matches){target.textContent=word;return}let i=0;target.textContent='';target.classList.add('is-typing');function tick(){if(blocked||document.hidden){sectorTimer=setTimeout(tick,100);return}target.textContent=word.slice(0,++i);if(i<word.length)sectorTimer=setTimeout(tick,60);else target.classList.remove('is-typing')}tick()};
  new MutationObserver(()=>sectors(shell.dataset.sector||'Kuaförler')).observe(shell,{attributes:true,attributeFilter:['data-sector']});sectors(shell.dataset.sector||'Kuaförler');
- if(!heading)return;const lines=[heading.querySelector('.slogan-first'),heading.querySelector('.slogan-second')],phrases=[['İşletmeler orada.','Veri burada.'],['Bir arama yapın.','Listeniz oluşsun.'],['Bölgenizi seçin.','İşletmeleri bulun.'],['Tek tek aramayın.','Topluca listeleyin.']];let index=0,phase='hold',chars=0,elapsed=0,last=performance.now();
+ if(!heading)return;const lines=[heading.querySelector('.slogan-first'),heading.querySelector('.slogan-second')],phrases=[['İşletmeleri bulun.','Listenizi oluşturun.'],['İşletmeler orada.','Veri burada.'],['Tek tek aramayın.','Topluca listeleyin.']];let index=0,phase='hold',chars=0,elapsed=0,last=performance.now();
  function paint(count){const words=phrases[index];lines[0].textContent=words[0].slice(0,count);lines[1].textContent=words[1].slice(0,Math.max(0,count-words[0].length))}
  function run(){clearTimeout(sloganTimer);const now=performance.now(),dt=Math.min(100,now-last);last=now;if(!reduced.matches&&visible&&!blocked&&!document.hidden){elapsed+=dt;if(phase==='hold'&&elapsed>6000){phase='erase';elapsed=0;chars=phrases[index].join('').length}if(phase==='erase'&&elapsed>24){elapsed=0;paint(--chars);if(chars<=0){index=(index+1)%phrases.length;phase='type';chars=0}}if(phase==='type'&&elapsed>55){elapsed=0;paint(++chars);if(chars>=phrases[index].join('').length){phase='hold';elapsed=0}}heading.classList.toggle('slogan-writing',phase!=='hold')}sloganTimer=setTimeout(run,40)}
+ // Reserve the tallest authored phrase so typing cannot move the adjacent film.
+ function reserveHeading(){heading.style.removeProperty('font-size');const width=heading.getBoundingClientRect().width;if(!width)return;const baseSize=parseFloat(getComputedStyle(heading).fontSize),probe=heading.cloneNode(true);probe.removeAttribute('id');probe.style.cssText='position:absolute!important;visibility:hidden!important;pointer-events:none!important;height:auto!important;min-height:0!important;max-height:none!important;width:'+width+'px!important;';heading.parentElement.append(probe);let contentWidth=width;for(const pair of phrases){probe.querySelector('.slogan-first').textContent=pair[0];probe.querySelector('.slogan-second').textContent=pair[1];contentWidth=Math.max(contentWidth,...[...probe.querySelectorAll('.slogan-first,.slogan-second')].map(el=>el.scrollWidth))}const size=Math.floor(baseSize*Math.min(1,(width-4)/contentWidth)*10)/10;probe.style.setProperty('font-size',size+'px','important');heading.style.setProperty('font-size',size+'px','important');let height=0;for(const pair of phrases){probe.querySelector('.slogan-first').textContent=pair[0];probe.querySelector('.slogan-second').textContent=pair[1];height=Math.max(height,probe.getBoundingClientRect().height)}probe.remove();heading.style.height=Math.ceil(height)+'px'}
+ reserveHeading();document.fonts?.ready.then(reserveHeading);let resizeFrame=0;addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(reserveHeading)});
  function reset(){if(reduced.matches){clearTimeout(sloganTimer);index=0;phase='hold';paint(100);heading.classList.remove('slogan-writing');if(target)target.textContent=sectorWord}else{last=performance.now();run()}}new IntersectionObserver(es=>visible=es[0].isIntersecting,{threshold:.2}).observe(heading);document.addEventListener('veriburada:onboarding-open',()=>blocked=true);document.addEventListener('veriburada:onboarding-close',()=>blocked=false);document.addEventListener('visibilitychange',()=>{last=performance.now()});reduced.addEventListener('change',reset);reset();
 })();
+
+/* Capability counters animate once, never inflate or loop. */
+(() => {const reduced=matchMedia('(prefers-reduced-motion:reduce)'),nodes=[...document.querySelectorAll('[data-count-target]')];const io=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;const el=entry.target,target=Number(el.dataset.countTarget),suffix=el.dataset.countSuffix||'';io.unobserve(el);if(reduced.matches){el.textContent=target+suffix;continue}let first;function tick(now){if(reduced.matches){el.textContent=target+suffix;return}first??=now;const progress=Math.min(1,(now-first)/1000);el.textContent=Math.round(target*(1-Math.pow(1-progress,3)))+suffix;if(progress<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}},{threshold:.6});nodes.forEach(n=>io.observe(n))})();
+
+/* Two identical logo groups form a seamless loop; duplicates stay silent for AT. */
+(() => {const root=document.querySelector('.brand-evidence-logos');if(!root||root.dataset.marqueeReady)return;root.dataset.marqueeReady='true';root.classList.add('brand-marquee');const originals=[...root.children],track=document.createElement('div'),group=document.createElement('div');track.className='brand-marquee-track';group.className='brand-marquee-group';for(const el of originals){el.dataset.brandOriginal='';group.append(el)}for(const el of originals){const copy=el.cloneNode(true);copy.removeAttribute('data-brand-original');copy.dataset.brandRepeat='';copy.setAttribute('aria-hidden','true');copy.querySelectorAll('img').forEach(im=>im.alt='');group.append(copy)}track.append(group);const second=group.cloneNode(true);second.setAttribute('aria-hidden','true');second.querySelectorAll('[data-brand-original]').forEach(el=>el.removeAttribute('data-brand-original'));second.querySelectorAll('img').forEach(im=>im.alt='');track.append(second);root.append(track)})();
