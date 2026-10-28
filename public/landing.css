@@ -333,37 +333,80 @@ h1,h2,h3{font-family:"LINE Seed JP",Inter,Arial,sans-serif;font-weight:700}
 
 
 /* User requested UI refinements */
-/* 1. Hamburger menu: remove top title bar, center the action buttons */
-.menu-panel-top {
+/* 1. Hamburger menu: remove top title bar, remove old bottom links, move auth buttons to bottom and center */
+.menu-panel-top,
+.menu-bottom {
   display: none !important;
 }
 
 .menu-auth {
   display: flex !important;
+  flex-direction: row !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 16px !important;
-  margin: 0 auto 24px !important;
-  padding: 0 0 24px !important;
-  border-bottom: 1px solid #dce8df !important;
+  gap: 12px !important;
   width: 100% !important;
+  margin: 20px auto 0 !important;
+  padding: 20px 0 0 !important;
+  border-top: 1px solid #dce8df !important;
+  border-bottom: none !important;
+  box-sizing: border-box !important;
 }
 
 .menu-auth > a {
-  min-width: 140px !important;
-  text-align: center !important;
+  flex: 1 1 0px !important;
+  width: 50% !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  max-height: 46px !important;
+  padding: 0 16px !important;
+  display: inline-flex !important;
   justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  font-size: 15px !important;
+  font-weight: 550 !important;
+  line-height: 1 !important;
+  border-radius: 10px !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+.menu-auth > a:first-child {
+  background: #ffffff !important;
+  color: #153f2b !important;
+  border: 1px solid #bdd5c6 !important;
+}
+
+.menu-auth > a:first-child:hover {
+  border-color: #198754 !important;
+  color: #198754 !important;
+}
+
+.menu-auth > a:last-child {
+  background: #198754 !important;
+  color: #ffffff !important;
+  border: 1px solid #198754 !important;
+}
+
+.menu-auth > a:last-child:hover {
+  background: #157347 !important;
+  border-color: #157347 !important;
 }
 
 @media(max-width:760px) {
   .menu-auth {
-    justify-content: center !important;
-    gap: 12px !important;
+    gap: 10px !important;
+    margin: 16px auto 0 !important;
+    padding: 16px 0 0 !important;
   }
   .menu-auth > a {
-    flex: 1 !important;
-    max-width: 180px !important;
-    min-width: 0 !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    font-size: 14px !important;
   }
 }
 
@@ -393,7 +436,8 @@ h1,h2,h3{font-family:"LINE Seed JP",Inter,Arial,sans-serif;font-weight:700}
 .connection-footer,
 .scene-note,
 .film-footnote,
-.narrative-caption {
+.narrative-caption,
+.benefit-strip {
   display: none !important;
 }
 
