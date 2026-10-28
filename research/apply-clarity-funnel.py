@@ -23,10 +23,10 @@ for sel,txt in [('.connection-section .section-copy p','İlinizi ve sektörünü
 # Reduce explanatory labels around the same media to one honest caption.
 foot=s.select_one('.film-footnote')
 if foot:
- foot.clear();foot.append(BeautifulSoup('<span>Örnek kayıtlarla ürün önizlemesi</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>','html.parser'))
+ foot.clear();foot.append(BeautifulSoup('<span></span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>','html.parser'))
 hero=s.select_one('.hero-cinema')
 if not s.select_one('.hero-media-source'):
- hero.append(BeautifulSoup('<div class="hero-media-source"><span>Örnek kayıtlarla ürün önizlemesi</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a></div>','html.parser').div)
+ hero.append(BeautifulSoup('<div class="hero-media-source"><span></span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a></div>','html.parser').div)
 if not s.select_one('.brand-evidence'):
  band=BeautifulSoup('''<section class="brand-evidence wrap" aria-label="Markalar"><div class="brand-evidence-logos"><div class="evidence-bofe"><img src="/media/brand-bofe.webp" alt="Bofe" width="246" height="90" loading="lazy"></div><div class="evidence-mesajify"><img src="/media/brand-mesajify.webp" alt="" width="256" height="73" loading="lazy"><span>Mesajify</span></div><div class="evidence-ayvazoglu"><img src="/media/brand-ayvazoglu.webp" alt="Ayvazoğlu İnşaat" width="667" height="374" loading="lazy"></div></div></section><section class="product-facts wrap" aria-label="Araştırma seçenekleri"><div><strong>81</strong><span>İl seçeneği</span></div><div><strong>5</strong><span>Seçilebilir bilgi alanı</span></div><div><strong>Tek</strong><span>Toplu işlem akışı</span></div></section>''','html.parser')
  s.select_one('.hero').insert_after(band)

@@ -28,7 +28,7 @@
   font-weight: 400;
   font-display: swap;
   src: url(/fonts/line-seed-latin-ext-400.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0100-012F, U+0131-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
   font-family: 'LINE Seed JP';
@@ -44,7 +44,7 @@
   font-weight: 700;
   font-display: swap;
   src: url(/fonts/line-seed-latin-ext-700.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0100-012F, U+0131-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
   font-family: 'LINE Seed JP';
@@ -224,4 +224,243 @@ h1,h2,h3{font-family:"LINE Seed JP",Inter,Arial,sans-serif;font-weight:700}
 .narrative-caption,
 .benefit-strip {
   display: none !important;
+}
+
+
+/* Enhanced Details Card & Connection Button */
+.details-card {
+  grid-column: 1 / -1 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1.35fr !important;
+  align-items: center !important;
+  min-height: 335px !important;
+  background: #f3f8f3 !important;
+}
+.details-card .card-copy {
+  padding: 36px 32px !important;
+}
+.detail-tags {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 16px !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  padding: 24px 28px 24px 0 !important;
+}
+.detail-tags .contact-profile {
+  flex: 1 1 260px !important;
+  max-width: 295px !important;
+  margin: 0 !important;
+  rotate: 0deg !important;
+  transform: none !important;
+  padding: 20px 22px !important;
+  background: #fff !important;
+  border: 1px solid #dce8df !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 18px rgba(15, 76, 48, 0.04) !important;
+}
+@media (max-width: 900px) {
+  .details-card {
+    grid-template-columns: 1fr !important;
+  }
+  .detail-tags {
+    justify-content: center !important;
+    padding: 0 20px 28px !important;
+  }
+  .detail-tags .profile-secondary {
+    display: none !important;
+  }
+  .detail-tags .contact-profile {
+    max-width: 320px !important;
+  }
+}
+.flow-success {
+  cursor: pointer;
+}
+.flow-success rect {
+  transition: fill .2s ease, stroke .2s ease;
+}
+.flow-success:hover rect,
+.flow-success:focus-visible rect {
+  fill: #f0fdf4 !important;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Refined 3-Column Bento on Desktop & Proper Mobile Vertical Layout         */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 901px) {
+  .bento-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+  }
+  .feature-card {
+    min-height: 490px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    border-radius: 14px !important;
+  }
+  .feature-card .card-copy {
+    padding: 28px 24px 14px !important;
+  }
+  .feature-card .card-copy h3 {
+    font-size: 21px !important;
+    line-height: 1.25 !important;
+    margin: 10px 0 8px !important;
+  }
+  .feature-card .card-copy p {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    color: #61786a !important;
+  }
+  .details-card {
+    grid-column: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background: #fff !important;
+  }
+  .details-card .detail-tags {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 8px 18px 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .details-card .contact-profile {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 18px 18px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #dce8df !important;
+    border-radius: 12px !important;
+    background: #fbfdfb !important;
+    box-shadow: 0 4px 16px rgba(15, 76, 48, 0.04) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .bento-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .details-card {
+    grid-column: 1 / -1 !important;
+    background: #fbfdfb !important;
+  }
+  .details-card .detail-tags {
+    justify-content: center !important;
+    padding: 0 16px 24px !important;
+  }
+  .details-card .contact-profile {
+    max-width: 320px !important;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Header Logo Roomy Headroom & No Top-Edge Clipping                          */
+/* -------------------------------------------------------------------------- */
+.header {
+  height: 92px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 max(40px, calc((100vw - 1280px)/2 + 40px)) !important;
+}
+.header .brand {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  margin: 0 auto 0 0 !important;
+  padding: 0 !important;
+}
+.header .brand img {
+  max-height: 42px !important;
+  width: auto !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Pricing Badges & Credit Selection Card Highlights                          */
+/* -------------------------------------------------------------------------- */
+.badge-popular {
+  display: inline-block;
+  padding: 3px 8px;
+  background: #198754;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.term-options button[aria-checked="true"] {
+  border-color: #198754 !important;
+  background: #f4fbf7 !important;
+  box-shadow: 0 0 0 1px #198754 !important;
+}
+
+/* Ensure sales records are always visible, sharp and stable */
+.sales-record {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-height: 60px !important;
+  padding: 10px 18px !important;
+  border-bottom: 1px solid #e8f0eb !important;
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+.sales-record:last-child {
+  border-bottom: none !important;
+}
+.sales-record > i {
+  width: 36px !important;
+  height: 36px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 8px !important;
+  background: #eaf7f1 !important;
+  flex-shrink: 0 !important;
+}
+.sales-record > i img {
+  width: 24px !important;
+  height: 24px !important;
+  object-fit: contain !important;
+}
+.sales-record strong {
+  font-size: 12.5px !important;
+  color: #143c29 !important;
+  line-height: 1.3 !important;
+}
+.sales-record small {
+  font-size: 11px !important;
+  color: #61786a !important;
+  margin-top: 2px !important;
+}
+.sales-fields {
+  margin-left: auto !important;
+  color: #198754 !important;
+  font-weight: 700 !important;
+}
+
+/* Badge Popular inside Pricing Radio Options */
+.badge-popular {
+  display: inline-block !important;
+  padding: 2px 8px !important;
+  background: #198754 !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  width: fit-content !important;
+  margin-bottom: 6px !important;
 }
