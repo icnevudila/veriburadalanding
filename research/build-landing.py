@@ -44,5 +44,10 @@ for image in s.select('.brand img'):
 for image in s.select('.flow-hub image'):
     image['href']='brand-emblem-small.webp'
 
+for old in s.select('script[src],link[href]'):
+    url=old.get('src',old.get('href',''))
+    if 'landing-refinements.' in url:old.decompose()
+s.head.append(s.new_tag('link',rel='stylesheet',href=f'landing-refinements.css?v={version}'))
+s.head.append(s.new_tag('script',src=f'landing-refinements.js?v={version}',defer=''))
 write_atomic(p,str(s))
 print(f'Built landing.css and landing.js with cache-buster ?v={version}')

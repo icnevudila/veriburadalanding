@@ -1,6 +1,19 @@
 """Authored static pages: crawlable HTML, page-specific art, no client-side router."""
 from pathlib import Path
 from bs4 import BeautifulSoup
+
+import time, uuid
+def save_page(path, content):
+ temporary=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
+ temporary.write_text(content,encoding='utf-8')
+ for attempt in range(4):
+  try:
+   temporary.replace(path)
+   return
+  except OSError:
+   if attempt==3:raise
+   time.sleep(.08)
+
 import json,html
 P=Path('public');ORIGIN='https://www.veriburada.com'
 HOME=BeautifulSoup((P/'index.html').read_text(encoding='utf-8'),'html.parser')
@@ -53,6 +66,7 @@ add('iletisim','İletişim ve destek | Veri Burada','Veri Burada kurulum, işlet
 exec(Path('research/content-articles.py').read_text(encoding='utf-8'))
 exec(Path('research/product-page-upgrade.py').read_text(encoding='utf-8'))
 exec(Path('research/legal-content.py').read_text(encoding='utf-8'))
+exec(Path('research/credit-page-content.py').read_text(encoding='utf-8'))
 
 def schema(page,url):
  base=[{'@type':'Organization','@id':ORIGIN+'/#organization','name':'Veri Burada','url':ORIGIN+'/'},{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'Veri Burada','inLanguage':'tr-TR'},{'@type':'WebPage','@id':url+'#webpage','url':url,'name':page['title'],'description':page['description'],'inLanguage':'tr-TR','isPartOf':{'@id':ORIGIN+'/#website'}},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Ana sayfa','item':ORIGIN+'/'},{'@type':'ListItem','position':2,'name':page['title'].split(' | ')[0],'item':url}]}]
@@ -65,8 +79,8 @@ for page in pages:
  actions='' if page.get('article') or page.get('legal') or slug in ['blog','sss','iletisim','pricing'] else '<div class="editorial-actions"><a class="button primary" href="#hesap" data-auth-signup>İlk listemi oluştur</a><a href="/listeler/">Örnek listeyi gör</a></div>'
  hero=f'<section class="editorial-hero {"has-art" if art else ""} {"article-heading" if page.get("article") else ""}"><div><a class="breadcrumb" href="/">Ana sayfa <span>/</span> {"Rehberler" if page.get("article") else page["title"].split(" | ")[0]}</a>{"<p class=article-byline>Veri Burada rehberleri · 4 dakikalık okuma</p>" if page.get("article") else ""}<h1>{page["h1"]}</h1><p>{page["lead"]}</p>{actions}</div>{"<div class=editorial-art>"+art+"</div>" if art else ""}</section>'
  closing='' if page.get('legal') else '<section class="editorial-closing"><div><h2>Aradığınız işletmeler,<br><em>bir sonraki listenizde.</em></h2><p>Bölgenizi ve sektörünüzü seçerek başlayın.</p></div><a class="button primary" href="#hesap" data-auth-signup>İlk listemi oluştur</a></section>'
- body=f'<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f4c30"><title>{title}</title><meta name="description" content="{desc}"><meta name="robots" content="{"noindex,follow" if page.get("noindex") else "index,follow"}"><link rel="canonical" href="{url}"><link rel="icon" href="/favicon.ico?v=brand3"><meta property="og:type" content="{"article" if page.get("article") else "website"}"><meta property="og:locale" content="tr_TR"><meta property="og:site_name" content="Veri Burada"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}"><meta property="og:image" content="{ORIGIN}/social-card.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/landing.css"><link rel="stylesheet" href="/editorial.css"><link rel="stylesheet" href="/page-narratives.css"><script type="application/ld+json">{schema(page,url)}</script><script defer src="/brand-ui.js"></script><script defer src="/onboarding-cinema.js"></script><script defer src="/motion-core.js"></script><script defer src="/auth-links.js"></script><script defer src="/navigation.js"></script><script defer src="/onboarding.js"></script><script defer src="/editorial.js"></script><script defer src="/page-narratives.js"></script></head><body class="final-edition content-edition {"legal-edition" if page.get("legal") else ""}"><a class="skip-link" href="#main">İçeriğe geç</a>{HEADER}<main class="editorial-main wrap" id="main">{hero}<div class="editorial-body">{page["body"]}</div>{closing}</main>{FOOTER}{MENU}</body></html>'
- folder=P/slug;folder.mkdir(parents=True,exist_ok=True);(folder/'index.html').write_text(body,encoding='utf-8')
+ body=f'<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f4c30"><title>{title}</title><meta name="description" content="{desc}"><meta name="robots" content="{"noindex,follow" if page.get("noindex") else "index,follow"}"><link rel="canonical" href="{url}"><link rel="icon" href="/favicon.ico?v=brand3"><meta property="og:type" content="{"article" if page.get("article") else "website"}"><meta property="og:locale" content="tr_TR"><meta property="og:site_name" content="Veri Burada"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}"><meta property="og:image" content="{ORIGIN}/social-card.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/landing.css"><link rel="stylesheet" href="/editorial.css"><link rel="stylesheet" href="/page-narratives.css"><link rel="stylesheet" href="/landing-refinements.css"><script type="application/ld+json">{schema(page,url)}</script><script defer src="/brand-ui.js"></script><script defer src="/onboarding-cinema.js"></script><script defer src="/motion-core.js"></script><script defer src="/auth-links.js"></script><script defer src="/navigation.js"></script><script defer src="/onboarding.js"></script><script defer src="/editorial.js"></script><script defer src="/page-narratives.js"></script><script defer src="/landing-refinements.js"></script></head><body class="final-edition content-edition {"legal-edition" if page.get("legal") else ""}"><a class="skip-link" href="#main">İçeriğe geç</a>{HEADER}<main class="editorial-main wrap" id="main">{hero}<div class="editorial-body">{page["body"]}</div>{closing}</main>{FOOTER}{MENU}</body></html>'
+ folder=P/slug;folder.mkdir(parents=True,exist_ok=True);save_page(folder/'index.html',body)
 s=BeautifulSoup((P/'index.html').read_text(encoding='utf-8'),'html.parser')
 for el in s.select('link[rel=canonical],script[type="application/ld+json"],meta[property="og:url"],meta[property="og:image"],meta[property="og:locale"],meta[name="twitter:card"]'):el.decompose()
 s.title.string='Veri Burada | Toplu işletme araştırması ve müşteri listeleri'
@@ -76,7 +90,7 @@ for attrs in [{'property':'og:url','content':ORIGIN+'/'},{'property':'og:image',
 s.select_one('meta[property="og:title"]')['content']='Bir arama yapın. Listeniz oluşsun. | Veri Burada'
 s.select_one('meta[property="og:description"]')['content']='Bölge ve sektör seçin. İşletme bilgilerini topluca listenize alın.'
 j=s.new_tag('script',type='application/ld+json');j.string=json.dumps({'@context':'https://schema.org','@graph':[{'@type':'Organization','@id':ORIGIN+'/#organization','name':'Veri Burada','url':ORIGIN+'/','logo':ORIGIN+'/brand-wordmark.webp'},{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'Veri Burada','inLanguage':'tr-TR'},{'@type':'SoftwareApplication','name':'Veri Burada','applicationCategory':'BusinessApplication','operatingSystem':'Web browser','description':'Bölge ve sektöre göre işletme araştırması ve CSV listeleri için web uygulaması.'}]},ensure_ascii=False);s.head.append(j)
-(P/'index.html').write_text(str(s),encoding='utf-8')
+save_page(P/'index.html',str(s))
 urls=[ORIGIN+'/']+[ORIGIN+'/'+p['slug']+'/' for p in pages if not p.get('noindex')]
 # Normalize only authored page URLs; a global trailingSlash rule would also
 # affect extensionless API calls. Preserve unrelated deployment configuration.
@@ -89,7 +103,7 @@ config['redirects']=[r for r in config.get('redirects',[]) if r['source'] not in
 config_path.write_text(json.dumps(config,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (P/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+u+'</loc></url>' for u in urls)+'</urlset>',encoding='utf-8')
 (P/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /map-demo.html\nSitemap: '+ORIGIN+'/sitemap.xml\n',encoding='utf-8')
-(P/'404.html').write_text('<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Sayfa bulunamadı | Veri Burada</title><link rel="stylesheet" href="/landing.css"><link rel="stylesheet" href="/editorial.css"><link rel="stylesheet" href="/page-narratives.css"><body class="content-edition"><main class="error-page"><a href="/"><img src="/brand-wordmark.webp" width="190" alt="Veri Burada"></a><p>404 · Sayfa bulunamadı</p><h1>Başka bir yoldan<br>devam edelim.</h1><p>Bu adres değişmiş veya kaldırılmış olabilir.</p><a class="button primary" href="/">Ana sayfaya dön</a><a href="/sss/">Sık sorulan sorular</a></main></body></html>',encoding='utf-8')
+save_page(P/'404.html','<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Sayfa bulunamadı | Veri Burada</title><link rel="stylesheet" href="/landing.css"><link rel="stylesheet" href="/editorial.css"><link rel="stylesheet" href="/page-narratives.css"><link rel="stylesheet" href="/landing-refinements.css"><body class="content-edition"><main class="error-page"><a href="/"><img src="/brand-wordmark.webp" width="190" alt="Veri Burada"></a><p>404 · Sayfa bulunamadı</p><h1>Başka bir yoldan<br>devam edelim.</h1><p>Bu adres değişmiş veya kaldırılmış olabilir.</p><a class="button primary" href="/">Ana sayfaya dön</a><a href="/sss/">Sık sorulan sorular</a></main></body></html>')
 Path('research/content-pages-manifest.json').write_text(json.dumps([{k:v for k,v in p.items() if k in ['slug','title','description','noindex','scene','article']} for p in pages],ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'Built {len(pages)} authored pages; {len(urls)} sitemap entries.')
 

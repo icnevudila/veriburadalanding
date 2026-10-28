@@ -6,10 +6,10 @@ window.seek=elapsed=>{
  stage.dataset.phase=elapsed<introDuration?(sent?'processing':'request'):t<2.2?'search':t<6.8?'discovery':t<12.5?'bulk':t<19.2?'inspect':t<21?'export':'hold';
  const queryText='İstanbul '+currentSector.query.toLocaleLowerCase('tr');q('.query').textContent=t>25.25?'':queryText.slice(0,Math.floor(queryText.length*search));q('.caret').style.opacity=(t<1.8||t>25.25)&&Math.floor(t*3)%2===0?1:0;
  const revealList=E((t-(mobile?12.5:10.8))/.95),focus=ramp(3,5.8,t)*(1-end),zoom=1.03+.055*focus*(1-ramp(12.5,14,t));
- const scale=Math.max(W/1400,H/1200)*zoom,dx=(W-1400*scale)/2-(mobile?0:155)*focus,dy=(H-1200*scale)/2;
+ const camera=window.VBHeroCamera||{zoom:1,x:0,y:0};const scale=Math.max(W/1400,H/1200)*zoom*camera.zoom,dx=(W-1400*scale)/2-(mobile?0:155)*focus+camera.x,dy=(H-1200*scale)/2+camera.y;
  q('.map-world').style.transform=`translate(${dx}px,${dy}px) scale(${scale})`;q('.map-shade').style.background=mobile?`rgba(248,251,249,${revealList*.08})`:'';
  const batchTimes=[8.3,8.3,10,10,11.7],count=t>=11.7?5:t>=10?4:t>=8.3?2:0;
- const selected=0,positions=points.map(([x,y])=>[dx+x*scale,dy+y*scale]);
+ const selected=0,positions=points.map(([x,y])=>[Math.max(30,Math.min(W-30,dx+x*scale)),Math.max(mobile&&!walkthrough?166:150,Math.min(H-45,dy+y*scale))]);
  qa('.pin').forEach((el,i)=>{
   const a=clamp((t-2.25-i*.64)/.55),spring=E(a),ready=t>=batchTimes[i],pulse=(t*.65+i*.13)%1;
   el.style.transform=`translate(${positions[i][0]}px,${positions[i][1]}px)`;el.style.opacity=E((t-2.25-i*.64)/.3)*(1-revealList*.25)*fade;el.querySelector('.head').style.transform=`scale(${spring})`;

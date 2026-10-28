@@ -13,6 +13,7 @@ for page in json.loads((root/'research'/'content-pages-manifest.json').read_text
  name=page['slug']+'/index.html'
  if not (root/'public'/name).resolve().is_relative_to((root/'public').resolve()):raise RuntimeError('Page escaped public directory')
  assets.append(name)
+assets += ['landing-refinements.js','landing-refinements.css','brand-wordmark-ui.png','hero-direction.js','hero-direction.css']
 files=[]
 for name in assets:
  rel='public/'+name;target=release/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(root/rel,target);files.append(rel)
