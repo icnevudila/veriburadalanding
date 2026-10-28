@@ -182,6 +182,7 @@ window.VBAuthLinks={signIn:'https://app.veriburada.com/signin',signUp:'https://a
       const out = 1 - M.smooth((t - 6.8) / 0.65);
 
       scenes.forEach(d => {
+        [...d.svg.querySelectorAll('.flow-field-token')].forEach((token,i)=>{const a=M.ease((t-2.8-i*.24)/.45);token.style.opacity=String(.35+.65*a);token.querySelector('circle').setAttribute('fill',a>.8?'#eaf7f1':'#fff')});
         // Inputs activation
         d.inputs.forEach((n, i) => {
           n.style.opacity = .55 + .45 * M.ease((t - .2 - i * .45) / .4);

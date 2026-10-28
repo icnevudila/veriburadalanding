@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <!-- Laurel Wreath Leaf definition -->
+    <path id="antic-leaf-l" d="M 0,0 C -3,-6 -10,-8 -16,-5 C -18,-1 -15,6 -9,8 C -4,9 0,5 0,0 Z" fill="#2b3831"/>
+    <path id="antic-leaf-r" d="M 0,0 C 3,-6 10,-8 16,-5 C 18,-1 15,6 9,8 C 4,9 0,5 0,0 Z" fill="#2b3831"/>
+  </defs>
+
+  <!-- Left Wreath Branch -->
+  <g transform="translate(68, 62)">
+    <path d="M 12,32 C -18,22 -32,-4 -22,-32 C -16,-46 -2,-56 12,-60" fill="none" stroke="#2b3831" stroke-width="2.5" stroke-linecap="round"/>
+    <use href="#antic-leaf-l" transform="translate(10, 32) rotate(42) scale(0.9)"/>
+    <use href="#antic-leaf-l" transform="translate(0, 24) rotate(32) scale(1.0)"/>
+    <use href="#antic-leaf-l" transform="translate(-12, 14) rotate(18) scale(1.05)"/>
+    <use href="#antic-leaf-l" transform="translate(-21, 0) rotate(2) scale(1.1)"/>
+    <use href="#antic-leaf-l" transform="translate(-24, -16) rotate(-16) scale(1.1)"/>
+    <use href="#antic-leaf-l" transform="translate(-20, -32) rotate(-32) scale(1.05)"/>
+    <use href="#antic-leaf-l" transform="translate(-10, -46) rotate(-48) scale(1.0)"/>
+    <use href="#antic-leaf-l" transform="translate(4, -56) rotate(-62) scale(0.9)"/>
+    <use href="#antic-leaf-l" transform="translate(14, -60) rotate(-78) scale(0.8)"/>
+  </g>
+
+  <!-- Center Wordmark: 'antic' in elegant refined geometric serif / display script -->
+  <g id="antic-text" fill="#2b3831">
+    <!-- Letter a -->
+    <path d="M 124,76 C 114,76 107,69 107,58 C 107,46 115,39 126,39 C 136,39 143,46 143,58 L 143,74 L 138,74 L 138,69 C 135,74 130,76 124,76 Z M 125,45 C 118,45 113,50 113,58 C 113,65 118,70 125,70 C 132,70 137,65 137,58 C 137,50 132,45 125,45 Z"/>
+    
+    <!-- Letter n -->
+    <path d="M 154,74 L 154,41 L 159,41 L 159,47 C 163,42 169,39 176,39 C 186,39 191,45 191,56 L 191,74 L 185,74 L 185,57 C 185,48 181,45 174,45 C 167,45 160,50 160,59 L 160,74 Z"/>
+
+    <!-- Letter t -->
+    <path d="M 205,74 C 199,74 196,70 196,64 L 196,46 L 190,46 L 190,41 L 196,41 L 196,30 L 202,30 L 202,41 L 212,41 L 212,46 L 202,46 L 202,63 C 202,67 204,69 207,69 C 209,69 211,68 212,67 L 214,72 C 212,73 209,74 205,74 Z"/>
+
+    <!-- Letter i -->
+    <path d="M 221,74 L 221,41 L 227,41 L 227,74 Z M 224,34 C 221.8,34 220,32.2 220,30 C 220,27.8 221.8,26 224,26 C 226.2,26 228,27.8 228,30 C 228,32.2 226.2,34 224,34 Z"/>
+
+    <!-- Letter c -->
+    <path d="M 252,76 C 241,76 233,68 233,57.5 C 233,46.5 241,39 252,39 C 259,39 264,42 268,47 L 263,51 C 260,47 256,45 252,45 C 244,45 239,51 239,57.5 C 239,64 244,70 252,70 C 257,70 261,68 264,64 L 268,68 C 264,73 259,76 252,76 Z"/>
+  </g>
+
+  <!-- Right Wreath Branch -->
+  <g transform="translate(312, 62)">
+    <path d="M -12,32 C 18,22 32,-4 22,-32 C 16,-46 2,-56 -12,-60" fill="none" stroke="#2b3831" stroke-width="2.5" stroke-linecap="round"/>
+    <use href="#antic-leaf-r" transform="translate(-10, 32) rotate(-42) scale(0.9)"/>
+    <use href="#antic-leaf-r" transform="translate(0, 24) rotate(-32) scale(1.0)"/>
+    <use href="#antic-leaf-r" transform="translate(12, 14) rotate(-18) scale(1.05)"/>
+    <use href="#antic-leaf-r" transform="translate(21, 0) rotate(-2) scale(1.1)"/>
+    <use href="#antic-leaf-r" transform="translate(24, -16) rotate(16) scale(1.1)"/>
+    <use href="#antic-leaf-r" transform="translate(20, -32) rotate(32) scale(1.05)"/>
+    <use href="#antic-leaf-r" transform="translate(10, -46) rotate(48) scale(1.0)"/>
+    <use href="#antic-leaf-r" transform="translate(-4, -56) rotate(62) scale(0.9)"/>
+    <use href="#antic-leaf-r" transform="translate(-14, -60) rotate(78) scale(0.8)"/>
+  </g>
+</svg>
