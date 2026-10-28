@@ -92,3 +92,26 @@ h1,h2,h3{font-family:"LINE Seed JP",Inter,Arial,sans-serif;font-weight:700}
 :root{--action-green:#198754;--action-hover:#157347}.button.primary,.button.mint,.header-start,.menu-auth>a:last-child,.account-options>.button.primary{background:var(--action-green)!important;border-color:var(--action-green)!important;color:#fff!important;box-shadow:none!important;justify-content:center!important;gap:0!important}.button.primary:hover,.button.mint:hover,.header-start:hover,.menu-auth>a:last-child:hover{background:var(--action-hover)!important;border-color:var(--action-hover)!important}.button.primary:active,.button.mint:active{transform:translateY(1px)}.output-download,.term-options button[aria-checked=true]{border-color:var(--action-green)!important}.plan-summary .button,.closing .button,.hero-actions .button{justify-content:center!important}
 /* The mobile film uses its authored 720 × 520 ratio, keeping the export footer in frame. */
 @media(max-width:1100px){.hero-cinema-screen{aspect-ratio:18/13!important;height:auto!important}.hero-cinema-screen .motion-poster img{object-fit:contain!important}}
+
+/* Telephone numbers stay strictly on one line without breaking digits */
+.site-business > span:first-of-type,
+.page-site-fields > span:first-of-type,
+.sales-record > span,
+.profile-field-copy {
+  white-space: nowrap !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+@media(max-width:760px){
+  .site-business strong{font-size:13px!important;}
+  .site-business > span{font-size:11px!important;line-height:1.45!important;}
+  .page-site-fields{font-size:10px!important;}
+  .agency-browser-grid{gap:8px!important;padding-inline:10px!important;}
+}
+
+@media(max-width:390px){
+  .site-business strong{font-size:12px!important;}
+  .site-business > span{font-size:10px!important;}
+  .site-business{padding:8px 7px!important;}
+}
