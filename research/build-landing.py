@@ -49,5 +49,10 @@ for old in s.select('script[src],link[href]'):
     if 'landing-refinements.' in url:old.decompose()
 s.head.append(s.new_tag('link',rel='stylesheet',href=f'landing-refinements.css?v={version}'))
 s.head.append(s.new_tag('script',src=f'landing-refinements.js?v={version}',defer=''))
+for old in s.select('script[src],link[href]'):
+    if 'service-films.' in old.get('src',old.get('href','')):old.decompose()
+if s.select_one('#hizmetler'):
+    s.head.append(s.new_tag('link',rel='stylesheet',href=f'service-films.css?v={version}'))
+    s.head.append(s.new_tag('script',src=f'service-films.js?v={version}',defer=''))
 write_atomic(p,str(s))
 print(f'Built landing.css and landing.js with cache-buster ?v={version}')

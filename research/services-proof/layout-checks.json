@@ -1,0 +1,157 @@
+[
+  {
+    "films": [
+      {
+        "companyTextFits": true,
+        "kind": "research",
+        "panelFits": true
+      },
+      {
+        "companyTextFits": true,
+        "kind": "monthly",
+        "panelFits": true
+      }
+    ],
+    "monthly": "/iletisim/",
+    "order": [
+      "hero",
+      "brand-evidence",
+      "product-facts",
+      "hizmetler",
+      "nasil-calisir",
+      "baglanti-akisi",
+      "ornek-liste",
+      "ozellikler",
+      "fiyatlar",
+      "faq-section",
+      "closing"
+    ],
+    "overflow": false,
+    "signup": "https://app.veriburada.com/signup",
+    "width": 320
+  },
+  {
+    "films": [
+      {
+        "companyTextFits": true,
+        "kind": "research",
+        "panelFits": true
+      },
+      {
+        "companyTextFits": true,
+        "kind": "monthly",
+        "panelFits": true
+      }
+    ],
+    "monthly": "/iletisim/",
+    "order": [
+      "hero",
+      "brand-evidence",
+      "product-facts",
+      "hizmetler",
+      "nasil-calisir",
+      "baglanti-akisi",
+      "ornek-liste",
+      "ozellikler",
+      "fiyatlar",
+      "faq-section",
+      "closing"
+    ],
+    "overflow": false,
+    "signup": "https://app.veriburada.com/signup",
+    "width": 390
+  },
+  {
+    "films": [
+      {
+        "companyTextFits": true,
+        "kind": "research",
+        "panelFits": true
+      },
+      {
+        "companyTextFits": true,
+        "kind": "monthly",
+        "panelFits": true
+      }
+    ],
+    "monthly": "/iletisim/",
+    "order": [
+      "hero",
+      "brand-evidence",
+      "product-facts",
+      "hizmetler",
+      "nasil-calisir",
+      "baglanti-akisi",
+      "ornek-liste",
+      "ozellikler",
+      "fiyatlar",
+      "faq-section",
+      "closing"
+    ],
+    "overflow": false,
+    "signup": "https://app.veriburada.com/signup",
+    "width": 481
+  },
+  {
+    "films": [
+      {
+        "companyTextFits": true,
+        "kind": "research",
+        "panelFits": true
+      },
+      {
+        "companyTextFits": true,
+        "kind": "monthly",
+        "panelFits": true
+      }
+    ],
+    "monthly": "/iletisim/",
+    "order": [
+      "hero",
+      "brand-evidence",
+      "product-facts",
+      "hizmetler",
+      "nasil-calisir",
+      "baglanti-akisi",
+      "ornek-liste",
+      "ozellikler",
+      "fiyatlar",
+      "faq-section",
+      "closing"
+    ],
+    "overflow": false,
+    "signup": "https://app.veriburada.com/signup",
+    "width": 1024
+  },
+  {
+    "films": [
+      {
+        "companyTextFits": true,
+        "kind": "research",
+        "panelFits": true
+      },
+      {
+        "companyTextFits": true,
+        "kind": "monthly",
+        "panelFits": true
+      }
+    ],
+    "monthly": "/iletisim/",
+    "order": [
+      "hero",
+      "brand-evidence",
+      "product-facts",
+      "hizmetler",
+      "nasil-calisir",
+      "baglanti-akisi",
+      "ornek-liste",
+      "ozellikler",
+      "fiyatlar",
+      "faq-section",
+      "closing"
+    ],
+    "overflow": false,
+    "signup": "https://app.veriburada.com/signup",
+    "width": 1440
+  }
+]

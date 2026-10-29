@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 p=Path('public/index.html')
 s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
 main=s.select_one('main')
-order=['.hero','.brand-evidence','.product-facts','#nasil-calisir','#baglanti-akisi','#ornek-liste','#ozellikler','#fiyatlar','.faq-section','.closing']
+order=['.hero','.brand-evidence','.product-facts','#hizmetler','#nasil-calisir','#baglanti-akisi','#ornek-liste','#ozellikler','#fiyatlar','.faq-section','.closing']
 sections=[main.select_one(':scope > '+selector) for selector in order]
 assert all(sections), 'A required funnel section is missing'
 assert len(main.find_all('section',recursive=False))==len(sections), 'Preserve unexpected sections before rearranging'

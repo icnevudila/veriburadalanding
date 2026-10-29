@@ -27,3 +27,5 @@
 .geo-map{background:#eaf0e5 url(istanbul-map-display-v4.webp) center/cover no-repeat}.leaflet-tile-container img{transition:opacity .35s}.hero-visual .panel-record{animation-iteration-count:1}.brand{border-radius:0}.brand img{mix-blend-mode:multiply}
 
 .brand{background:var(--paper)}
+
+.footer-osm-note{font-size:10px;opacity:.65;margin-left:8px;font-weight:400;display:inline-block;letter-spacing:normal}.footer-osm-note a{color:inherit;text-decoration:underline}.footer-osm-note a:hover{opacity:1}

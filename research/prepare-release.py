@@ -14,7 +14,7 @@ for page in json.loads((root/'research'/'content-pages-manifest.json').read_text
  if not (root/'public'/name).resolve().is_relative_to((root/'public').resolve()):raise RuntimeError('Page escaped public directory')
  assets.append(name)
 assets += ['preparation-demo.html','preparation-demo.css','preparation-demo.js','preparation-desktop.webp','preparation-mobile.webp']
-assets += ['landing-refinements.js','landing-refinements.css','brand-wordmark-ui.png','hero-direction.js','hero-direction.css','hero-premium.js','hero-premium.css']
+assets += ['landing-refinements.js','landing-refinements.css','brand-wordmark-ui.png','hero-direction.js','hero-direction.css','hero-premium.js','hero-premium.css','service-films.js','service-films.css']
 files=[]
 for name in assets:
  rel='public/'+name;target=release/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(root/rel,target);files.append(rel)
