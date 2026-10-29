@@ -64,10 +64,10 @@
 .sc-month-delivery>footer{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px;background:#f0f7e9;font-size:clamp(15px,1.8cqw,20px);color:#4f8247;line-height:1.3}
 .sc-month-delivery footer>svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:760px){
- #hizmetler{padding-top:35px!important;padding-bottom:45px!important}
+ #hizmetler{padding-top:24px!important;padding-bottom:32px!important}
  #hizmetler .services-heading{margin-bottom:29px}
- #hizmetler .services-grid{gap:38px}
- #hizmetler .service-offering-copy{margin-bottom:18px}
+ #hizmetler .services-grid{gap:30px}
+ #hizmetler .service-offering-copy{margin-bottom:15px}
  #hizmetler .service-offering h3{font-size:clamp(25px,6.3vw,30px);letter-spacing:-.9px}
  #hizmetler .service-art{aspect-ratio:auto;height:clamp(330px,86vw,410px);border-radius:17px}
  #hizmetler .service-link{font-size:16px;margin-top:12px}
