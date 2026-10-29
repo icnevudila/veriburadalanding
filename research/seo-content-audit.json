@@ -130,16 +130,16 @@
     },
     {
       "path": "/gizlilik-politikasi/",
-      "title": "Gizlilik Politikası | Veri Burada",
-      "descriptionLength": 139,
+      "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni | Veri Burada",
+      "descriptionLength": 129,
       "h1": 1,
       "schema": true,
       "noindex": true
     },
     {
       "path": "/kullanim-kosullari/",
-      "title": "Kullanım Koşulları ve Sözleşme Kapsamı | Veri Burada",
-      "descriptionLength": 146,
+      "title": "Kullanım Koşulları ve Hizmet Sözleşmesi | Veri Burada",
+      "descriptionLength": 122,
       "h1": 1,
       "schema": true,
       "noindex": true

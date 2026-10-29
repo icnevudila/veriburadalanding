@@ -37,3 +37,5 @@ Unsplash-hosted public stock photographs, downloaded and optimized locally for w
 - media/architecture.webp: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab
 
 Miniature restaurant website layouts are original code-native design studies. Business names, phone values, ratings and .example domains are illustrative and labelled as examples. They are not customer endorsements.
+
+Hero geography refresh (2026-10-29): four local WebP maps are rendered by research/render-hero-city-maps.py from small OpenStreetMap API 0.6 bounding-box data extracts for Kadikoy, Cankaya, Alsancak and Nilufer. Bounding boxes, road counts and original point locations are recorded in research/hero-city-maps.json. Styling is project work; map data is copyright OpenStreetMap contributors, ODbL. This uses vector data rather than scraping tiles. The landing serves local images and does not call a remote map or tile provider. Business records and pin associations are illustrative, not verified businesses at those positions. Source attribution remains visible.

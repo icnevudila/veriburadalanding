@@ -1,0 +1,150 @@
+{
+  "kadikoy": {
+    "bounds": [
+      29.024,
+      40.984,
+      29.044,
+      41.001
+    ],
+    "size": [
+      1600,
+      1200
+    ],
+    "pins": [
+      [
+        377.6,
+        488.8
+      ],
+      [
+        688.9,
+        674.9
+      ],
+      [
+        1120.3,
+        457.3
+      ],
+      [
+        1221.7,
+        866.1
+      ],
+      [
+        604.2,
+        942.8
+      ]
+    ],
+    "roads": 1551,
+    "source": "https://www.openstreetmap.org/copyright",
+    "path": "/media/hero-map-kadikoy.webp"
+  },
+  "cankaya": {
+    "bounds": [
+      32.842,
+      39.905,
+      32.867,
+      39.924
+    ],
+    "size": [
+      1600,
+      1200
+    ],
+    "pins": [
+      [
+        415.1,
+        396.0
+      ],
+      [
+        688.9,
+        660.9
+      ],
+      [
+        1095.6,
+        437.2
+      ],
+      [
+        1209.8,
+        878.8
+      ],
+      [
+        690.1,
+        971.9
+      ]
+    ],
+    "roads": 952,
+    "source": "https://www.openstreetmap.org/copyright",
+    "path": "/media/hero-map-cankaya.webp"
+  },
+  "alsancak": {
+    "bounds": [
+      27.135,
+      38.428,
+      27.155,
+      38.445
+    ],
+    "size": [
+      1600,
+      1200
+    ],
+    "pins": [
+      [
+        454.2,
+        512.4
+      ],
+      [
+        711.6,
+        682.7
+      ],
+      [
+        1155.1,
+        467.5
+      ],
+      [
+        1228.4,
+        867.5
+      ],
+      [
+        598.6,
+        916.9
+      ]
+    ],
+    "roads": 706,
+    "source": "https://www.openstreetmap.org/copyright",
+    "path": "/media/hero-map-alsancak.webp"
+  },
+  "nilufer": {
+    "bounds": [
+      28.975,
+      40.21,
+      29.002,
+      40.23
+    ],
+    "size": [
+      1600,
+      1200
+    ],
+    "pins": [
+      [
+        369.2,
+        476.3
+      ],
+      [
+        715.5,
+        692.3
+      ],
+      [
+        1119.1,
+        459.5
+      ],
+      [
+        1216.8,
+        849.4
+      ],
+      [
+        600.2,
+        930.5
+      ]
+    ],
+    "roads": 1384,
+    "source": "https://www.openstreetmap.org/copyright",
+    "path": "/media/hero-map-nilufer.webp"
+  }
+}
