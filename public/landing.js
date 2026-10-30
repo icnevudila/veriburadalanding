@@ -1,5 +1,5 @@
 /* Public application destinations. No credentials belong in this file. */
-window.VBAuthLinks={signIn:'https://app.veriburada.com/signin',signUp:'https://app.veriburada.com/signup'};
+window.VBAuthLinks={signIn:'http://app.veriburada.com/giris',signUp:'http://app.veriburada.com/kayit'};
 
 ;
 /* Original illustrated object system. Product identity always uses the supplied mark. */
@@ -465,7 +465,7 @@ window.VBAuthLinks={signIn:'https://app.veriburada.com/signin',signUp:'https://a
  const dialog=document.createElement('dialog');dialog.className='account-dialog';dialog.setAttribute('aria-labelledby','account-title');
  dialog.innerHTML='<button class="account-close" type="button" aria-label="Pencereyi kapat">×</button><img class="account-brand" src="/brand-wordmark.webp" alt="Veri Burada" width="1200" height="375"><h2 id="account-title">Veri Burada’ya başlayın.</h2><p>Hesabınıza giriş yapın veya yeni hesap oluşturun.</p><div class="account-options"><a data-account-option="signUp" class="button primary" href="#">Kaydol</a><a data-account-option="signIn" class="button account-secondary" href="#">Giriş yap</a></div><p class="account-status" role="status" hidden></p>';document.body.append(dialog);
  let previous;
- function destination(kind){try{const u=new URL(window.VBAuthLinks?.[kind]);return u.protocol==='https:'?u.href:null}catch{return null}}
+ function destination(kind){try{const u=new URL(window.VBAuthLinks?.[kind]);return (u.protocol==='https:'||u.protocol==='http:')?u.href:null}catch{return null}}
  function refresh(){dialog.querySelectorAll('[data-account-option]').forEach(a=>{const url=destination(a.dataset.accountOption);a.href=url||'#';a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-disabled',String(!url))})}
  function open(kind){previous=document.activeElement;refresh();const status=dialog.querySelector('.account-status');status.hidden=!!destination('signIn')&&!!destination('signUp');status.textContent='Giriş ve kayıt bağlantıları henüz eklenmedi.';dialog.dataset.intent=kind||'choice';dialog.showModal();document.body.classList.add('account-open');window.dispatchEvent(new CustomEvent('veriburada:motion',{detail:{paused:true}}));dialog.querySelector('.account-close').focus()}
  function close(){dialog.close()}

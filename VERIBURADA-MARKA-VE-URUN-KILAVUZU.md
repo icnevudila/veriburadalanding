@@ -7,7 +7,7 @@
 
 * **Marka Adı:** Veri Burada
 * **Resmî Web Sitesi:** [https://www.veriburada.com](https://www.veriburada.com)
-* **Web Uygulaması (Panel):** [https://app.veriburada.com](https://app.veriburada.com) (Kayıt: `/signup`, Giriş: `/signin`)
+* **Web Uygulaması (Panel):** [http://app.veriburada.com](http://app.veriburada.com) (Kayıt: `http://app.veriburada.com/kayit`, Giriş: `http://app.veriburada.com/giris`)
 * **Destek & İletişim:** `destek@veriburada.com`
 * **Sektör:** B2B SaaS, Satış İstihbaratı (Sales Intelligence), Veri Madenciliği & Lead Generation
 
