@@ -2,7 +2,7 @@
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-import time, uuid
+import time, uuid, datetime
 def save_page(path, content):
  temporary=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
  temporary.write_text(content,encoding='utf-8')
@@ -101,7 +101,14 @@ config['redirects'] += [{'source':'/eklenti-indir','destination':'/basla/','perm
 sources={'/'+p['slug'] for p in pages}
 config['redirects']=[r for r in config.get('redirects',[]) if r['source'] not in sources]+[{'source':'/'+p['slug'],'destination':'/'+p['slug']+'/','permanent':True} for p in pages]
 config_path.write_text(json.dumps(config,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(P/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+u+'</loc></url>' for u in urls)+'</urlset>',encoding='utf-8')
+def sitemap_node(u):
+ if u==ORIGIN+'/':prio,freq='1.0','daily'
+ elif any(k in u for k in ['/pricing/','/ozellikler/','/nasil-calisir/','/basla/','/listeler/']):prio,freq='0.9','weekly'
+ elif '/kullanim-alanlari/' in u or '/blog/' in u:prio,freq='0.8','weekly'
+ else:prio,freq='0.7','monthly'
+ today=datetime.date.today().isoformat()
+ return f'  <url>\n    <loc>{u}</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>\n  </url>'
+(P/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+'\n'.join(sitemap_node(u) for u in urls)+'\n</urlset>\n',encoding='utf-8')
 (P/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /map-demo.html\nSitemap: '+ORIGIN+'/sitemap.xml\n',encoding='utf-8')
 save_page(P/'404.html','<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Sayfa bulunamadı | Veri Burada</title><link rel="stylesheet" href="/landing.css"><link rel="stylesheet" href="/editorial.css"><link rel="stylesheet" href="/page-narratives.css"><link rel="stylesheet" href="/landing-refinements.css"><body class="content-edition"><main class="error-page"><a href="/"><img src="/brand-wordmark.webp" width="190" alt="Veri Burada"></a><p>404 · Sayfa bulunamadı</p><h1>Başka bir yoldan<br>devam edelim.</h1><p>Bu adres değişmiş veya kaldırılmış olabilir.</p><a class="button primary" href="/">Ana sayfaya dön</a><a href="/sss/">Sık sorulan sorular</a></main></body></html>')
 Path('research/content-pages-manifest.json').write_text(json.dumps([{k:v for k,v in p.items() if k in ['slug','title','description','noindex','scene','article']} for p in pages],ensure_ascii=False,indent=2),encoding='utf-8')
